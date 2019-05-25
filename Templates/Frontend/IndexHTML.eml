@@ -1,0 +1,29 @@
+
+		<!-- Page Main START -->
+		
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+	%(Navigation)%
+
+<!-- #include file="\\web1\~whitworth\forms\forms-templates\template-update-panel-progress-indicator.htm" -->
+             <asp:UpdatePanel ID="MainUpdatePanel" runat="server">
+            <ContentTemplate>
+<div style="text-align:center">
+<asp:ValidationSummary ID="ValidationSummaryTop%(SubmitType)%" cssclass="error" runat="server" />
+</div>
+%(BodyContent)%
+
+                    <br /><br />
+            </ContentTemplate>
+</asp:UpdatePanel>
+<div style="text-align:center">
+	    %(AdditionalButtons)%
+		<span id="SubmittingText" class="loading" style="display:none" ><strong>SUBMITTING</strong></span>
+		<asp:linkbutton id="btn%(SubmitType)%" OnClientClick="HideSubmitButton(this)" CssClass="button" runat="server"><span class="glyphicon glyphicon-circle-arrow-right"></span> %(SubmitText)%</asp:linkbutton>
+		    </div>
+            <div style="text-align:center">
+            <asp:ValidationSummary ID="ValidationSummaryBottom%(SubmitType)%" cssclass="error" runat="server" />
+            </div>
+			
+			<script>
+        %(JavascriptActions)%
+		</script>

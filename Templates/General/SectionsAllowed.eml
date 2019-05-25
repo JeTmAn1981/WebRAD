@@ -1,0 +1,32 @@
+Public Shared Sub CheckSectionAllowed(ByVal sectionNumber As Integer)
+        Dim sectionsAllowed = GetSectionsAllowed()
+
+        If Not sectionsAllowed(sectionNumber) Then
+            Redirect(GetNextPage(sectionNumber, sectionsAllowed))
+        End If
+    End Sub
+
+    Public Shared Function GetSectionsAllowed() As Dictionary(Of Integer, Boolean)
+        Dim currentApplicationID = Common.GetCurrentApplicationID()
+        Dim applicationData As DataTable = GetDataTable("SELECT * FROM " & MAIN_DATABASE_TABLE_NAME & " WHERE ID = " & currentApplicationID)
+
+        Dim sectionsAllowed As New Dictionary(Of Integer, Boolean)()
+
+        If applicationData.Rows.Count > 0 Then
+            With applicationData.Rows(0)
+                %(SectionsAllowed)%
+            End With
+        End If
+
+        Return sectionsAllowed
+    End Function
+
+    Public Shared Function GetNextPage(ByVal sectionNumber As Integer, sectionsAllowed As Dictionary(Of Integer, Boolean)) As String
+        Dim nextSections = sectionsAllowed.Where(Function(section) section.Key > sectionNumber And section.Value = True).OrderBy(Function(section) section.Key)
+
+        If nextSections.Count > 0 Then
+            Return "section" & nextSections(0).Key & ".aspx"
+        End If
+
+        Return "status.aspx"
+    End Function

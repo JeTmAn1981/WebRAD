@@ -1,0 +1,13 @@
+		<!-- Page Main START -->
+		
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+                       %(BodyContent)%
+
+					   %(WorkflowSteps)%
+					   
+		       %(TotalOwed)%
+%(EcommerceControls)%		
+<script>
+        %(JavascriptActions)%
+		</script>
+		<!-- Page Main END -->

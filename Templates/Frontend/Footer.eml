@@ -1,0 +1,12 @@
+		<!-- Form End -->
+        <!-- #include file="\\web1\~whitworth\forms\forms-templates\template-footer.htm" -->
+		<script src="//www.whitworth.edu/js/webradapps.js"></script>
+		<script type="text/javascript">
+		%(CustomScript)%
+		%(JSHandlers)%
+		%(JSHandlerRegistrations)%
+		%(JSHandlerTriggers)%
+		</script>
+		
+    </body>
+</html>

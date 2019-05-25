@@ -1,0 +1,75 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+     dim pageName As String = "View Archive"
+
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If Not Page.IsPostBack Then
+		LoadFormText()
+	    BindData()
+        End If
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+
+ 
+    Sub BindData()
+	    dim conditionals As New List(Of String)()
+		Dim sSelectQuery As String
+        
+        sSelectQuery = "%(SelectStatement)%"
+        %(FilterStatement)%
+		%(WhereStatement)%
+
+		conditionals.Add("COALESCE(ARCHIVED,0) = 1")
+		
+		sSelectQuery &= If(conditionals.Count > 0, " WHERE ", "") & String.Join(" AND ", conditionals)
+	
+        Dim frs As New WhitTools.FilteredRepeaterSelector(sSelectQuery, rptSubmissions, lblPageNumbers, cnx)
+
+		frs.setPageLimit(%(PageLimit)%)
+        frs.setCurrentPage(GetQueryString(S_PAGE))
+		
+        %(SetShowControl)%
+        frs.selectOrderBy = "%(OrderByColumn)%"
+        frs.redirectURL = "%(PageType)%.aspx"
+        frs.ShowFilteredPageResults()
+	End Sub
+ 
+ Sub ddlActions_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ddlActions.SelectedIndexChanged
+        %(ActionHandlerCall)%
+    End Sub
+
+	Sub RedirectToIndex()
+        Redirect("archive%(AncillaryReference)%.aspx")
+    End Sub
+	
+   %(ActionMethods)%
+	  
+ %(SortHandler)%
+
+  %(FilterHandler)%
+  
+  
+End Class

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CommunicationsModelStoreContainer" CdmEntityContainer="CommunicationsEntities">
+    <EntitySetMapping Name="ARA_Assignments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Assignments">
+        <MappingFragment StoreEntitySet="ARA_Assignments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RuleID" ColumnName="RuleID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_CabinetDepartments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_CabinetDepartments">
+        <MappingFragment StoreEntitySet="ARA_CabinetDepartments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CabinetMemberID" ColumnName="CabinetMemberID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_CabinetList">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_CabinetList">
+        <MappingFragment StoreEntitySet="ARA_CabinetList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="KeyRequestApproverPLID" ColumnName="KeyRequestApproverPLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Department_BreadcrumbLinks">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Department_BreadcrumbLinks">
+        <MappingFragment StoreEntitySet="ARA_Department_BreadcrumbLinks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="LinkName" ColumnName="LinkName" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Departments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Departments">
+        <MappingFragment StoreEntitySet="ARA_Departments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="MailStop" ColumnName="MailStop" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="HomePageURL" ColumnName="HomePageURL" />
+          <ScalarProperty Name="HomePageURL2" ColumnName="HomePageURL2" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DepSearch" ColumnName="DepSearch" />
+          <ScalarProperty Name="RedirectTo" ColumnName="RedirectTo" />
+          <ScalarProperty Name="PortalDepartment" ColumnName="PortalDepartment" />
+          <ScalarProperty Name="CopyJobTicket" ColumnName="CopyJobTicket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Departments_Locations">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Departments_Locations">
+        <MappingFragment StoreEntitySet="ARA_Departments_Locations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepartmentTypes">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepartmentTypes">
+        <MappingFragment StoreEntitySet="ARA_DepartmentTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepChairList">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepChairList">
+        <MappingFragment StoreEntitySet="ARA_DepChairList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="AssistantPLID" ColumnName="AssistantPLID" />
+          <ScalarProperty Name="Assistant2PLID" ColumnName="Assistant2PLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepChairList_SubDepartments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepChairList_SubDepartments">
+        <MappingFragment StoreEntitySet="ARA_DepChairList_SubDepartments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="ParentDepID" ColumnName="ParentDepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepDirectorsDeansList">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepDirectorsDeansList">
+        <MappingFragment StoreEntitySet="ARA_DepDirectorsDeansList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="AssistantPLID" ColumnName="AssistantPLID" />
+          <ScalarProperty Name="Assistant2PLID" ColumnName="Assistant2PLID" />
+          <ScalarProperty Name="DirectorType" ColumnName="DirectorType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepDirectorsDeansList_SubDepartments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepDirectorsDeansList_SubDepartments">
+        <MappingFragment StoreEntitySet="ARA_DepDirectorsDeansList_SubDepartments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="ParentDepID" ColumnName="ParentDepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_DepDirectorsDeansList_Types">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_DepDirectorsDeansList_Types">
+        <MappingFragment StoreEntitySet="ARA_DepDirectorsDeansList_Types">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_MajorCategories">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_MajorCategories">
+        <MappingFragment StoreEntitySet="ARA_MajorCategories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Majors">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Majors">
+        <MappingFragment StoreEntitySet="ARA_Majors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Major" ColumnName="Major" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="FreshmanProgram" ColumnName="FreshmanProgram" />
+          <ScalarProperty Name="DatawarehouseDescription" ColumnName="DatawarehouseDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Rules">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Rules">
+        <MappingFragment StoreEntitySet="ARA_Rules">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_RuleTypes">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_RuleTypes">
+        <MappingFragment StoreEntitySet="ARA_RuleTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_Schools">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_Schools">
+        <MappingFragment StoreEntitySet="ARA_Schools">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CEEB" ColumnName="CEEB" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="RedirectTo" ColumnName="RedirectTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_StatesProvinces">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_StatesProvinces">
+        <MappingFragment StoreEntitySet="ARA_StatesProvinces">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_VPDepartments">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_VPDepartments">
+        <MappingFragment StoreEntitySet="ARA_VPDepartments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VPID" ColumnName="VPID" />
+          <ScalarProperty Name="DepID" ColumnName="DepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARA_VPList">
+      <EntityTypeMapping TypeName="CommunicationsModel.ARA_VPList">
+        <MappingFragment StoreEntitySet="ARA_VPList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PLID" ColumnName="PLID" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

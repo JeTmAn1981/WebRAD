@@ -1,0 +1,30 @@
+﻿@model %(ProjectName)%.Models.%(ProjectName)%
+
+@{
+    ViewBag.Title = "%(ProjectTitle)%";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+  
+	<div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+	%(BodyContent)%
+	
+	<div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p align="center">
+                    <input type="submit" value="Submit" class="button" />
+                </p>
+            </div>
+        </div>
+
+	</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

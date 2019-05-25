@@ -1,0 +1,47 @@
+
+		<!-- Page Main START -->
+%(CustomMessage)%
+<asp:panel id="pnlReviewInformation" runat="server" visible="false">
+        <div style="border: 2px solid black; padding:10px">
+                <strong>PLEASE NOTE:</strong> Our database shows that you have previously submitted this form.  Some of the information from your previous submission has been carried over to this one for your convenience.  Please review all information carefully before submitting this form.
+         </div>
+        <br /><br />
+        </asp:panel>
+
+
+	<asp:panel id="pnlQuit" runat="server" visible="false">
+       <div style="border: 2px solid black; padding:10px">
+                Your application information has now been saved.  You may return to this page at a time of your choosing to continue filling out this application.
+          </div>
+        <br /><br />
+        </asp:panel>
+
+	
+	The %(PageTitle)% Form is divided into sections. Your completion status is displayed in the menu below. To jump directly to a specific section, just click on the corresponding link.
+
+        <br />
+	<br />
+        
+	        <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+               <thead>
+                <th>Section Purpose</th>
+                <th>Completion Status</th>
+               </thead>
+	%(SectionsAllowedCollection)%	
+	%(SectionLinks)%
+
+       
+        </table>
+
+	<br />
+        <br />
+        
+	<div style="text-align:center">
+	%(ChangePasswordLink)%
+	  <asp:linkbutton id="btnContinue" CssClass="button" causesvalidation="false" runat="server"><span class="glyphicon glyphicon-circle-arrow-right"></span> Continue to Form</asp:linkbutton>
+    </div>
+
+            <div style="text-align:center">
+            <asp:ValidationSummary ID="vsStatus" cssclass="Error85" runat="server" />
+            </div>
+           

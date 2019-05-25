@@ -1,0 +1,132 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+	dim pageName As String = "Update"
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+	
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+	bArchive = False
+	
+		If Not Page.IsPostBack Then
+			Page.Form.Attributes.Add("enctype", "multipart/form-data")
+			%(CheckArchiveCall)%
+			%(SetUsernameCall)%
+            %(RunAOPageBeforeLoadCall)%
+			LoadFormText()
+			LoadDDLs()
+			BindData()%(RunAOPageAfterLoadCall)%
+        End If%(RegisterPostbackControlsCall)%
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+	
+	%(RunAOPageAfterLoadMethod)%
+	%(RunAOPageBeforeLoadMethod)%
+
+    Sub LoadDDLs()
+		dim dtSupplied as new WhitTools.DataTablesSupplied
+	
+       %(LoadDDLsContent)%
+    End Sub
+
+
+    Sub BindData()
+		dim dt as new DataTable
+
+        dt = getdatatable(cnx, "Select * From %(MainTableName)% Where ID = '" & Request.querystring("ID") & "'", False)
+		dt = ConvertDataTableColumnTypes(dt)
+        EliminateNull(dt)
+		
+		If dt.rows.count > 0
+			With dt.rows(0)
+				%(BindData)%
+				%(AssignInvoiceInfo)%
+				%(TriggerPostbackActions)%
+				%(BindRepeaterData)%
+				%(BindDataAdditional)%
+				%(BindWorkflowSteps)%
+            End With
+        End If
+    End Sub
+
+    Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
+        Page.Validate()
+        If Page.IsValid Then
+		%(RunAOBeforePageSubmitCall)%
+		
+	    dim cmd as new SqlCommand
+	    dim nCurrentID as integer = Request.Querystring("ID")
+	    
+            cmd.connection = cnx
+            cmd.CommandType = CommandType.StoredProcedure
+	    cmd.commandtext = "usp_Update%(MainUpdateProcedureName)%"
+
+            With cmd
+		.Parameters.AddWithValue("@ID",nCurrentID)
+		%(MainUpdateProcedureParameters)%
+            End With
+
+        %(DeleteAncillaryData)%
+	    %(SaveAncillaryCalls)%
+		%(DeleteTempFiles)%
+        ExecuteNonQuery(cmd, cnx)
+		Session("ApplicationID") = nCurrentID
+        nSubmissionID = nCurrentID
+		
+		%(RunAOAfterPageSubmitCall)%
+			
+	    LeaveUpdatePage()
+        End If
+    End Sub
+	
+	Private Sub LeaveUpdatePage()
+        If GetSessionVariable("PreviousPage").Contains("search") Then
+            WriteJavaScript("window.opener.UpdateRecord(" & GetQueryString("ID") & ");")
+            WriteJavaScript("window.close();")
+        Else
+            Response.Redirect(If(GetSessionVariable("PreviousPage") <> "", GetSessionVariable("PreviousPage"), "index%(AncillaryReference)%.aspx"))
+        End If
+    End Sub
+
+	%(AdditionalButtonsMethods)%
+    
+	%(RunAOBeforePageSubmitMethod)%
+	
+	%(RunAOAfterPageSubmitMethod)%
+	
+	%(EditInvoiceMethod)%
+
+	%(ValidatorContent)%
+    %(CheckControlMethods)%
+    %(PostbackActions)%
+	%(RepeaterMethods)%
+	
+    
+    %(SaveAncillaryMethods)%
+	%(PageMethods)%        
+	%(FileUploadMethods)%	
+	%(ControlLifeCycleEvents)%
+	%(WebServices)%
+	%(RegisterPostbackControlsMethod)%
+	%(CheckArchiveMethod)%
+
+End Class

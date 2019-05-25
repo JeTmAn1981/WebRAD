@@ -1,0 +1,23 @@
+    Shared Function GetCurrentApplicationID() As Integer
+            If Not bFrontend Then
+            Return GetQuerystring("ID")
+            Else
+
+            Dim applicationID As Integer
+
+            Try
+                applicationID = WhitTools.Encryption.DecryptTextExternal(GetQueryString("ApplicationID"))
+                Catch ex As Exception
+            End Try
+
+            If applicationID <> 0 Then
+                Return applicationID
+            End If
+
+            If (GetSessionVariable("ApplicationID") <> "" And GetSessionVariable("ApplicationID") <> "0") AndAlso GetDataTable("SELECT * FROM %(SQLMainTable)% WHERE ID = " & GetSessionVariable("ApplicationID") & " AND COALESCE(Deleted, 0) = 0 %(CheckCertification)%", cnx).Rows.Count = 0 Then
+                Return GetSessionVariable("ApplicationID")
+            End If
+
+			%(FinalReturn)%
+              End If
+            End Function

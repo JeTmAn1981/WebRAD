@@ -1,0 +1,77 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+  
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		bArchive = True
+		
+        If Not Page.IsPostBack Then
+			%(RunAOPageBeforeLoadCall)%
+			LoadFormText()
+			LoadDDLs()
+			BindData()%(RunAOPageAfterLoadCall)%
+        End If
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+	
+	%(RunAOPageBeforeLoadMethod)%
+	%(RunAOPageAfterLoadMethod)%
+
+    Sub LoadDDLs()
+		dim dtSupplied as new WhitTools.DataTablesSupplied
+	
+       %(LoadDDLsContent)%
+    End Sub
+  
+    Sub BindData()
+	dim dt as new DataTable
+
+        dt = getdatatable("Select * From %(MainTableName)% Where ID = '" & %(IDSelect)% & "'",cnx)
+
+	If dt.rows.count > 0
+	    With dt.rows(0)
+        	%(BindData)%
+
+        	%(TotalOwed)%
+
+			%(TriggerPostbackActions)%
+
+			%(BindRepeaterData)%
+			
+			%(BindDataAdditional)%
+			
+			%(BindWorkflowSteps)%
+            End With
+        End If
+    End Sub
+
+%(CheckControlMethods)%
+
+%(RepeaterMethods)%
+
+%(PostbackActions)%
+
+%(PageMethods)%     
+ 
+End Class

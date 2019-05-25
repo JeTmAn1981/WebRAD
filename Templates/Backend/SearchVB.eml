@@ -1,0 +1,113 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+     dim pageName As String = "Search"
+
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+	bArchive = False
+	
+        If Not Page.IsPostBack Then
+		LoadFormText()
+	    LoadDDLs()
+		'CheckPreviousSearch()
+        SetSessionVariable("PreviousPage", "%(PageType)%.aspx")
+        End If
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+
+   Sub LoadDDLs()
+       %(LoadDDLsContent)%
+    End Sub
+	
+	Sub CheckPreviousSearch()
+        If GetSessionVariable("LastSearchQuery%(AncillaryReference)%") <> "" Then
+            RunSearch()
+        End If
+    End Sub
+ 
+    Sub ddlActions_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ddlActions.SelectedIndexChanged
+          %(ActionHandlerCall)%
+    End Sub
+
+   %(ActionMethods)%
+
+   Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
+	Delete%(ProjectShortName)%Items(rptSubmissions)
+	RunSearch()
+    End Sub
+
+    Protected Sub btnSearch_Click(sender As Object, e As EventArgs)
+	RunSearch()
+    End Sub
+
+    Protected Sub btnNewSearch_Click(sender As Object, e As EventArgs)
+	SetSessionVariable("LastSearchQuery%(AncillaryReference)%", "")
+    Redirect("%(PageType)%.aspx")
+    End Sub
+
+    Sub RunSearch()
+	ddlActions.SelectedIndex = 0
+	pnlDelete.visible=false
+	
+	SelectRepeaterData(rptSubmissions,GetSearchData(),cnx)
+	
+	lblRecordsTotal.Text= rptSubmissions.Items.Count & " search result(s) were returned."
+	pnlNoResults.visible = (rptSubmissions.Items.Count = 0)
+	pnlSearchTerms.visible = false
+	pnlSearchResults.visible = true
+	
+	Response.Write("<script> window.onload = function() { $('LoadingScreen').dialog('close'); goTo(document.getElementById('ListOptions')); };</script>")
+    End Sub
+
+    Function GetSearchData() as DataTable
+       dim dtResults as New DataTable
+       dim sSearchQuery, searchTerms as String
+	   Dim conditionals As New List(Of String)()
+
+       %(SearchQuery)%
+	
+       %(FilterStatement)%
+       %(WhereStatement)%
+       %(SearchTerms)%
+		
+       sSearchQuery &= If(conditionals.Count > 0, " WHERE ", "") & String.Join(" AND ", conditionals)
+		
+       sSearchQuery &= "%(SortStatement)%"
+	   
+	   dtResults = GetDataTable(sSearchQuery,cnx)
+	   SetSessionVariable("LastSearchQuery%(AncillaryReference)%", sSearchQuery)
+       
+	   If dtResults.Rows.Count = 0 Then
+            EmptyRepeater(rptSubmissions)
+       End If
+
+       return dtResults
+    End Function
+
+   %(SortHandler)%
+
+   %(FilterHandler)%
+
+End Class

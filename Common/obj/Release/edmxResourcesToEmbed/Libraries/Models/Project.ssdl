@@ -1,0 +1,1828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebRADModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdditionalOperationTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="MethodReference" Type="varchar" MaxLength="50" />
+    <Property Name="ExecuteType" Type="varchar" MaxLength="50" />
+    <Property Name="PerPage" Type="bit" />
+    <Property Name="Order" Type="int" />
+  </EntityType>
+  <EntityType Name="BackendActionTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BackendOptionOperatorTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Value" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BackendOptionTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Display" Type="int" />
+    <Property Name="IndividualPage" Type="int" />
+    <Property Name="DetailsRequired" Type="bit" />
+  </EntityType>
+  <EntityType Name="CompositeControls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompositeControlType" Type="int" />
+    <Property Name="IndividualControlType" Type="int" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlActionTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="UseJavascript" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlChangeHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="Property" Type="nvarchar(max)" />
+    <Property Name="OldValue" Type="nvarchar(max)" />
+    <Property Name="NewValue" Type="nvarchar(max)" />
+    <Property Name="DateUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ControlDataTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="DesignerDescription" Type="varchar" MaxLength="100" />
+    <Property Name="DesignerLibrary" Type="varchar" MaxLength="100" />
+    <Property Name="ToolkitType" Type="varchar" MaxLength="50" />
+    <Property Name="HTMLType" Type="varchar" MaxLength="100" />
+    <Property Name="HTMLAttributes" Type="varchar(max)" />
+    <Property Name="Prefix" Type="varchar" MaxLength="10" />
+    <Property Name="ProvidesValue" Type="bit" />
+    <Property Name="ValueAttribute" Type="varchar" MaxLength="100" />
+    <Property Name="JSValueAttribute" Type="varchar" MaxLength="100" />
+    <Property Name="ValidatorMessage" Type="varchar" MaxLength="500" />
+    <Property Name="IsListControl" Type="int" />
+    <Property Name="IsCheckControl" Type="int" />
+    <Property Name="LabelOnPrintable" Type="int" />
+    <Property Name="ActionAvailable" Type="int" />
+    <Property Name="ActionMethod" Type="varchar" MaxLength="50" />
+    <Property Name="JSActionMethod" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ControlDisplayTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ControlSQLTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataType" Type="varchar" MaxLength="50" />
+    <Property Name="NeedSize" Type="int" />
+    <Property Name="NullValue" Type="varchar" MaxLength="50" />
+    <Property Name="ModelType" Type="varchar" MaxLength="50" />
+    <Property Name="EntityType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ControlTypeActions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionControlDataType" Type="int" />
+    <Property Name="TargetControlDataType" Type="int" />
+    <Property Name="ActionType" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailColumnExclusions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColumnName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailRequirements">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfileID" Type="int" />
+    <Property Name="DetailTypeID" Type="int" />
+    <Property Name="Required" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="ControlType" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayHeading" Type="int" />
+    <Property Name="Heading" Type="varchar(max)" />
+    <Property Name="Subheading" Type="varchar(max)" />
+    <Property Name="DisplayLocation" Type="int" />
+    <Property Name="DisplayType" Type="int" />
+    <Property Name="Enabled" Type="int" />
+    <Property Name="Visible" Type="int" />
+    <Property Name="Required" Type="int" />
+    <Property Name="RequireVerification" Type="int" />
+    <Property Name="CustomValidation" Type="int" />
+    <Property Name="Autopostback" Type="int" />
+    <Property Name="PerformPostbackAction" Type="int" />
+    <Property Name="PostbackActionTarget" Type="int" />
+    <Property Name="PostbackAction" Type="int" />
+    <Property Name="RichValue" Type="int" />
+    <Property Name="Value" Type="varchar(max)" />
+    <Property Name="Placeholder" Type="varchar" MaxLength="500" />
+    <Property Name="TextPosition" Type="varchar" MaxLength="10" />
+    <Property Name="Calendar" Type="int" />
+    <Property Name="MaxLength" Type="int" />
+    <Property Name="MaxFileSize" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Width" Type="int" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatDirection" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatColumns" Type="int" />
+    <Property Name="ListSelections" Type="int" />
+    <Property Name="SelectionMode" Type="varchar" MaxLength="50" />
+    <Property Name="SelectionItems" Type="int" />
+    <Property Name="DataMethod" Type="int" />
+    <Property Name="OtherDataMethod" Type="varchar" MaxLength="500" />
+    <Property Name="IncludePleaseSelect" Type="int" />
+    <Property Name="MinimumValue" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumValue" Type="varchar" MaxLength="100" />
+    <Property Name="DataSource" Type="varchar" MaxLength="500" />
+    <Property Name="DataTextField" Type="varchar" MaxLength="50" />
+    <Property Name="DataValueField" Type="varchar" MaxLength="50" />
+    <Property Name="LayoutType" Type="int" />
+    <Property Name="IncludeDatabase" Type="int" />
+    <Property Name="SQLDataType" Type="int" />
+    <Property Name="SQLDataSize" Type="varchar" MaxLength="10" />
+    <Property Name="RequirementsProfile" Type="int" />
+    <Property Name="TextMode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailTypeCategories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailTypeItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlTypeDetailTypeID" Type="int" />
+    <Property Name="Text" Type="varchar(max)" />
+    <Property Name="Value" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Heading" Type="varchar" MaxLength="100" />
+    <Property Name="Category" Type="int" />
+    <Property Name="HTMLType" Type="varchar" MaxLength="100" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" />
+    <Property Name="Order" Type="int" />
+    <Property Name="ParentTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailValues">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlTypeID" Type="int" />
+    <Property Name="DetailTypeID" Type="int" />
+    <Property Name="Value" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ControlTypeFileTypesAllowed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="FileType" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlTypeItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="Text" Type="varchar" MaxLength="100" />
+    <Property Name="Value" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ControlTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="NonASP" Type="int" />
+    <Property Name="IsParent" Type="int" />
+    <Property Name="Composite" Type="int" />
+    <Property Name="ParentControlTypeID" Type="int" />
+    <Property Name="CustomValidatorRequired" Type="int" />
+    <Property Name="DataType" Type="int" />
+  </EntityType>
+  <EntityType Name="ControlTypeValidators">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Errormessage" Type="varchar" MaxLength="100" />
+    <Property Name="ValidationExpression" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DataMethodTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="MethodContent" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumValueUsed" Type="int" />
+    <Property Name="MaximumValueRequired" Type="int" />
+    <Property Name="MinimumValueUsed" Type="int" />
+    <Property Name="MinimumValueRequired" Type="int" />
+  </EntityType>
+  <EntityType Name="DataSourceParentTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Table" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FileTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Extension" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="LayoutSubtypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LayoutTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LoginColumnTypes">
+    <Key>
+      <PropertyRef Name="IDNumber" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDNumber" Type="int" Nullable="false" />
+    <Property Name="Heading" Type="varchar" MaxLength="100" />
+    <Property Name="ControlName" Type="varchar" MaxLength="100" />
+    <Property Name="ControlType" Type="varchar" MaxLength="10" />
+    <Property Name="Prefix" Type="varchar" MaxLength="10" />
+    <Property Name="Frontend" Type="int" />
+    <Property Name="Order" Type="int" />
+  </EntityType>
+  <EntityType Name="ProhibitedColumnNames">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProjectAdditionalOperations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageID" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="AdditionalOperations" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ProjectAncillaryMaintenance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="AncillaryProjectID" Type="int" />
+    <Property Name="ShortName" Type="varchar" MaxLength="100" />
+    <Property Name="Singleton" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectArchiveMigrations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectBackendAdditionalLinks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="URL" Type="varchar(max)" />
+    <Property Name="DateSubmitted" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProjectBackendExports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="FileType" Type="varchar" MaxLength="10" />
+    <Property Name="DataSourceType" Type="int" />
+    <Property Name="DataSourceID" Type="int" />
+    <Property Name="SQLQuery" Type="varchar(max)" />
+    <Property Name="MessageType" Type="varchar" MaxLength="50" />
+    <Property Name="Template" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ProjectBackendOptionColumns">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OptionID" Type="int" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="Label" Type="varchar" MaxLength="100" />
+    <Property Name="OperatorType" Type="int" />
+    <Property Name="ComparisonValue" Type="varchar(max)" />
+    <Property Name="CustomActionCode" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ProjectBackendOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Label" Type="varchar" MaxLength="100" />
+    <Property Name="SelectionType" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectBuildBackendAncillaryMaintenance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuildID" Type="int" />
+    <Property Name="AncillaryMaintenanceID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectBuildBackendOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuildID" Type="int" />
+    <Property Name="BackendOptionTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectBuildPages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuildID" Type="int" />
+    <Property Name="PageID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectBuilds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Frontend" Type="int" />
+    <Property Name="Backend" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="FormsType" Type="varchar" MaxLength="10" />
+    <Property Name="Style" Type="varchar" MaxLength="10" />
+    <Property Name="DateSubmitted" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProjectColumns">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="TableControlID" Type="int" />
+    <Property Name="ColumnControlID" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="20" />
+    <Property Name="TypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectControlFileTypesAllowed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControlID" Type="int" />
+    <Property Name="FileType" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectControlListItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Text" Type="varchar(max)" />
+    <Property Name="Value" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProjectControlPostbackActions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TriggerControl" Type="int" />
+    <Property Name="TargetControl" Type="int" />
+    <Property Name="Action" Type="int" />
+    <Property Name="UpdateRepeaterItemsSelectionType" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateRepeaterItemsValue" Type="int" />
+    <Property Name="SetValueType" Type="varchar" MaxLength="50" />
+    <Property Name="ExplicitValue" Type="varchar(max)" />
+    <Property Name="ControlValue" Type="int" />
+    <Property Name="SelectionItems" Type="int" />
+    <Property Name="DataSourceID" Type="int" />
+    <Property Name="DataSource" Type="varchar(max)" />
+    <Property Name="DataSourceType" Type="int" />
+    <Property Name="DataSourceSelect" Type="varchar" MaxLength="8000" />
+    <Property Name="DataSourceTable" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceWhere" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceGroupBy" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceOrderBy" Type="varchar" MaxLength="500" />
+    <Property Name="DataTextField" Type="varchar" MaxLength="50" />
+    <Property Name="DataValueField" Type="varchar" MaxLength="50" />
+    <Property Name="DataMethod" Type="int" />
+    <Property Name="OtherDataMethod" Type="varchar" MaxLength="500" />
+    <Property Name="MinimumValue" Type="int" />
+    <Property Name="MaximumValue" Type="int" />
+    <Property Name="IncludePleaseSelect" Type="int" />
+    <Property Name="SelectionMode" Type="varchar" MaxLength="50" />
+    <Property Name="CustomActionCode" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="ProjectControlPostbackActionTriggerValues">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionID" Type="int" />
+    <Property Name="TriggerValue" Type="varchar(max)" />
+    <Property Name="TriggerOperator" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ProjectControls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="PageID" Type="int" />
+    <Property Name="ParentControlID" Type="int" />
+    <Property Name="ControlType" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayHeading" Type="int" />
+    <Property Name="Heading" Type="varchar(max)" />
+    <Property Name="Subheading" Type="varchar(max)" />
+    <Property Name="ShortHeading" Type="varchar" MaxLength="100" />
+    <Property Name="Autopostback" Type="int" />
+    <Property Name="PerformPostbackAction" Type="int" />
+    <Property Name="PostbackActionTarget" Type="int" />
+    <Property Name="PostbackAction" Type="int" />
+    <Property Name="Onchange" Type="int" />
+    <Property Name="OnchangeCall" Type="varchar" MaxLength="500" />
+    <Property Name="OnchangeBody" Type="varchar(max)" />
+    <Property Name="DisplayColumn" Type="int" />
+    <Property Name="DisplayLocation" Type="int" />
+    <Property Name="DisplayType" Type="int" />
+    <Property Name="IncludeDatabase" Type="int" />
+    <Property Name="Enabled" Type="int" />
+    <Property Name="Visible" Type="int" />
+    <Property Name="CustomVisibleValue" Type="varchar(max)" />
+    <Property Name="Required" Type="int" />
+    <Property Name="MinimumRequired" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumRequired" Type="varchar" MaxLength="100" />
+    <Property Name="RequireVerification" Type="int" />
+    <Property Name="CustomValidation" Type="int" />
+    <Property Name="CustomValidationCode" Type="varchar(max)" />
+    <Property Name="Text" Type="varchar(max)" />
+    <Property Name="TextPosition" Type="varchar" MaxLength="10" />
+    <Property Name="Calendar" Type="int" />
+    <Property Name="RichValue" Type="int" />
+    <Property Name="Value" Type="varchar(max)" />
+    <Property Name="Placeholder" Type="varchar" MaxLength="500" />
+    <Property Name="TextMode" Type="varchar" MaxLength="10" />
+    <Property Name="RichTextUser" Type="int" />
+    <Property Name="Rows" Type="int" />
+    <Property Name="Columns" Type="int" />
+    <Property Name="MaxLength" Type="int" />
+    <Property Name="MaxLengthType" Type="varchar" MaxLength="20" />
+    <Property Name="MaxFileSize" Type="int" />
+    <Property Name="UploadPath" Type="varchar" MaxLength="1000" />
+    <Property Name="UploadPathNewFolder" Type="varchar" MaxLength="200" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Width" Type="int" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatDirection" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatColumns" Type="int" />
+    <Property Name="ListSelections" Type="int" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" />
+    <Property Name="SelectionMode" Type="varchar" MaxLength="50" />
+    <Property Name="SelectionItems" Type="int" />
+    <Property Name="IncludePleaseSelect" Type="int" />
+    <Property Name="DataMethod" Type="int" />
+    <Property Name="OtherDataMethod" Type="varchar" MaxLength="500" />
+    <Property Name="MinimumValue" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumValue" Type="varchar" MaxLength="100" />
+    <Property Name="SupplyControlData" Type="int" />
+    <Property Name="SupplyDataType" Type="varchar" MaxLength="20" />
+    <Property Name="DataSourceID" Type="int" />
+    <Property Name="DataSource" Type="varchar(max)" />
+    <Property Name="DataSourceColumn" Type="varchar" MaxLength="100" />
+    <Property Name="DataSourceType" Type="int" />
+    <Property Name="DataSourceSelect" Type="varchar(max)" />
+    <Property Name="DataSourceTable" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceWhere" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceGroupBy" Type="varchar" MaxLength="500" />
+    <Property Name="DataSourceOrderBy" Type="varchar" MaxLength="500" />
+    <Property Name="DataTextField" Type="varchar" MaxLength="50" />
+    <Property Name="DataValueField" Type="varchar" MaxLength="50" />
+    <Property Name="SQLDataType" Type="int" />
+    <Property Name="SQLDataSize" Type="varchar" MaxLength="10" />
+    <Property Name="SQLDefaultValue" Type="varchar" MaxLength="50" />
+    <Property Name="AllowNegativeValue" Type="int" />
+    <Property Name="SQLInsertItemTable" Type="varchar" MaxLength="100" />
+    <Property Name="SQLInsertItemStoredProcedure" Type="varchar" MaxLength="100" />
+    <Property Name="ForeignID" Type="varchar" MaxLength="50" />
+    <Property Name="LayoutType" Type="int" />
+    <Property Name="LayoutSubtype" Type="int" />
+    <Property Name="RepeaterAddRemove" Type="int" />
+    <Property Name="RepeaterItemName" Type="varchar" MaxLength="100" />
+    <Property Name="SubmitterEmail" Type="int" />
+    <Property Name="ProspectCode" Type="varchar" MaxLength="10" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectDataSources">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentType" Type="int" />
+    <Property Name="Source" Type="varchar(max)" />
+    <Property Name="BackendSource" Type="varchar(max)" />
+    <Property Name="Column" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Select" Type="varchar(max)" />
+    <Property Name="Table" Type="varchar(max)" />
+    <Property Name="Where" Type="varchar" MaxLength="500" />
+    <Property Name="GroupBy" Type="varchar" MaxLength="500" />
+    <Property Name="OrderBy" Type="varchar" MaxLength="500" />
+    <Property Name="TextField" Type="varchar" MaxLength="50" />
+    <Property Name="ValueField" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectEmailMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="TypeID" Type="int" />
+    <Property Name="ToAddress" Type="varchar" MaxLength="500" />
+    <Property Name="BCCAddress" Type="varchar" MaxLength="500" />
+    <Property Name="Subject" Type="varchar" MaxLength="1000" />
+    <Property Name="MessageType" Type="varchar" MaxLength="10" />
+    <Property Name="Message" Type="varchar" MaxLength="8000" />
+    <Property Name="Workflow" Type="int" />
+    <Property Name="WorkflowDestination" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectEmailMessageSubmitterControls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageID" Type="int" />
+    <Property Name="ControlID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Value" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectPages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="Purpose" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Dependent" Type="bit" />
+    <Property Name="SelectionControl" Type="int" />
+    <Property Name="SelectionValue" Type="varchar(max)" />
+    <Property Name="Certification" Type="int" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageTitle" Type="varchar" MaxLength="100" />
+    <Property Name="Department" Type="int" />
+    <Property Name="CustomDepartmentName" Type="varchar" MaxLength="100" />
+    <Property Name="RequireLogin" Type="int" />
+    <Property Name="Insert" Type="int" />
+    <Property Name="Archive" Type="int" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="DefaultSort" Type="varchar" MaxLength="20" />
+    <Property Name="Filter" Type="int" />
+    <Property Name="Actions" Type="int" />
+    <Property Name="Printable" Type="int" />
+    <Property Name="Export" Type="int" />
+    <Property Name="ExportType" Type="int" />
+    <Property Name="ExportSQLQuery" Type="varchar" MaxLength="8000" />
+    <Property Name="NumberExports" Type="int" />
+    <Property Name="EmailSupervisor" Type="int" />
+    <Property Name="IncludeFrontend" Type="int" />
+    <Property Name="FrontendLink" Type="varchar" MaxLength="500" />
+    <Property Name="FrontendPath" Type="varchar" MaxLength="8000" />
+    <Property Name="FrontendNewFolder" Type="varchar" MaxLength="100" />
+    <Property Name="MultipleSubmissions" Type="int" />
+    <Property Name="IncludeSectionNumbers" Type="int" />
+    <Property Name="IncludeBackend" Type="int" />
+    <Property Name="BackendLink" Type="varchar" MaxLength="500" />
+    <Property Name="BackendPath" Type="varchar" MaxLength="8000" />
+    <Property Name="BackendNewFolder" Type="varchar" MaxLength="100" />
+    <Property Name="CustomSelectStatement" Type="varchar" MaxLength="8000" />
+    <Property Name="CustomSelectDataSourceID" Type="int" />
+    <Property Name="SearchColumns" Type="int" />
+    <Property Name="Ecommerce" Type="int" />
+    <Property Name="EcommerceProduct" Type="int" />
+    <Property Name="DefaultCharge" Type="varchar" MaxLength="10" />
+    <Property Name="Workflow" Type="int" />
+    <Property Name="WorkflowStep" Type="int" />
+    <Property Name="SQLDatabase" Type="int" />
+    <Property Name="SQLMainTableName" Type="varchar" MaxLength="100" />
+    <Property Name="SQLInsertStoredProcedureName" Type="varchar" MaxLength="100" />
+    <Property Name="SQLUpdateStoredProcedureName" Type="varchar" MaxLength="100" />
+    <Property Name="SQLAdditionalCertificationStatement" Type="varchar(max)" />
+    <Property Name="ConfirmationMessageType" Type="varchar" MaxLength="10" />
+    <Property Name="ConfirmationMessage" Type="varchar(max)" />
+    <Property Name="SubmitterEmail" Type="int" />
+    <Property Name="SubmitterEmailMessage" Type="varchar(max)" />
+    <Property Name="ClosedMessage" Type="varchar(max)" />
+    <Property Name="PageLimit" Type="int" />
+    <Property Name="FrontendDetailsComplete" Type="int" />
+    <Property Name="BackendDetailsComplete" Type="int" />
+    <Property Name="Notes" Type="varchar(max)" />
+    <Property Name="DateSubmitted" Type="datetime" />
+    <Property Name="DateUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProjectSupervisors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="SupervisorType" Type="varchar" MaxLength="50" />
+    <Property Name="SupervisorID" Type="varchar" MaxLength="250" />
+    <Property Name="SupervisorName" Type="varchar" MaxLength="100" />
+    <Property Name="SupervisorEmail" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="SQLDatabases">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServerID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SQLServers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ValidatorTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Prefix" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'WebRAD.dbo.TopLevelProjectControls_v' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TopLevelProjectControls_v">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="PageID" Type="int" />
+    <Property Name="ParentControlID" Type="int" />
+    <Property Name="ControlType" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayHeading" Type="int" />
+    <Property Name="Heading" Type="varchar(max)" />
+    <Property Name="Subheading" Type="varchar(max)" />
+    <Property Name="ShortHeading" Type="varchar" MaxLength="100" />
+    <Property Name="Autopostback" Type="int" />
+    <Property Name="PerformPostbackAction" Type="int" />
+    <Property Name="PostbackActionTarget" Type="int" />
+    <Property Name="PostbackAction" Type="int" />
+    <Property Name="Onchange" Type="int" />
+    <Property Name="OnchangeCall" Type="varchar" MaxLength="500" />
+    <Property Name="OnchangeBody" Type="varchar(max)" />
+    <Property Name="DisplayColumn" Type="int" />
+    <Property Name="DisplayLocation" Type="int" />
+    <Property Name="DisplayType" Type="int" />
+    <Property Name="IncludeDatabase" Type="int" />
+    <Property Name="Enabled" Type="int" />
+    <Property Name="Visible" Type="int" />
+    <Property Name="CustomVisibleValue" Type="varchar(max)" />
+    <Property Name="Required" Type="int" />
+    <Property Name="MinimumRequired" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumRequired" Type="varchar" MaxLength="100" />
+    <Property Name="RequireVerification" Type="int" />
+    <Property Name="CustomValidation" Type="int" />
+    <Property Name="CustomValidationCode" Type="varchar(max)" />
+    <Property Name="Text" Type="varchar(max)" />
+    <Property Name="TextPosition" Type="varchar" MaxLength="10" />
+    <Property Name="Calendar" Type="int" />
+    <Property Name="RichValue" Type="int" />
+    <Property Name="Value" Type="varchar(max)" />
+    <Property Name="Placeholder" Type="varchar" MaxLength="500" />
+    <Property Name="TextMode" Type="varchar" MaxLength="10" />
+    <Property Name="RichTextUser" Type="int" />
+    <Property Name="Rows" Type="int" />
+    <Property Name="Columns" Type="int" />
+    <Property Name="MaxLength" Type="int" />
+    <Property Name="MaxLengthType" Type="varchar" MaxLength="20" />
+    <Property Name="MaxFileSize" Type="int" />
+    <Property Name="UploadPath" Type="varchar" MaxLength="1000" />
+    <Property Name="UploadPathNewFolder" Type="varchar" MaxLength="200" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Width" Type="int" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatDirection" Type="varchar" MaxLength="50" />
+    <Property Name="RepeatColumns" Type="int" />
+    <Property Name="ListSelections" Type="int" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" />
+    <Property Name="SelectionMode" Type="varchar" MaxLength="50" />
+    <Property Name="SelectionItems" Type="int" />
+    <Property Name="IncludePleaseSelect" Type="int" />
+    <Property Name="DataMethod" Type="int" />
+    <Property Name="OtherDataMethod" Type="varchar" MaxLength="500" />
+    <Property Name="MinimumValue" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumValue" Type="varchar" MaxLength="100" />
+    <Property Name="SupplyControlData" Type="int" />
+    <Property Name="SupplyDataType" Type="varchar" MaxLength="20" />
+    <Property Name="DataSourceID" Type="int" />
+    <Property Name="DataSourceColumn" Type="varchar" MaxLength="100" />
+    <Property Name="SQLDataType" Type="int" />
+    <Property Name="SQLDataSize" Type="varchar" MaxLength="10" />
+    <Property Name="SQLDefaultValue" Type="varchar" MaxLength="50" />
+    <Property Name="AllowNegativeValue" Type="int" />
+    <Property Name="SQLInsertItemTable" Type="varchar" MaxLength="100" />
+    <Property Name="SQLInsertItemStoredProcedure" Type="varchar" MaxLength="100" />
+    <Property Name="ForeignID" Type="varchar" MaxLength="50" />
+    <Property Name="LayoutType" Type="int" />
+    <Property Name="LayoutSubtype" Type="int" />
+    <Property Name="RepeaterAddRemove" Type="int" />
+    <Property Name="RepeaterItemName" Type="varchar" MaxLength="100" />
+    <Property Name="SubmitterEmail" Type="int" />
+    <Property Name="Position" Type="int" />
+    <Property Name="ModelType" Type="varchar" MaxLength="50" />
+    <Property Name="EntityType" Type="varchar" MaxLength="50" />
+    <Property Name="ToolkitType" Type="varchar" MaxLength="50" />
+    <Property Name="Prefix" Type="varchar" MaxLength="10" />
+    <Property Name="DataType" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="HTMLType" Type="varchar" MaxLength="100" />
+    <Property Name="DesignerDescription" Type="varchar" MaxLength="100" />
+    <Property Name="DesignerLibrary" Type="varchar" MaxLength="100" />
+    <Property Name="IsListControl" Type="int" />
+    <Property Name="IsCheckControl" Type="int" />
+    <Property Name="LabelOnPrintable" Type="int" />
+    <Property Name="ValueAttribute" Type="varchar" MaxLength="100" />
+    <Property Name="ValidatorMessage" Type="varchar" MaxLength="500" />
+    <Property Name="HTMLAttributes" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK_CompositeControls_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="CompositeControls" Type="Self.CompositeControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CompositeControls">
+        <PropertyRef Name="CompositeControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompositeControls_ControlTypes1">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="CompositeControls" Type="Self.CompositeControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CompositeControls">
+        <PropertyRef Name="IndividualControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlActionTypes">
+    <End Role="ControlActionTypes" Type="Self.ControlActionTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlActionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="ActionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlDataTypes">
+    <End Role="ControlDataTypes" Type="Self.ControlDataTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="ActionControlDataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlDataTypes1">
+    <End Role="ControlDataTypes" Type="Self.ControlDataTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="TargetControlDataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailRequirements_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailRequirements" Type="Self.ControlTypeDetailRequirements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailRequirements">
+        <PropertyRef Name="DetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetails_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetails" Type="Self.ControlTypeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetails">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypeItems" Type="Self.ControlTypeDetailTypeItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypeItems">
+        <PropertyRef Name="ControlTypeDetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories">
+    <End Role="ControlTypeDetailTypeCategories" Type="Self.ControlTypeDetailTypeCategories" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypeCategories">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypes">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypes1" Type="Self.ControlTypeDetailTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypes1">
+        <PropertyRef Name="ParentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailValues_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailValues" Type="Self.ControlTypeDetailValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailValues">
+        <PropertyRef Name="DetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailValues_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailValues" Type="Self.ControlTypeDetailValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailValues">
+        <PropertyRef Name="ControlTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeFileTypesAllowed_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeFileTypesAllowed" Type="Self.ControlTypeFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeFileTypesAllowed">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeItems_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="ControlTypeItems" Type="Self.ControlTypeItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeItems">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypes_ControlDataTypes">
+    <End Role="ControlDataTypes" Type="Self.ControlDataTypes" Multiplicity="0..1" />
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypes">
+        <PropertyRef Name="DataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeValidators_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="1" />
+    <End Role="ControlTypeValidators" Type="Self.ControlTypeValidators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeValidators">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeValidators_ValidatorTypes">
+    <End Role="ValidatorTypes" Type="Self.ValidatorTypes" Multiplicity="1" />
+    <End Role="ControlTypeValidators" Type="Self.ControlTypeValidators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ValidatorTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeValidators">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LayoutSubtypes_LayoutTypes">
+    <End Role="LayoutTypes" Type="Self.LayoutTypes" Multiplicity="0..1" />
+    <End Role="LayoutSubtypes" Type="Self.LayoutSubtypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LayoutTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LayoutSubtypes">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAdditionalOperations_ProjectPages">
+    <End Role="ProjectPages" Type="Self.ProjectPages" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectAdditionalOperations" Type="Self.ProjectAdditionalOperations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectPages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAdditionalOperations">
+        <PropertyRef Name="PageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAncillaryMaintenance_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectAncillaryMaintenance" Type="Self.ProjectAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAncillaryMaintenance">
+        <PropertyRef Name="AncillaryProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAncillaryMaintenance_Projects1">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectAncillaryMaintenance" Type="Self.ProjectAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAncillaryMaintenance">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendAdditionalLinks_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+    <End Role="ProjectBackendAdditionalLinks" Type="Self.ProjectBackendAdditionalLinks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendAdditionalLinks">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendExports_ProjectDataSources">
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSources" Multiplicity="0..1" />
+    <End Role="ProjectBackendExports" Type="Self.ProjectBackendExports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectDataSources">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendExports">
+        <PropertyRef Name="DataSourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendExports_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectBackendExports" Type="Self.ProjectBackendExports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendExports">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptionColumns_ProjectBackendOptions">
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOptions" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptionColumns" Type="Self.ProjectBackendOptionColumns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBackendOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptionColumns">
+        <PropertyRef Name="OptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptionColumns_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptionColumns" Type="Self.ProjectBackendOptionColumns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptionColumns">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptions_BackendOptionTypes">
+    <End Role="BackendOptionTypes" Type="Self.BackendOptionTypes" Multiplicity="0..1" />
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackendOptionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptions">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptions_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildPages_ProjectBuilds">
+    <End Role="ProjectBuilds" Type="Self.ProjectBuilds" Multiplicity="0..1" />
+    <End Role="ProjectBuildPages" Type="Self.ProjectBuildPages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBuilds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildPages">
+        <PropertyRef Name="BuildID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildPages_ProjectPages">
+    <End Role="ProjectPages" Type="Self.ProjectPages" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBuildPages" Type="Self.ProjectBuildPages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectPages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildPages">
+        <PropertyRef Name="PageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuilds_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectBuilds" Type="Self.ProjectBuilds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuilds">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectColumns_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectColumns" Type="Self.ProjectColumns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectColumns">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlFileTypesAllowed_FileTypes">
+    <End Role="FileTypes" Type="Self.FileTypes" Multiplicity="0..1" />
+    <End Role="ProjectControlFileTypesAllowed" Type="Self.ProjectControlFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FileTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlFileTypesAllowed">
+        <PropertyRef Name="FileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlFileTypesAllowed_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlFileTypesAllowed" Type="Self.ProjectControlFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlFileTypesAllowed">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlListItems_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlListItems" Type="Self.ProjectControlListItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlListItems">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActions_ControlActionTypes">
+    <End Role="ControlActionTypes" Type="Self.ControlActionTypes" Multiplicity="0..1" />
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlActionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActions">
+        <PropertyRef Name="Action" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActions_TargetControl">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActions">
+        <PropertyRef Name="TargetControl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions">
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackActions" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlPostbackActionTriggerValues" Type="Self.ProjectControlPostbackActionTriggerValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControlPostbackActions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActionTriggerValues">
+        <PropertyRef Name="ActionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlTypes" Multiplicity="0..1" />
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="ControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ParentControl">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1" />
+    <End Role="ProjectControls1" Type="Self.ProjectControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls1">
+        <PropertyRef Name="ParentControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ProjectDataSources">
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSources" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectDataSources">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="DataSourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_TableControl">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectColumns" Type="Self.ProjectColumns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectColumns">
+        <PropertyRef Name="TableControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectDataSources_DataSourceParentTypes">
+    <End Role="DataSourceParentTypes" Type="Self.DataSourceParentTypes" Multiplicity="0..1" />
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSources" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataSourceParentTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectDataSources">
+        <PropertyRef Name="ParentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessages_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectEmailMessages" Type="Self.ProjectEmailMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessages">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessageSubmitterControls_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControls" Multiplicity="0..1" />
+    <End Role="ProjectEmailMessageSubmitterControls" Type="Self.ProjectEmailMessageSubmitterControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessageSubmitterControls">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages">
+    <End Role="ProjectEmailMessages" Type="Self.ProjectEmailMessages" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectEmailMessageSubmitterControls" Type="Self.ProjectEmailMessageSubmitterControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectEmailMessages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessageSubmitterControls">
+        <PropertyRef Name="MessageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectOptions_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectOptions" Type="Self.ProjectOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectOptions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectPages_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectPages" Type="Self.ProjectPages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectPages">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSupervisors_Projects">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+    <End Role="ProjectSupervisors" Type="Self.ProjectSupervisors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSupervisors">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebRADModelStoreContainer">
+    <EntitySet Name="AdditionalOperationTypes" EntityType="Self.AdditionalOperationTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendActionTypes" EntityType="Self.BackendActionTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendOptionOperatorTypes" EntityType="Self.BackendOptionOperatorTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BackendOptionTypes" EntityType="Self.BackendOptionTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompositeControls" EntityType="Self.CompositeControls" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlActionTypes" EntityType="Self.ControlActionTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlChangeHistory" EntityType="Self.ControlChangeHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlDataTypes" EntityType="Self.ControlDataTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlDisplayTypes" EntityType="Self.ControlDisplayTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlSQLTypes" EntityType="Self.ControlSQLTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeActions" EntityType="Self.ControlTypeActions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailColumnExclusions" EntityType="Self.ControlTypeDetailColumnExclusions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailRequirements" EntityType="Self.ControlTypeDetailRequirements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetails" EntityType="Self.ControlTypeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailTypeCategories" EntityType="Self.ControlTypeDetailTypeCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailTypeItems" EntityType="Self.ControlTypeDetailTypeItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailTypes" EntityType="Self.ControlTypeDetailTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeDetailValues" EntityType="Self.ControlTypeDetailValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeFileTypesAllowed" EntityType="Self.ControlTypeFileTypesAllowed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeItems" EntityType="Self.ControlTypeItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypes" EntityType="Self.ControlTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControlTypeValidators" EntityType="Self.ControlTypeValidators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataMethodTypes" EntityType="Self.DataMethodTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataSourceParentTypes" EntityType="Self.DataSourceParentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileTypes" EntityType="Self.FileTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LayoutSubtypes" EntityType="Self.LayoutSubtypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LayoutTypes" EntityType="Self.LayoutTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginColumnTypes" EntityType="Self.LoginColumnTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProhibitedColumnNames" EntityType="Self.ProhibitedColumnNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectAdditionalOperations" EntityType="Self.ProjectAdditionalOperations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectAncillaryMaintenance" EntityType="Self.ProjectAncillaryMaintenance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectArchiveMigrations" EntityType="Self.ProjectArchiveMigrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBackendAdditionalLinks" EntityType="Self.ProjectBackendAdditionalLinks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBackendExports" EntityType="Self.ProjectBackendExports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBackendOptionColumns" EntityType="Self.ProjectBackendOptionColumns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBackendOptions" EntityType="Self.ProjectBackendOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBuildBackendAncillaryMaintenance" EntityType="Self.ProjectBuildBackendAncillaryMaintenance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBuildBackendOptions" EntityType="Self.ProjectBuildBackendOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBuildPages" EntityType="Self.ProjectBuildPages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectBuilds" EntityType="Self.ProjectBuilds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectColumns" EntityType="Self.ProjectColumns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectControlFileTypesAllowed" EntityType="Self.ProjectControlFileTypesAllowed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectControlListItems" EntityType="Self.ProjectControlListItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectControlPostbackActions" EntityType="Self.ProjectControlPostbackActions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectControlPostbackActionTriggerValues" EntityType="Self.ProjectControlPostbackActionTriggerValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectControls" EntityType="Self.ProjectControls" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectDataSources" EntityType="Self.ProjectDataSources" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectEmailMessages" EntityType="Self.ProjectEmailMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectEmailMessageSubmitterControls" EntityType="Self.ProjectEmailMessageSubmitterControls" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectOptions" EntityType="Self.ProjectOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectPages" EntityType="Self.ProjectPages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectSupervisors" EntityType="Self.ProjectSupervisors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SQLDatabases" EntityType="Self.SQLDatabases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SQLServers" EntityType="Self.SQLServers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ValidatorTypes" EntityType="Self.ValidatorTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TopLevelProjectControls_v" EntityType="Self.TopLevelProjectControls_v" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TopLevelProjectControls_v].[ID] AS [ID], 
+    [TopLevelProjectControls_v].[ProjectID] AS [ProjectID], 
+    [TopLevelProjectControls_v].[PageID] AS [PageID], 
+    [TopLevelProjectControls_v].[ParentControlID] AS [ParentControlID], 
+    [TopLevelProjectControls_v].[ControlType] AS [ControlType], 
+    [TopLevelProjectControls_v].[Name] AS [Name], 
+    [TopLevelProjectControls_v].[DisplayHeading] AS [DisplayHeading], 
+    [TopLevelProjectControls_v].[Heading] AS [Heading], 
+    [TopLevelProjectControls_v].[Subheading] AS [Subheading], 
+    [TopLevelProjectControls_v].[ShortHeading] AS [ShortHeading], 
+    [TopLevelProjectControls_v].[Autopostback] AS [Autopostback], 
+    [TopLevelProjectControls_v].[PerformPostbackAction] AS [PerformPostbackAction], 
+    [TopLevelProjectControls_v].[PostbackActionTarget] AS [PostbackActionTarget], 
+    [TopLevelProjectControls_v].[PostbackAction] AS [PostbackAction], 
+    [TopLevelProjectControls_v].[Onchange] AS [Onchange], 
+    [TopLevelProjectControls_v].[OnchangeCall] AS [OnchangeCall], 
+    [TopLevelProjectControls_v].[OnchangeBody] AS [OnchangeBody], 
+    [TopLevelProjectControls_v].[DisplayColumn] AS [DisplayColumn], 
+    [TopLevelProjectControls_v].[DisplayLocation] AS [DisplayLocation], 
+    [TopLevelProjectControls_v].[DisplayType] AS [DisplayType], 
+    [TopLevelProjectControls_v].[IncludeDatabase] AS [IncludeDatabase], 
+    [TopLevelProjectControls_v].[Enabled] AS [Enabled], 
+    [TopLevelProjectControls_v].[Visible] AS [Visible], 
+    [TopLevelProjectControls_v].[CustomVisibleValue] AS [CustomVisibleValue], 
+    [TopLevelProjectControls_v].[Required] AS [Required], 
+    [TopLevelProjectControls_v].[MinimumRequired] AS [MinimumRequired], 
+    [TopLevelProjectControls_v].[MaximumRequired] AS [MaximumRequired], 
+    [TopLevelProjectControls_v].[RequireVerification] AS [RequireVerification], 
+    [TopLevelProjectControls_v].[CustomValidation] AS [CustomValidation], 
+    [TopLevelProjectControls_v].[CustomValidationCode] AS [CustomValidationCode], 
+    [TopLevelProjectControls_v].[Text] AS [Text], 
+    [TopLevelProjectControls_v].[TextPosition] AS [TextPosition], 
+    [TopLevelProjectControls_v].[Calendar] AS [Calendar], 
+    [TopLevelProjectControls_v].[RichValue] AS [RichValue], 
+    [TopLevelProjectControls_v].[Value] AS [Value], 
+    [TopLevelProjectControls_v].[Placeholder] AS [Placeholder], 
+    [TopLevelProjectControls_v].[TextMode] AS [TextMode], 
+    [TopLevelProjectControls_v].[RichTextUser] AS [RichTextUser], 
+    [TopLevelProjectControls_v].[Rows] AS [Rows], 
+    [TopLevelProjectControls_v].[Columns] AS [Columns], 
+    [TopLevelProjectControls_v].[MaxLength] AS [MaxLength], 
+    [TopLevelProjectControls_v].[MaxLengthType] AS [MaxLengthType], 
+    [TopLevelProjectControls_v].[MaxFileSize] AS [MaxFileSize], 
+    [TopLevelProjectControls_v].[UploadPath] AS [UploadPath], 
+    [TopLevelProjectControls_v].[UploadPathNewFolder] AS [UploadPathNewFolder], 
+    [TopLevelProjectControls_v].[Height] AS [Height], 
+    [TopLevelProjectControls_v].[Width] AS [Width], 
+    [TopLevelProjectControls_v].[CssClass] AS [CssClass], 
+    [TopLevelProjectControls_v].[RepeatDirection] AS [RepeatDirection], 
+    [TopLevelProjectControls_v].[RepeatColumns] AS [RepeatColumns], 
+    [TopLevelProjectControls_v].[ListSelections] AS [ListSelections], 
+    [TopLevelProjectControls_v].[GroupName] AS [GroupName], 
+    [TopLevelProjectControls_v].[SelectionMode] AS [SelectionMode], 
+    [TopLevelProjectControls_v].[SelectionItems] AS [SelectionItems], 
+    [TopLevelProjectControls_v].[IncludePleaseSelect] AS [IncludePleaseSelect], 
+    [TopLevelProjectControls_v].[DataMethod] AS [DataMethod], 
+    [TopLevelProjectControls_v].[OtherDataMethod] AS [OtherDataMethod], 
+    [TopLevelProjectControls_v].[MinimumValue] AS [MinimumValue], 
+    [TopLevelProjectControls_v].[MaximumValue] AS [MaximumValue], 
+    [TopLevelProjectControls_v].[SupplyControlData] AS [SupplyControlData], 
+    [TopLevelProjectControls_v].[SupplyDataType] AS [SupplyDataType], 
+    [TopLevelProjectControls_v].[DataSourceID] AS [DataSourceID], 
+    [TopLevelProjectControls_v].[DataSourceColumn] AS [DataSourceColumn], 
+    [TopLevelProjectControls_v].[SQLDataType] AS [SQLDataType], 
+    [TopLevelProjectControls_v].[SQLDataSize] AS [SQLDataSize], 
+    [TopLevelProjectControls_v].[SQLDefaultValue] AS [SQLDefaultValue], 
+    [TopLevelProjectControls_v].[AllowNegativeValue] AS [AllowNegativeValue], 
+    [TopLevelProjectControls_v].[SQLInsertItemTable] AS [SQLInsertItemTable], 
+    [TopLevelProjectControls_v].[SQLInsertItemStoredProcedure] AS [SQLInsertItemStoredProcedure], 
+    [TopLevelProjectControls_v].[ForeignID] AS [ForeignID], 
+    [TopLevelProjectControls_v].[LayoutType] AS [LayoutType], 
+    [TopLevelProjectControls_v].[LayoutSubtype] AS [LayoutSubtype], 
+    [TopLevelProjectControls_v].[RepeaterAddRemove] AS [RepeaterAddRemove], 
+    [TopLevelProjectControls_v].[RepeaterItemName] AS [RepeaterItemName], 
+    [TopLevelProjectControls_v].[SubmitterEmail] AS [SubmitterEmail], 
+    [TopLevelProjectControls_v].[Position] AS [Position], 
+    [TopLevelProjectControls_v].[ModelType] AS [ModelType], 
+    [TopLevelProjectControls_v].[EntityType] AS [EntityType], 
+    [TopLevelProjectControls_v].[ToolkitType] AS [ToolkitType], 
+    [TopLevelProjectControls_v].[Prefix] AS [Prefix], 
+    [TopLevelProjectControls_v].[DataType] AS [DataType], 
+    [TopLevelProjectControls_v].[Description] AS [Description], 
+    [TopLevelProjectControls_v].[HTMLType] AS [HTMLType], 
+    [TopLevelProjectControls_v].[DesignerDescription] AS [DesignerDescription], 
+    [TopLevelProjectControls_v].[DesignerLibrary] AS [DesignerLibrary], 
+    [TopLevelProjectControls_v].[IsListControl] AS [IsListControl], 
+    [TopLevelProjectControls_v].[IsCheckControl] AS [IsCheckControl], 
+    [TopLevelProjectControls_v].[LabelOnPrintable] AS [LabelOnPrintable], 
+    [TopLevelProjectControls_v].[ValueAttribute] AS [ValueAttribute], 
+    [TopLevelProjectControls_v].[ValidatorMessage] AS [ValidatorMessage], 
+    [TopLevelProjectControls_v].[HTMLAttributes] AS [HTMLAttributes]
+    FROM [dbo].[TopLevelProjectControls_v] AS [TopLevelProjectControls_v]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CompositeControls_ControlTypes" Association="Self.FK_CompositeControls_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="CompositeControls" EntitySet="CompositeControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompositeControls_ControlTypes1" Association="Self.FK_CompositeControls_ControlTypes1">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="CompositeControls" EntitySet="CompositeControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlActionTypes" Association="Self.FK_ControlTypeActions_ControlActionTypes">
+      <End Role="ControlActionTypes" EntitySet="ControlActionTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlDataTypes" Association="Self.FK_ControlTypeActions_ControlDataTypes">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlDataTypes1" Association="Self.FK_ControlTypeActions_ControlDataTypes1">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailRequirements_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailRequirements_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailRequirements" EntitySet="ControlTypeDetailRequirements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetails_ControlTypes" Association="Self.FK_ControlTypeDetails_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeDetails" EntitySet="ControlTypeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailTypeItems" EntitySet="ControlTypeDetailTypeItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories" Association="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories">
+      <End Role="ControlTypeDetailTypeCategories" EntitySet="ControlTypeDetailTypeCategories" />
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailTypes1" EntitySet="ControlTypeDetailTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailValues_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailValues_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailValues" EntitySet="ControlTypeDetailValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailValues_ControlTypes" Association="Self.FK_ControlTypeDetailValues_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeDetailValues" EntitySet="ControlTypeDetailValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeFileTypesAllowed_ControlTypes" Association="Self.FK_ControlTypeFileTypesAllowed_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeFileTypesAllowed" EntitySet="ControlTypeFileTypesAllowed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeItems_ControlTypes" Association="Self.FK_ControlTypeItems_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeItems" EntitySet="ControlTypeItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypes_ControlDataTypes" Association="Self.FK_ControlTypes_ControlDataTypes">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeValidators_ControlTypes" Association="Self.FK_ControlTypeValidators_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeValidators" EntitySet="ControlTypeValidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeValidators_ValidatorTypes" Association="Self.FK_ControlTypeValidators_ValidatorTypes">
+      <End Role="ValidatorTypes" EntitySet="ValidatorTypes" />
+      <End Role="ControlTypeValidators" EntitySet="ControlTypeValidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LayoutSubtypes_LayoutTypes" Association="Self.FK_LayoutSubtypes_LayoutTypes">
+      <End Role="LayoutTypes" EntitySet="LayoutTypes" />
+      <End Role="LayoutSubtypes" EntitySet="LayoutSubtypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAdditionalOperations_ProjectPages" Association="Self.FK_ProjectAdditionalOperations_ProjectPages">
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+      <End Role="ProjectAdditionalOperations" EntitySet="ProjectAdditionalOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAncillaryMaintenance_Projects" Association="Self.FK_ProjectAncillaryMaintenance_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectAncillaryMaintenance" EntitySet="ProjectAncillaryMaintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAncillaryMaintenance_Projects1" Association="Self.FK_ProjectAncillaryMaintenance_Projects1">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectAncillaryMaintenance" EntitySet="ProjectAncillaryMaintenance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendAdditionalLinks_Projects" Association="Self.FK_ProjectBackendAdditionalLinks_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendAdditionalLinks" EntitySet="ProjectBackendAdditionalLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendExports_ProjectDataSources" Association="Self.FK_ProjectBackendExports_ProjectDataSources">
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+      <End Role="ProjectBackendExports" EntitySet="ProjectBackendExports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendExports_Projects" Association="Self.FK_ProjectBackendExports_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendExports" EntitySet="ProjectBackendExports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptionColumns_ProjectBackendOptions" Association="Self.FK_ProjectBackendOptionColumns_ProjectBackendOptions">
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+      <End Role="ProjectBackendOptionColumns" EntitySet="ProjectBackendOptionColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptionColumns_ProjectControls" Association="Self.FK_ProjectBackendOptionColumns_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectBackendOptionColumns" EntitySet="ProjectBackendOptionColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptions_BackendOptionTypes" Association="Self.FK_ProjectBackendOptions_BackendOptionTypes">
+      <End Role="BackendOptionTypes" EntitySet="BackendOptionTypes" />
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptions_Projects" Association="Self.FK_ProjectBackendOptions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildPages_ProjectBuilds" Association="Self.FK_ProjectBuildPages_ProjectBuilds">
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+      <End Role="ProjectBuildPages" EntitySet="ProjectBuildPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildPages_ProjectPages" Association="Self.FK_ProjectBuildPages_ProjectPages">
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+      <End Role="ProjectBuildPages" EntitySet="ProjectBuildPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuilds_Projects" Association="Self.FK_ProjectBuilds_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectColumns_Projects" Association="Self.FK_ProjectColumns_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectColumns" EntitySet="ProjectColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlFileTypesAllowed_FileTypes" Association="Self.FK_ProjectControlFileTypesAllowed_FileTypes">
+      <End Role="FileTypes" EntitySet="FileTypes" />
+      <End Role="ProjectControlFileTypesAllowed" EntitySet="ProjectControlFileTypesAllowed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlFileTypesAllowed_ProjectControls" Association="Self.FK_ProjectControlFileTypesAllowed_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlFileTypesAllowed" EntitySet="ProjectControlFileTypesAllowed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlListItems_ProjectControls" Association="Self.FK_ProjectControlListItems_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlListItems" EntitySet="ProjectControlListItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActions_ControlActionTypes" Association="Self.FK_ProjectControlPostbackActions_ControlActionTypes">
+      <End Role="ControlActionTypes" EntitySet="ControlActionTypes" />
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActions_TargetControl" Association="Self.FK_ProjectControlPostbackActions_TargetControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions" Association="Self.FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions">
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+      <End Role="ProjectControlPostbackActionTriggerValues" EntitySet="ProjectControlPostbackActionTriggerValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ControlTypes" Association="Self.FK_ProjectControls_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ParentControl" Association="Self.FK_ProjectControls_ParentControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControls1" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ProjectDataSources" Association="Self.FK_ProjectControls_ProjectDataSources">
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_Projects" Association="Self.FK_ProjectControls_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_TableControl" Association="Self.FK_ProjectControls_TableControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectColumns" EntitySet="ProjectColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectDataSources_DataSourceParentTypes" Association="Self.FK_ProjectDataSources_DataSourceParentTypes">
+      <End Role="DataSourceParentTypes" EntitySet="DataSourceParentTypes" />
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessages_Projects" Association="Self.FK_ProjectEmailMessages_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectEmailMessages" EntitySet="ProjectEmailMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessageSubmitterControls_ProjectControls" Association="Self.FK_ProjectEmailMessageSubmitterControls_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectEmailMessageSubmitterControls" EntitySet="ProjectEmailMessageSubmitterControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages" Association="Self.FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages">
+      <End Role="ProjectEmailMessages" EntitySet="ProjectEmailMessages" />
+      <End Role="ProjectEmailMessageSubmitterControls" EntitySet="ProjectEmailMessageSubmitterControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectOptions_Projects" Association="Self.FK_ProjectOptions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectOptions" EntitySet="ProjectOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectPages_Projects" Association="Self.FK_ProjectPages_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSupervisors_Projects" Association="Self.FK_ProjectSupervisors_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectSupervisors" EntitySet="ProjectSupervisors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

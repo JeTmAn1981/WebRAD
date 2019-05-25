@@ -1,0 +1,21 @@
+
+		<!-- Page Main START -->
+		<dl>
+			<ul class="unstyled-list-inline">
+		%(Navigation)%
+		</ul>
+<br />
+                    %(BodyContent)%
+                    <br /><br />
+
+            
+					
+            <div align="center">
+            <asp:Button ID="btnUpdate" runat="server" CssClass="button" Text="Update" />
+            </div>
+            <div align="center">
+            <asp:ValidationSummary ID="vsSubmit" cssclass="Error85" runat="server" />
+            </div>
+		</dl>
+		<!-- Page Main END -->
+	

@@ -1,0 +1,19 @@
+		<!-- Page Main START -->
+		<style>
+    .report-item
+    {
+        float:left;
+        margin:10px;
+    }
+</style>	
+
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+		<!-- Page Main START -->
+		<div class="form-maintenance">
+		<ul class="unstyled-list-inline maintenance-items">
+		%(Navigation)%
+		</ul>
+
+		%(MainContent)%
+</div>
+		

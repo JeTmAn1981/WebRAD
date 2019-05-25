@@ -1,0 +1,43 @@
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+<!-- #include file="\\web1\~whitworth\forms\forms-templates\template-update-panel-progress-indicator.htm" -->
+<asp:UpdatePanel ID="MainUpdatePanel" runat="server">
+            <ContentTemplate>
+<div style="text-align:center">
+<asp:ValidationSummary ID="ValidationSummaryTop%(SubmitType)%" cssclass="error" runat="server" />
+</div>
+		%(BodyContent)%
+<asp:Panel id="pnlTotalOwed" runat="server">
+		<asp:label id="lblTotalHeader" runat="server" AssociatedControlID="lblTotalOwed">Total:</asp:label>
+			<asp:label id="lblTotalOwed" text="%(DefaultCharge)%" runat="server" />
+			</asp:Panel>
+					</ContentTemplate>
+</asp:UpdatePanel>
+                    <br /><br />
+            <div style="text-align:center">
+			<span id="SubmittingText" class="loading" style="display:none" ><strong>SUBMITTING</strong></span>
+           	<asp:button id="btnContinue" runat="server"  OnClientClick="HideSubmitButton(this)" causesvalidation="False" text="Continue" cssclass="button"></asp:button></asp:panel>
+	    </div>
+
+
+		<asp:label id="lblUSBbillerPayorId" runat="server" visible="False"></asp:label>
+		<asp:label id="lblInvoicetype" runat="server" visible="False">%(InvoiceType)%</asp:label>
+		<asp:label id="lblUSBproductCode" runat="server" visible="False">transactions</asp:label>
+		<asp:label id="lblUSBamountdue" runat="server" visible="False">0</asp:label>
+		<asp:label id="lblUSBdatesubmitted" runat="server" visible="False"></asp:label>
+		<asp:label id="lblUSBtransactionkey" runat="server" visible="False"></asp:label>
+		<asp:label id="lblUSBproductname" runat="server" visible="False">%(ProductName)%</asp:label>
+		<asp:label id="lblUSBbillerID" runat="server" visible="False">WW1</asp:label>
+		<asp:label id="lblUSBbillergroupID" runat="server" visible="False">WWC</asp:label>
+		<asp:label id="lblUSBdisallowLogin" runat="server" visible="False">Y</asp:label>
+		<asp:label id="lblUSBcategory" runat="server" visible="False"></asp:label>
+	
+
+  <div style="text-align:center">
+            <asp:ValidationSummary ID="ValidationSummaryBottom%(SubmitType)%" cssclass="error" runat="server" />
+            </div>
+	
+			<script>
+        %(JavascriptActions)%
+		</script>
+		<!-- Page Main END -->
+	

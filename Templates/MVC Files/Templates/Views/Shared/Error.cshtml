@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <title>%(ProjectTitle)% | Whitworth University</title>
+    @Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_head.htm")))
+</head>
+<body class="body">
+    @Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_body_01.htm")))
+    %(Department)%
+    @Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_body_02.htm")))
+    
+    @Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_body_03.htm")))
+    %(ProjectTitle)%
+    @Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_body_04.htm")))
+    
+    <!-- Form Start -->
+        <hgroup>
+        <h1>Error.</h1>
+        <h2>An error occurred while processing your request.</h2>
+    </hgroup>
+    <!-- Form End -->
+@Html.Raw(File.ReadAllText(Server.MapPath("/Forms/FormsTemplates/template_body_footer.htm")))
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

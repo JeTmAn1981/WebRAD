@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CommunicationsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ARA_Assignments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RuleID" Type="Int32" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="PLID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ARA_Departments" Relationship="Self.FK_ARA_Assignments_ARA_Departments" FromRole="ARA_Assignments" ToRole="ARA_Departments" />
+    <NavigationProperty Name="ARA_Rules" Relationship="Self.FK_ARA_Assignments_ARA_Rules" FromRole="ARA_Assignments" ToRole="ARA_Rules" />
+  </EntityType>
+  <EntityType Name="ARA_CabinetDepartments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CabinetMemberID" Type="Int32" />
+    <Property Name="DepID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_CabinetList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <Property Name="LastModified" Type="DateTime" Precision="3" />
+    <Property Name="KeyRequestApproverPLID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_Department_BreadcrumbLinks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="LinkName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LinkURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_Departments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="MailStop" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HomePageURL" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HomePageURL2" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Int32" />
+    <Property Name="DepSearch" Type="Int32" />
+    <Property Name="RedirectTo" Type="Int32" />
+    <Property Name="PortalDepartment" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CopyJobTicket" Type="Int32" />
+    <NavigationProperty Name="ARA_Assignments" Relationship="Self.FK_ARA_Assignments_ARA_Departments" FromRole="ARA_Departments" ToRole="ARA_Assignments" />
+    <NavigationProperty Name="ARA_Departments_Locations" Relationship="Self.FK_ARA_Departments_Locations_ARA_Departments" FromRole="ARA_Departments" ToRole="ARA_Departments_Locations" />
+  </EntityType>
+  <EntityType Name="ARA_Departments_Locations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="BuildingID" Type="Int32" />
+    <NavigationProperty Name="ARA_Departments" Relationship="Self.FK_ARA_Departments_Locations_ARA_Departments" FromRole="ARA_Departments_Locations" ToRole="ARA_Departments" />
+  </EntityType>
+  <EntityType Name="ARA_DepartmentTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_DepChairList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="AssistantPLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant2PLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_DepChairList_SubDepartments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="ParentDepID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_DepDirectorsDeansList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="AssistantPLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant2PLID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DirectorType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_DepDirectorsDeansList_SubDepartments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="ParentDepID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_DepDirectorsDeansList_Types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_MajorCategories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DepID" Type="Int32" />
+    <Property Name="Active" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_Majors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Major" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="FreshmanProgram" Type="Int32" />
+    <Property Name="DatawarehouseDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_Rules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="ShortDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastModified" Type="DateTime" Precision="3" />
+    <Property Name="SubmittedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ARA_Assignments" Relationship="Self.FK_ARA_Assignments_ARA_Rules" FromRole="ARA_Rules" ToRole="ARA_Assignments" />
+  </EntityType>
+  <EntityType Name="ARA_RuleTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ARA_Schools">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="305" FixedLength="false" Unicode="false" />
+    <Property Name="School" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="AddressLine1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CEEB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Local" Type="Int32" />
+    <Property Name="RedirectTo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_StatesProvinces">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Abbreviation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_VPDepartments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VPID" Type="Int32" />
+    <Property Name="DepID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ARA_VPList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PLID" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <Property Name="LastModified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_ARA_Assignments_ARA_Departments">
+    <End Role="ARA_Departments" Type="Self.ARA_Departments" Multiplicity="0..1" />
+    <End Role="ARA_Assignments" Type="Self.ARA_Assignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ARA_Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ARA_Assignments">
+        <PropertyRef Name="DepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARA_Assignments_ARA_Rules">
+    <End Role="ARA_Rules" Type="Self.ARA_Rules" Multiplicity="0..1" />
+    <End Role="ARA_Assignments" Type="Self.ARA_Assignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ARA_Rules">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ARA_Assignments">
+        <PropertyRef Name="RuleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARA_Departments_Locations_ARA_Departments">
+    <End Role="ARA_Departments" Type="Self.ARA_Departments" Multiplicity="0..1" />
+    <End Role="ARA_Departments_Locations" Type="Self.ARA_Departments_Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ARA_Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ARA_Departments_Locations">
+        <PropertyRef Name="DepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CommunicationsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ARA_Assignments" EntityType="Self.ARA_Assignments" />
+    <EntitySet Name="ARA_CabinetDepartments" EntityType="Self.ARA_CabinetDepartments" />
+    <EntitySet Name="ARA_CabinetList" EntityType="Self.ARA_CabinetList" />
+    <EntitySet Name="ARA_Department_BreadcrumbLinks" EntityType="Self.ARA_Department_BreadcrumbLinks" />
+    <EntitySet Name="ARA_Departments" EntityType="Self.ARA_Departments" />
+    <EntitySet Name="ARA_Departments_Locations" EntityType="Self.ARA_Departments_Locations" />
+    <EntitySet Name="ARA_DepartmentTypes" EntityType="Self.ARA_DepartmentTypes" />
+    <EntitySet Name="ARA_DepChairList" EntityType="Self.ARA_DepChairList" />
+    <EntitySet Name="ARA_DepChairList_SubDepartments" EntityType="Self.ARA_DepChairList_SubDepartments" />
+    <EntitySet Name="ARA_DepDirectorsDeansList" EntityType="Self.ARA_DepDirectorsDeansList" />
+    <EntitySet Name="ARA_DepDirectorsDeansList_SubDepartments" EntityType="Self.ARA_DepDirectorsDeansList_SubDepartments" />
+    <EntitySet Name="ARA_DepDirectorsDeansList_Types" EntityType="Self.ARA_DepDirectorsDeansList_Types" />
+    <EntitySet Name="ARA_MajorCategories" EntityType="Self.ARA_MajorCategories" />
+    <EntitySet Name="ARA_Majors" EntityType="Self.ARA_Majors" />
+    <EntitySet Name="ARA_Rules" EntityType="Self.ARA_Rules" />
+    <EntitySet Name="ARA_RuleTypes" EntityType="Self.ARA_RuleTypes" />
+    <EntitySet Name="ARA_Schools" EntityType="Self.ARA_Schools" />
+    <EntitySet Name="ARA_StatesProvinces" EntityType="Self.ARA_StatesProvinces" />
+    <EntitySet Name="ARA_VPDepartments" EntityType="Self.ARA_VPDepartments" />
+    <EntitySet Name="ARA_VPList" EntityType="Self.ARA_VPList" />
+    <AssociationSet Name="FK_ARA_Assignments_ARA_Departments" Association="Self.FK_ARA_Assignments_ARA_Departments">
+      <End Role="ARA_Departments" EntitySet="ARA_Departments" />
+      <End Role="ARA_Assignments" EntitySet="ARA_Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARA_Assignments_ARA_Rules" Association="Self.FK_ARA_Assignments_ARA_Rules">
+      <End Role="ARA_Rules" EntitySet="ARA_Rules" />
+      <End Role="ARA_Assignments" EntitySet="ARA_Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARA_Departments_Locations_ARA_Departments" Association="Self.FK_ARA_Departments_Locations_ARA_Departments">
+      <End Role="ARA_Departments" EntitySet="ARA_Departments" />
+      <End Role="ARA_Departments_Locations" EntitySet="ARA_Departments_Locations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

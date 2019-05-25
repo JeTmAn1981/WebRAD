@@ -1,0 +1,135 @@
+		<!-- Page Main START -->
+
+<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+<ul class="unstyled-list-inline maintenance-items">
+		%(Navigation)%
+		</ul>
+
+<asp:panel id="pnlSearchTerms" runat="server">
+<div style="text-align:center">
+<asp:button id="btnSearch2" runat="server" OnClick="btnSearch_Click" text="Search" cssclass="button"></asp:button>
+</div>
+
+   %(BodyContent)%
+
+                <br /><br />
+
+<div style="text-align:center">
+<asp:button id="btnSearch" runat="server" OnClick="btnSearch_Click" text="Search" cssclass="button"></asp:button>
+</div>
+
+<p>
+<asp:validationsummary id="vsSearch" runat="server" />
+</p>
+</asp:panel>
+
+
+<asp:panel id="pnlSearchResults" runat="server" visible="false">
+   <div style="text-align:center">
+
+		<asp:button id="btnNewSearch" runat="server" OnClick="btnNewSearch_Click" text="New Search" cssclass="button"></asp:button>
+</div>
+<br /><br />
+<div class="form-maintenance">
+
+<ul class="unstyled-list-inline" id="ListOptions">
+      <li>
+        <!-- Select -->
+        <label for="toggleSelected">Select:</label>
+		<select id="toggleSelected" onchange="toggleActionSelections(this)">
+		<option value=""></option>
+		<option value="All">All</option>
+		<option value="None">None</option>
+		</select>
+        
+      </li>
+	<li>
+        <!-- Action -->
+        <asp:Label id="lblActions" runat="server" AssociatedControlID="ddlActions">Action:</asp:Label>
+        <asp:dropdownlist id="ddlActions" autopostback="True" runat="server">
+          <asp:listitem value=""></asp:listitem>
+		  %(ActionItems)%
+          <asp:listitem value="Delete">Delete Selected Items</asp:listitem>
+        </asp:dropdownlist>
+        <!-- Delete Button - No HTML when invisible -->
+        <asp:panel id="pnlDelete" runat="server" visible="False">
+            <asp:button id="btnDelete" runat="server" CssClass="button" text="Confirm Delete"></asp:button>
+        </asp:panel>
+      </li>
+	
+				%(SortControl)% 
+				%(FilterControl)% 
+	  
+
+
+    </ul>
+	
+	
+</div>
+		
+<div class="form-group full-width">
+	<p>
+	<asp:Label runat="server" ID="lblRecordsTotal"></asp:Label>
+	</p>
+
+      <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack" id="Submissions">
+        <thead>
+          <tr>
+            <th></th>
+			%(DisplayColumns)%
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <asp:Repeater ID="rptSubmissions" runat="server">
+            <ItemTemplate>
+              <tr>
+                <td align="center" valign="top"><a class="button" id="EditButton" target='_blank'  href='<%# Container.DataItem("UpdateLocation") & "%(AncillaryReference)%.aspx?ID=" & container.dataitem("ID") %>' onclick="saveSearchListPosition(this);" runat="server"> Edit</a></td>
+				%(DataColumns)%
+				<td align="center" valign="top">
+					<asp:checkbox id="chkAction" runat="server" />
+					<asp:Label ID="lblAll" runat="server" AssociatedControlID="chkAction" />
+					<asp:label id="lblID" runat="server" visible="False" text='<%# Container.dataitem("ID") %>' />
+				</td>
+              </tr>
+            </ItemTemplate>
+          </asp:Repeater>
+        </tbody>
+      </table>
+
+    </div>
+
+	    <hr>
+
+<p>
+    <asp:Label ID="lblPageNumbers" runat="server"></asp:Label>
+	</p>
+
+
+		
+		<asp:panel id="pnlNoResults" runat="server">
+		<br /><br />
+			<div class="bordered">
+			Sorry, no results were found.  Please try a new search.
+			</div>
+		<br /><br />
+		</asp:panel>
+		<br /><br />
+   <div style="text-align:center">
+
+		<asp:button id="btnNewSearch2" runat="server" OnClick="btnNewSearch_Click" text="New Search" cssclass="button"></asp:button>
+</div>
+</asp:panel>
+
+<div class="loading" id="LoadingScreen" align="center">
+    <img src="//www.whitworth.edu/~images/circleloadinganimation.gif" alt="" />
+</div>
+<script>
+    $("input[id*='btnNewSearch']").click(function (btn) { removeSearchListPosition(); });
+    $('#LoadingScreen').dialog({ autoOpen: false});
+    $('input[id*="btnSearch"]').click(function () {
+            $('#LoadingScreen').dialog("open");
+        });
+    </script>  
+		
+		<!-- Page Main END -->

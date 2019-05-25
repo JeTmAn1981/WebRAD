@@ -1,0 +1,118 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+	%(CheckScheduleCall)%
+    
+        If Not Page.IsPostBack Then
+		Page.Form.Attributes.Add("enctype", "multipart/form-data")
+		%(RunAOPageBeforeLoadCall)%
+		%(CheckSectionAllowed)%
+		LoadFormText()
+	    LoadInitialEcommerceData(lblUSBDateSubmitted)
+             
+            LoadDDLs()
+	    %(CallBindData)%%(RunAOPageAfterLoadCall)%
+	    
+        End If
+
+	CalculateTotal()
+	CheckIfBankIsClosed(lblInvoiceType.Text)%(RegisterPostbackControlsCall)%
+    End Sub
+
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+	
+    %(RunAOPageAfterLoadMethod)%
+    %(RunAOPageBeforeLoadMethod)%
+
+    Sub LoadDDLs()
+	   dim dtSupplied as new WhitTools.DataTablesSupplied
+	
+       %(LoadDDLsContent)%
+    End Sub
+
+    Private Sub btnContinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnContinue.Click
+            Page.Validate()
+
+            If Page.IsValid Then
+			%(RunAOBeforePageSubmitCall)%
+			
+            Dim sLastName, sfirstname, smiddlename, sprefix, semail, sphonenumber, sphoneext, sphonetype, saddress1, saddress2, scity, sstate, szip, scountry, sWhitworthID As String
+            Dim nCurrentID As Integer
+            Dim cmd As New SqlCommand
+            
+            If CDec(lblUSBamountdue.Text) > 0 Then
+                dim invoiceVariables as Dictionary(Of string, InvoiceVariable) = LoadInvoiceVariables()
+                lblUSBtransactionkey.Text = InsertInvoice(invoicevariables, lblInvoicetype.Text)
+            End If
+		
+            cmd.connection = cnx
+            cmd.CommandType = CommandType.StoredProcedure
+  	        cmd.commandtext = "usp_%(MainStoredProcedureType)%%(MainStoredProcedureName)%"
+
+                With cmd
+		    %(MainStoredProcedureParameters)%
+                    cmd.Parameters.AddWithValue("@Invoice", lblUSBtransactionkey.Text)
+                End With
+
+   	        nCurrentID = ExecuteScalar(cmd, cnx)	
+			Session("ApplicationID") = nCurrentID
+			nSubmissionID = nCurrentID
+			
+    	    %(DeleteAncillaryData)%
+	        %(SaveAncillaryCalls)%
+			%(DeleteTempFiles)%
+     	    %(SendEmailCall)%%(RunAOAfterPageSubmitCall)%
+
+			If CDec(lblUsbAmountDue.text) > 0 And InvoiceContainsGLCharges(lblUSBtransactionkey.Text) Then
+				RedirectUserToEcommercePaymentPage(lblUSBtransactionkey.Text)
+			Else
+				%(Redirect)%
+			End If
+                
+            End If
+        End Sub 'btnContinue_Click
+
+	%(AdditionalButtonsMethods)%
+  
+	%(RunAOBeforePageSubmitMethod)%
+	%(RunAOAfterPageSubmitMethod)%
+	
+
+    %(ValidatorContent)%
+	%(CheckControlMethods)%
+	%(PostbackActions)%
+	%(RepeaterMethods)%
+	
+	%(BindData)%
+
+	%(SaveAncillaryMethods)%
+	%(SendEmailMethod)%
+	%(PageMethods)%    
+	%(SaveWorkflowInfoMethod)%
+	%(FileUploadMethods)%	
+	%(ControlLifeCycleEvents)%
+	%(WebServices)%
+	%(RegisterPostbackControlsMethod)%
+End Class

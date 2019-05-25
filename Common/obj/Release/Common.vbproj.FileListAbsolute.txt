@@ -1,0 +1,69 @@
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\csc.exe
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\System.Collections.Immutable.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\System.Reflection.Metadata.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\vbc.exe
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\VBCSCompiler.exe
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\VBCSCompiler.exe.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.Resources.resources
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.vbproj.GenerateResource.Cache
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Release\Common.vbprojResolveAssemblyReference.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\AjaxControlToolkit.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Antlr3.Runtime.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\DocumentFormat.OpenXml.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Newtonsoft.Json.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\NLog.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\System.CodeDom.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\System.Web.Optimization.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ClosedXML.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Newtonsoft.Json.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\NLog.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.Resources.resources
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.vbproj.GenerateResource.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.vbproj.CoreCompileInputs.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.vbproj.CopyComplete
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Release\Common.vbprojAssemblyReference.cache

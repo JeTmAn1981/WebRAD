@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4038a0465394115894b48ed99d66b21" Name="Diagram1">
+        <EntityTypeShape EntityType="WebRADModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.AdditionalOperationType" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.BackendActionType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.BackendOptionOperatorType" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.BackendOptionType" Width="1.5" PointX="3.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.CompositeControl" Width="1.5" PointX="11" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlActionType" Width="1.5" PointX="17" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlChangeHistory" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlDataType" Width="1.5" PointX="6.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlDisplayType" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlSQLType" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeAction" Width="1.5" PointX="19.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailColumnExclusion" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailRequirement" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetail" Width="1.5" PointX="11" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailTypeCategory" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailTypeItem" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailType" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeDetailValue" Width="1.5" PointX="11" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeFileTypesAllowed" Width="1.5" PointX="11" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeItem" Width="1.5" PointX="11" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlType" Width="1.5" PointX="8.75" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ControlTypeValidator" Width="1.5" PointX="14" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.DataMethodType" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.DataSourceParentType" Width="1.5" PointX="6.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.dtproperty" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.FileType" Width="1.5" PointX="14" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.LayoutSubtype" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.LayoutType" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.LoginColumnType" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProhibitedColumnName" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectAdditionalOperation" Width="1.5" PointX="5.25" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectAncillaryMaintenance" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectArchiveMigration" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBackendAdditionalLink" Width="1.5" PointX="3" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBackendExport" Width="1.5" PointX="3" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBackendOptionColumn" Width="1.5" PointX="13.25" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBackendOption" Width="1.5" PointX="6" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBuildBackendAncillaryMaintenance" Width="1.5" PointX="5.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBuildBackendOption" Width="1.5" PointX="5.25" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBuildPage" Width="1.5" PointX="5.25" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectBuild" Width="1.5" PointX="3" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectColumn" Width="1.5" PointX="8" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectControlFileTypesAllowed" Width="1.5" PointX="16.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectControlListItem" Width="1.5" PointX="13.25" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectControlPostbackAction" Width="1.5" PointX="19.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectControlPostbackActionTriggerValue" Width="1.5" PointX="21.5" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectControl" Width="1.5" PointX="11" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectDataSource" Width="1.5" PointX="8.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectEmailMessage" Width="1.5" PointX="3" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectEmailMessageSubmitterControl" Width="1.5" PointX="16.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectOption" Width="1.5" PointX="3" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectPage" Width="1.5" PointX="3" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.Project" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ProjectSupervisor" Width="1.5" PointX="3" PointY="72.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.SQLDatabas" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.SQLServer" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.TableHierarchy" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.Test" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.ValidatorType" Width="1.5" PointX="11.75" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebRADModel.TopLevelProjectControls_v" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendOptions_BackendOptionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildBackendOptions_BackendOptionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_CompositeControls_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_CompositeControls_ControlTypes1" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeActions_ControlActionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlPostbackActions_ControlActionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeActions_ControlDataTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeActions_ControlDataTypes1" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypes_ControlDataTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailRequirements_ControlTypeDetailTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetails_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailTypes_ControlTypeDetailTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailValues_ControlTypeDetailTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeDetailValues_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeFileTypesAllowed_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeItems_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeValidators_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControls_ControlTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ControlTypeValidators_ValidatorTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectDataSources_DataSourceParentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlFileTypesAllowed_FileTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_LayoutSubtypes_LayoutTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectAdditionalOperations_ProjectPages" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectAncillaryMaintenance_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectAncillaryMaintenance_Projects1" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendAdditionalLinks_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendExports_ProjectDataSources" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendExports_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendOptionColumns_ProjectBackendOptions" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendOptionColumns_ProjectControls" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBackendOptions_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildBackendOptions_ProjectBuilds" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildPages_ProjectBuilds" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildPages_ProjectPages" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuilds_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectColumns_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControls_TableControl" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlFileTypesAllowed_ProjectControls" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlListItems_ProjectControls" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlPostbackActions_TargetControl" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControls_ParentControl" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControls_ProjectDataSources" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectControls_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectEmailMessageSubmitterControls_ProjectControls" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectEmailMessages_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectOptions_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectPages_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectSupervisors_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="WebRADModel.FK_ProjectBuildBackendOptions_Projects" />
+        <AssociationConnector Association="WebRADModel.FK_Projects_ProjectPages" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

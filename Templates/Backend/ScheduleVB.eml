@@ -1,0 +1,117 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+	dim pageName As String = "Maintenance"
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If Not Page.IsPostBack Then
+		LoadFormText()
+	    LoadDDLs()
+	    BindData()
+        End If
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+
+    Sub LoadDDLs()
+	    FillTimes(ddlOpenTime)
+        ddlOpenTime.Items.RemoveAt(0)
+        FillTimes(ddlCloseTime)
+        ddlCloseTime.Items.RemoveAt(0)
+    End Sub
+ 
+    Sub BindData()
+	dim dt as new DataTable
+
+        dt = getdatatable(cnx, "Select * From %(ScheduleTableName)%")
+
+	If dt.Rows.Count > 0
+		With dt.rows(0)
+                txtOpenDate.Text = .Item("OpenDate")
+                SetItemSelected(ddlOpenTime, .Item("OpenTime"))
+                txtCloseDate.Text = .Item("CloseDate")
+                SetItemSelected(ddlCloseTime, .Item("CloseTime"))
+                txtClosedMessage.Text = .Item("Message")
+		End With
+		
+		FixDate(txtOpenDate)
+        FixDate(txtCloseDate)
+	End If
+    End Sub
+	
+	Private Sub FixDate(ByRef currentDate As TextBox)
+        currentDate.Text = If(currentDate.Text = "1/1/1900", "", currentDate.Text)
+    End Sub
+
+    Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
+	Page.Validate()
+
+	If Page.IsValid()
+		Dim cmd As New SqlCommand()
+	        
+		cmd.Connection = cnx
+        	cmd.CommandText = "usp_Update%(ScheduleTableName)%"
+	        cmd.CommandType = CommandType.StoredProcedure
+
+			If txtOpenDate.Text <> "" Then
+                cmd.Parameters.AddWithValue("@OpenDate", txtOpenDate.Text)
+            End If
+
+            cmd.Parameters.AddWithValue("@OpenTime", ddlOpenTime.SelectedValue)
+
+            If txtCloseDate.Text <> "" Then
+                cmd.Parameters.AddWithValue("@CloseDate", txtCloseDate.Text)
+            End If
+
+            cmd.Parameters.AddWithValue("@CloseTime", ddlCloseTime.SelectedValue)
+            cmd.Parameters.AddWithValue("@Message", txtClosedMessage.Text)
+        	
+        	cnx.Open()
+	       	cmd.ExecuteNonQuery()
+	        cnx.Close()
+
+	        Redirect("index%(AncillaryReference)%.aspx")
+	End If
+    End Sub
+
+    Public Sub cvOpenDate_ServerValidate(ByVal source As System.Object, ByVal args As System.Web.UI.WebControls.ServerValidateEventArgs)
+        args.IsValid = ValidateDate(txtOpenDate.Text, cvOpenDate, "", args, True)
+    End Sub
+
+    Public Sub cvCloseDate_ServerValidate(ByVal source As System.Object, ByVal args As System.Web.UI.WebControls.ServerValidateEventArgs)
+        args.IsValid = ValidateDate(txtCloseDate.Text, cvCloseDate, "", args, True)
+
+        If txtCloseDate.Text <> "" And ValidateDate(txtOpenDate.Text, cvOpenDate, "", args, False) Then
+            Dim openDate, closeDate As DateTime
+
+            openDate = txtOpenDate.Text & " " & ddlOpenTime.SelectedValue
+            closeDate = txtCloseDate.Text & " " & ddlCloseTime.SelectedValue
+
+            If closeDate <= openDate Then
+                cvCloseDate.ErrorMessage = "Please enter a close date/time which occurs on or after the open date/time."
+                args.IsValid = False
+            End If
+        End If
+    End Sub
+
+ End Class

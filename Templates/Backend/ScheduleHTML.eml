@@ -1,0 +1,48 @@
+		<!-- Page Main START -->
+		<div class="form-maintenance">
+		<ul class="unstyled-list-inline">
+		%(Navigation)%
+		</ul>
+</div>
+		<div class="form-group">
+    
+            <asp:CustomValidator Display="Dynamic" CssClass="error" id="cvOpenDate" Runat="server" ErrorMessage="Please enter/select the following: Open Date." OnServerValidate="cvOpenDate_ServerValidate"></asp:CustomValidator>
+      <label for="txtOpenDate">Form Opens:</label>
+            <div class="stack-container">
+                <div class="stack" style="padding-right:1%">
+      <asp:Textbox ID="txtOpenDate" Runat="server"  TextMode="SingleLine"  MaxLength="15" onfocus="makeDatePicker(this)"></asp:Textbox>
+                    </div>
+                <div class="stack">
+                    <asp:dropdownlist ID="ddlOpenTime" runat="server"></asp:dropdownlist>
+                    </div>
+            </div>
+      
+    
+          	<asp:CustomValidator Display="Dynamic" CssClass="error" id="cvCloseDate" Runat="server" ErrorMessage="Please enter/select the following: Close Date." OnServerValidate="cvCloseDate_ServerValidate"></asp:CustomValidator>
+      <label for="txtCloseDate">Form Closes:</label>
+      <div class="stack-container">
+                <div class="stack" style="padding-right:1%">
+      <asp:Textbox ID="txtCloseDate" Runat="server"  TextMode="SingleLine"  MaxLength="15" onfocus="makeDatePicker(this)"></asp:Textbox>
+                    </div>
+                <div class="stack">
+                    <asp:dropdownlist ID="ddlCloseTime" runat="server"></asp:dropdownlist>
+                    </div>
+            </div>
+    
+<p>
+                Please enter the message you'd like to be shown on the closed page for this form.  If you enter nothing, the default message, "%(ClosedMessage)%", will be displayed.
+				</p>
+		        <label for="txtClosedMessage">Closed Message</label>
+                
+                <asp:TextBox ID="txtClosedMessage" runat="server"  TextMode="MultiLine" rows="5" Columns="80"></asp:TextBox>
+          </div>
+				
+				
+		<div style="TEXT-ALIGN:center">
+		<asp:button id="btnUpdate" runat="server" cssclass="button" text="Update" />
+		</div>
+		<div style="TEXT-ALIGN:center">
+		<asp:validationsummary id="vsSchedule" cssclass="error" runat="server" />
+		</div>
+		</dl>
+		<!-- Page Main END -->

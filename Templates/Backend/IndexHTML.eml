@@ -1,0 +1,82 @@
+		<!-- Page Main START -->
+		<div class="form-maintenance">
+		<ul class="unstyled-list-inline maintenance-items">
+		%(Navigation)%
+		%(InsertLink)%
+		</ul>
+		
+<ul class="unstyled-list-inline maintenance-items">
+      <li>
+        <!-- Select -->
+        <label for="toggleSelected">Select:</label>
+		<select id="toggleSelected" onchange="toggleActionSelections(this)">
+		<option value=""></option>
+		<option value="All">All</option>
+		<option value="None">None</option>
+		</select>
+        
+      </li>
+    
+	<li>
+        <!-- Action -->
+        <asp:Label id="lblActions" runat="server" AssociatedControlID="ddlActions">Action:</asp:Label>
+        <asp:dropdownlist id="ddlActions" autopostback="True" runat="server">
+          <asp:listitem value=""></asp:listitem>
+		  %(ActionItems)%
+          <asp:listitem value="Delete">Delete Selected Items</asp:listitem>
+        </asp:dropdownlist>
+        <!-- Delete Button - No HTML when invisible -->
+        <asp:panel id="pnlDelete" runat="server" visible="False">
+            <asp:button id="btnDelete" runat="server" CssClass="button" text="Confirm Delete"></asp:button>
+        </asp:panel>
+      </li>
+	
+	</ul>
+	<ul class="unstyled-list-inline maintenance-items">
+		
+				%(SortControl)% 
+				%(FilterControl)% 
+	  
+    </ul>
+	</div>
+    
+    <div class="form-group full-width">
+	<p>
+	<asp:Label runat="server" ID="lblRecordsTotal"></asp:Label>
+	</p>
+
+      <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+        <thead>
+          <tr>
+            <th></th>
+			%(DisplayColumns)%
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <asp:Repeater ID="rptSubmissions" runat="server">
+            <ItemTemplate>
+              <tr>
+                <td align="center" valign="top"><a class="button" href='update%(AncillaryReference)%.aspx?ID=<%# container.dataitem("ID") %>'>Edit</a></td>
+				%(DataColumns)%
+				<td align="center" valign="top">
+					<asp:checkbox id="chkAction" runat="server" />
+					<asp:Label ID="lblAll" runat="server" AssociatedControlID="chkAction" />
+					<asp:label id="lblID" runat="server" visible="False" text='<%# Container.dataitem("ID") %>' />
+				</td>
+              </tr>
+            </ItemTemplate>
+          </asp:Repeater>
+        </tbody>
+      </table>
+
+    </div>
+
+    <hr>
+
+<p>
+    <asp:Label ID="lblPageNumbers" runat="server"></asp:Label>
+	</p>
+
+	
+	

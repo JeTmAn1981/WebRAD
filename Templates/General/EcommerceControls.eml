@@ -1,0 +1,12 @@
+		<asp:label id="lblUSBbillerPayorId" runat="server" visible="False"></asp:label>
+		<asp:label id="lblInvoicetype" runat="server" visible="False">%(InvoiceType)%</asp:label>
+		<asp:label id="lblUSBproductCode" runat="server" visible="False">transactions</asp:label>
+		<asp:label id="lblUSBamountdue" runat="server" visible="False">0</asp:label>
+		<asp:label id="lblUSBdatesubmitted" runat="server" visible="False"></asp:label>
+		<asp:label id="lblUSBtransactionkey" runat="server" visible="False"></asp:label>
+		<asp:label id="lblUSBproductname" runat="server" visible="False">%(ProductName)%</asp:label>
+		<asp:label id="lblUSBbillerID" runat="server" visible="False">WW1</asp:label>
+		<asp:label id="lblUSBbillergroupID" runat="server" visible="False">WWC</asp:label>
+		<asp:label id="lblUSBdisallowLogin" runat="server" visible="False">Y</asp:label>
+		<asp:label id="lblUSBcategory" runat="server" visible="False"></asp:label>
+	

@@ -1,0 +1,105 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+    dim pageName As String = "%(PageTitle)%"
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+	Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+	%(CheckScheduleCall)%
+        If Not Page.IsPostBack Then
+		Page.Form.Attributes.Add("enctype", "multipart/form-data")
+		%(RunAOPageBeforeLoadCall)%
+		%(CheckSectionAllowed)%
+			LoadFormText()
+            LoadDDLs()
+	    %(CallBindData)%%(RunAOPageAfterLoadCall)%
+        End If%(RegisterPostbackControlsCall)%
+    End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+	
+	%(RunAOPageAfterLoadMethod)%
+	%(RunAOPageBeforeLoadMethod)%
+
+    Sub LoadDDLs()
+	   dim dtSupplied as new WhitTools.DataTablesSupplied
+	   
+       %(LoadDDLsContent)%
+	   	   %(TriggerPostbackActions)%
+    End Sub
+
+    
+    Private Sub btn%(SubmitType)%_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn%(SubmitType)%.Click
+        Page.Validate()
+        If Page.IsValid Then
+		    %(RunAOBeforePageSubmitCall)%
+            SaveData()
+		
+		%(Redirect)%
+        End If
+    End Sub
+
+    Sub SaveData()
+            dim nCurrentID as integer
+
+	    Dim cmd As New SqlCommand
+	    cmd.Connection = cnx
+	    cmd.CommandType = CommandType.StoredProcedure
+	    cmd.CommandText = "usp_%(MainStoredProcedureType)%%(MainStoredProcedureName)%"
+	
+	    With cmd
+		 %(MainStoredProcedureParameters)%
+	    End With
+
+	    nCurrentID = ExecuteScalar(cmd,cnx)
+		Session("ApplicationID") = nCurrentID
+		nSubmissionID = nCurrentID
+		
+	    %(DeleteAncillaryData)%
+	    %(SaveAncillaryCalls)%
+		%(DeleteTempFiles)%
+	    %(SaveWorkflowInfoCall)%
+	    %(SendEmailCall)%%(RunAOAfterPageSubmitCall)%
+    End Sub
+
+	%(AdditionalButtonsMethods)%
+    
+	%(RunAOBeforePageSubmitMethod)%
+	%(RunAOAfterPageSubmitMethod)%
+	
+	%(ValidatorContent)%
+    %(CheckControlMethods)%
+    %(PostbackActions)%
+	%(RepeaterMethods)%
+	
+    %(BindData)%
+
+    %(SaveAncillaryMethods)%
+    %(SendEmailMethod)%
+	%(PageMethods)%        
+	%(SaveWorkflowInfoMethod)%
+	%(FileUploadMethods)%	
+	%(ControlLifeCycleEvents)%
+	%(WebServices)%
+	%(RegisterPostbackControlsMethod)%
+End Class

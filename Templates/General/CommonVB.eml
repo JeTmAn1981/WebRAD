@@ -1,0 +1,50 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+
+Public Class Common
+
+Private Shared _cnx As SqlConnection
+
+Public Shared Property cnx() As SqlConnection
+        Get
+		If _cnx Is Nothing
+		_cnx = CreateSQLConnection("%(DatabaseName)%"%(SQLServerName)%)
+		End If
+		
+		return _cnx
+        End Get
+
+        Set(ByVal value As SqlConnection)
+            _cnx = value
+        End Set
+    End Property
+
+
+
+Public Shared bFrontend as Boolean = %(IsFrontend)%
+Public Shared bArchive As Boolean = False
+Public Shared nSubmissionID As Integer
+Public Const MAIN_DATABASE_TABLE_NAME As String = "%(SQLMainTableName)%"
+Public Const APPLICATION_NAME As String = "%(ProjectTitle)%"
+Public Const DEPARTMENT_NAME As String = "%(DepartmentName)%"
+Public Shared CONFIRMATION_MESSAGE As String = "%(ConfirmationMessage)%"
+Public Const DEFAULT_CLOSED_MESSAGE As String = "%(ClosedMessage)%"
+Public Shared closedMessage As String = DEFAULT_CLOSED_MESSAGE
+Public Shared supervisors As List(Of String) = New List(Of String)(New String() {%(SupervisorsList)%})    
+Public Shared ftLoader As FormTextLoader = New FormTextLoader(APPLICATION_NAME, AddressOf AddDepartmentBreadcrumbs)
+
+%(CommonCode)%
+
+Public Delegate Sub AfterCustomActionDelegate()
+   
+%(Actions)%
+	
+	%(SectionsAllowed)%
+End Class
+
+
+
+
+

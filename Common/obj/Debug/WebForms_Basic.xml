@@ -1,0 +1,65 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Common
+</name>
+</assembly>
+<members>
+<member name="T:Common.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Common.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="M:Common.Actions.Main.GetRepeaterAction(System.Int32)">
+ <summary>
+ Currently the only allowed repeater action is custom code.  This method will need to be updated
+ if other Main are allowed.
+ </summary>
+ <param name="nID"></param>
+ <returns></returns>
+</member>
+<member name="M:Common.General.Actions.GetRepeaterAction(System.Int32)">
+ <summary>
+ Currently the only allowed repeater action is custom code.  This method will need to be updated
+ if other actions are allowed.
+ </summary>
+ <param name="nID"></param>
+ <returns></returns>
+</member>
+<member name="M:Common.General.Pages.GetFirstPage(System.String)">
+ <summary>
+ Checks to see if a page has already been created for this project.  If no pages exist, creates a page.  Then returns the first page's ID.
+ </summary>
+ <param name="nProjectID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

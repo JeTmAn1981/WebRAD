@@ -1,0 +1,160 @@
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\csc.exe
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\System.Collections.Immutable.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\System.Reflection.Metadata.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\vbc.exe
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\VBCSCompiler.exe
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\roslyn\VBCSCompiler.exe.config
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.config
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll.config
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.pdb
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.pdb
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll.config
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbprojResolveAssemblyReference.cache
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.Resources.resources
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbproj.GenerateResource.Cache
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.dll
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.xml
+F:\inetpub\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll.config
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll.config
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.Resources.resources
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbproj.GenerateResource.Cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbproj.CoreCompileInputs.cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.pdb
+Y:\~Test\Tom\WebRAD\Common\bin\Common.dll.config
+Y:\~Test\Tom\WebRAD\Common\bin\Common.dll
+Y:\~Test\Tom\WebRAD\Common\bin\Common.pdb
+Y:\~Test\Tom\WebRAD\Common\bin\WebForms_Basic.xml
+Y:\~Test\Tom\WebRAD\Common\bin\AjaxControlToolkit.dll
+Y:\~Test\Tom\WebRAD\Common\bin\Antlr3.Runtime.dll
+Y:\~Test\Tom\WebRAD\Common\bin\DocumentFormat.OpenXml.dll
+Y:\~Test\Tom\WebRAD\Common\bin\EntityFramework.dll
+Y:\~Test\Tom\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+Y:\~Test\Tom\WebRAD\Common\bin\Microsoft.Web.Infrastructure.dll
+Y:\~Test\Tom\WebRAD\Common\bin\Newtonsoft.Json.dll
+Y:\~Test\Tom\WebRAD\Common\bin\NLog.dll
+Y:\~Test\Tom\WebRAD\Common\bin\System.Web.Optimization.dll
+Y:\~Test\Tom\WebRAD\Common\bin\WhitTools.dll
+Y:\~Test\Tom\WebRAD\Common\bin\EntityFramework.xml
+Y:\~Test\Tom\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+Y:\~Test\Tom\WebRAD\Common\bin\NLog.xml
+Y:\~Test\Tom\WebRAD\Common\bin\Microsoft.Web.Infrastructure.xml
+Y:\~Test\Tom\WebRAD\Common\bin\WhitTools.pdb
+Y:\~Test\Tom\WebRAD\Common\bin\WhitTools.xml
+Y:\~Test\Tom\WebRAD\Common\bin\WhitTools.dll.config
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\Common.Resources.resources
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\Common.vbproj.GenerateResource.Cache
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\Common.vbproj.CoreCompileInputs.cache
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\Common.dll
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\WebForms_Basic.xml
+Y:\~Test\Tom\WebRAD\Common\obj\Debug\Common.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\WebForms_Basic.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\AjaxControlToolkit.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Antlr3.Runtime.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\DocumentFormat.OpenXml.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.Web.Infrastructure.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\System.Web.Optimization.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\DocumentFormat.OpenXml.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.Web.Infrastructure.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbprojResolveAssemblyReference.cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\WebForms_Basic.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Common.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WebForms_Basic.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\AjaxControlToolkit.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Antlr3.Runtime.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\DocumentFormat.OpenXml.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.Web.Infrastructure.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\System.CodeDom.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\System.Web.Optimization.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Newtonsoft.Json.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\NLog.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\Microsoft.Web.Infrastructure.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\bin\WhitTools.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbprojResolveAssemblyReference.cache
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.Resources.resources
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbproj.GenerateResource.Cache
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.vbproj.CoreCompileInputs.cache
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\WebForms_Basic.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\Common\obj\Debug\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\AjaxControlToolkit.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Antlr3.Runtime.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\DocumentFormat.OpenXml.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.SqlServer.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Newtonsoft.Json.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\NLog.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\System.CodeDom.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\System.Web.Optimization.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ClosedXML.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ExcelNumberFormat.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\FastMember.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\EntityFramework.SqlServer.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Newtonsoft.Json.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\NLog.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ClosedXML.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ClosedXML.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\ExcelNumberFormat.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.Resources.resources
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.vbproj.GenerateResource.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.vbproj.CoreCompileInputs.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.vbproj.CopyComplete
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\WhitTools.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\bin\DocumentFormat.OpenXml.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\Common\obj\Debug\Common.vbprojAssemblyReference.cache

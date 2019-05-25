@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebRADModelStoreContainer" CdmEntityContainer="WebRADEntities">
+    <EntitySetMapping Name="AdditionalOperationTypes">
+      <EntityTypeMapping TypeName="WebRADModel.AdditionalOperationType">
+        <MappingFragment StoreEntitySet="AdditionalOperationTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MethodReference" ColumnName="MethodReference" />
+          <ScalarProperty Name="ExecuteType" ColumnName="ExecuteType" />
+          <ScalarProperty Name="PerPage" ColumnName="PerPage" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendActionTypes">
+      <EntityTypeMapping TypeName="WebRADModel.BackendActionType">
+        <MappingFragment StoreEntitySet="BackendActionTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendOptionOperatorTypes">
+      <EntityTypeMapping TypeName="WebRADModel.BackendOptionOperatorType">
+        <MappingFragment StoreEntitySet="BackendOptionOperatorTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackendOptionTypes">
+      <EntityTypeMapping TypeName="WebRADModel.BackendOptionType">
+        <MappingFragment StoreEntitySet="BackendOptionTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Display" ColumnName="Display" />
+          <ScalarProperty Name="IndividualPage" ColumnName="IndividualPage" />
+          <ScalarProperty Name="DetailsRequired" ColumnName="DetailsRequired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompositeControls">
+      <EntityTypeMapping TypeName="WebRADModel.CompositeControl">
+        <MappingFragment StoreEntitySet="CompositeControls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompositeControlType" ColumnName="CompositeControlType" />
+          <ScalarProperty Name="IndividualControlType" ColumnName="IndividualControlType" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlActionTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlActionType">
+        <MappingFragment StoreEntitySet="ControlActionTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="UseJavascript" ColumnName="UseJavascript" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlChangeHistories">
+      <EntityTypeMapping TypeName="WebRADModel.ControlChangeHistory">
+        <MappingFragment StoreEntitySet="ControlChangeHistory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="Property" ColumnName="Property" />
+          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlDataTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlDataType">
+        <MappingFragment StoreEntitySet="ControlDataTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DesignerDescription" ColumnName="DesignerDescription" />
+          <ScalarProperty Name="DesignerLibrary" ColumnName="DesignerLibrary" />
+          <ScalarProperty Name="ToolkitType" ColumnName="ToolkitType" />
+          <ScalarProperty Name="HTMLType" ColumnName="HTMLType" />
+          <ScalarProperty Name="HTMLAttributes" ColumnName="HTMLAttributes" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="ProvidesValue" ColumnName="ProvidesValue" />
+          <ScalarProperty Name="ValueAttribute" ColumnName="ValueAttribute" />
+          <ScalarProperty Name="JSValueAttribute" ColumnName="JSValueAttribute" />
+          <ScalarProperty Name="ValidatorMessage" ColumnName="ValidatorMessage" />
+          <ScalarProperty Name="IsListControl" ColumnName="IsListControl" />
+          <ScalarProperty Name="IsCheckControl" ColumnName="IsCheckControl" />
+          <ScalarProperty Name="LabelOnPrintable" ColumnName="LabelOnPrintable" />
+          <ScalarProperty Name="ActionAvailable" ColumnName="ActionAvailable" />
+          <ScalarProperty Name="ActionMethod" ColumnName="ActionMethod" />
+          <ScalarProperty Name="JSActionMethod" ColumnName="JSActionMethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlDisplayTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlDisplayType">
+        <MappingFragment StoreEntitySet="ControlDisplayTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlSQLTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlSQLType">
+        <MappingFragment StoreEntitySet="ControlSQLTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="NeedSize" ColumnName="NeedSize" />
+          <ScalarProperty Name="NullValue" ColumnName="NullValue" />
+          <ScalarProperty Name="ModelType" ColumnName="ModelType" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeActions">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeAction">
+        <MappingFragment StoreEntitySet="ControlTypeActions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActionControlDataType" ColumnName="ActionControlDataType" />
+          <ScalarProperty Name="TargetControlDataType" ColumnName="TargetControlDataType" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailColumnExclusions">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailColumnExclusion">
+        <MappingFragment StoreEntitySet="ControlTypeDetailColumnExclusions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailRequirements">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailRequirement">
+        <MappingFragment StoreEntitySet="ControlTypeDetailRequirements">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="DetailTypeID" ColumnName="DetailTypeID" />
+          <ScalarProperty Name="Required" ColumnName="Required" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetails">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetail">
+        <MappingFragment StoreEntitySet="ControlTypeDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DisplayHeading" ColumnName="DisplayHeading" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="Subheading" ColumnName="Subheading" />
+          <ScalarProperty Name="DisplayLocation" ColumnName="DisplayLocation" />
+          <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="Required" ColumnName="Required" />
+          <ScalarProperty Name="RequireVerification" ColumnName="RequireVerification" />
+          <ScalarProperty Name="CustomValidation" ColumnName="CustomValidation" />
+          <ScalarProperty Name="Autopostback" ColumnName="Autopostback" />
+          <ScalarProperty Name="PerformPostbackAction" ColumnName="PerformPostbackAction" />
+          <ScalarProperty Name="PostbackActionTarget" ColumnName="PostbackActionTarget" />
+          <ScalarProperty Name="PostbackAction" ColumnName="PostbackAction" />
+          <ScalarProperty Name="RichValue" ColumnName="RichValue" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Placeholder" ColumnName="Placeholder" />
+          <ScalarProperty Name="TextPosition" ColumnName="TextPosition" />
+          <ScalarProperty Name="Calendar" ColumnName="Calendar" />
+          <ScalarProperty Name="MaxLength" ColumnName="MaxLength" />
+          <ScalarProperty Name="MaxFileSize" ColumnName="MaxFileSize" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="RepeatDirection" ColumnName="RepeatDirection" />
+          <ScalarProperty Name="RepeatColumns" ColumnName="RepeatColumns" />
+          <ScalarProperty Name="ListSelections" ColumnName="ListSelections" />
+          <ScalarProperty Name="SelectionMode" ColumnName="SelectionMode" />
+          <ScalarProperty Name="SelectionItems" ColumnName="SelectionItems" />
+          <ScalarProperty Name="DataMethod" ColumnName="DataMethod" />
+          <ScalarProperty Name="OtherDataMethod" ColumnName="OtherDataMethod" />
+          <ScalarProperty Name="IncludePleaseSelect" ColumnName="IncludePleaseSelect" />
+          <ScalarProperty Name="MinimumValue" ColumnName="MinimumValue" />
+          <ScalarProperty Name="MaximumValue" ColumnName="MaximumValue" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="DataTextField" ColumnName="DataTextField" />
+          <ScalarProperty Name="DataValueField" ColumnName="DataValueField" />
+          <ScalarProperty Name="LayoutType" ColumnName="LayoutType" />
+          <ScalarProperty Name="IncludeDatabase" ColumnName="IncludeDatabase" />
+          <ScalarProperty Name="SQLDataType" ColumnName="SQLDataType" />
+          <ScalarProperty Name="SQLDataSize" ColumnName="SQLDataSize" />
+          <ScalarProperty Name="RequirementsProfile" ColumnName="RequirementsProfile" />
+          <ScalarProperty Name="TextMode" ColumnName="TextMode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailTypeCategories">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailTypeCategory">
+        <MappingFragment StoreEntitySet="ControlTypeDetailTypeCategories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailTypeItems">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailTypeItem">
+        <MappingFragment StoreEntitySet="ControlTypeDetailTypeItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlTypeDetailTypeID" ColumnName="ControlTypeDetailTypeID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailType">
+        <MappingFragment StoreEntitySet="ControlTypeDetailTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="HTMLType" ColumnName="HTMLType" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="ParentTypeID" ColumnName="ParentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeDetailValues">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeDetailValue">
+        <MappingFragment StoreEntitySet="ControlTypeDetailValues">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlTypeID" ColumnName="ControlTypeID" />
+          <ScalarProperty Name="DetailTypeID" ColumnName="DetailTypeID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeFileTypesAlloweds">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeFileTypesAllowed">
+        <MappingFragment StoreEntitySet="ControlTypeFileTypesAllowed">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeItems">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeItem">
+        <MappingFragment StoreEntitySet="ControlTypeItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ControlType">
+        <MappingFragment StoreEntitySet="ControlTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="NonASP" ColumnName="NonASP" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="Composite" ColumnName="Composite" />
+          <ScalarProperty Name="ParentControlTypeID" ColumnName="ParentControlTypeID" />
+          <ScalarProperty Name="CustomValidatorRequired" ColumnName="CustomValidatorRequired" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlTypeValidators">
+      <EntityTypeMapping TypeName="WebRADModel.ControlTypeValidator">
+        <MappingFragment StoreEntitySet="ControlTypeValidators">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Errormessage" ColumnName="Errormessage" />
+          <ScalarProperty Name="ValidationExpression" ColumnName="ValidationExpression" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataMethodTypes">
+      <EntityTypeMapping TypeName="WebRADModel.DataMethodType">
+        <MappingFragment StoreEntitySet="DataMethodTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MethodContent" ColumnName="MethodContent" />
+          <ScalarProperty Name="MaximumValueUsed" ColumnName="MaximumValueUsed" />
+          <ScalarProperty Name="MaximumValueRequired" ColumnName="MaximumValueRequired" />
+          <ScalarProperty Name="MinimumValueUsed" ColumnName="MinimumValueUsed" />
+          <ScalarProperty Name="MinimumValueRequired" ColumnName="MinimumValueRequired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataSourceParentTypes">
+      <EntityTypeMapping TypeName="WebRADModel.DataSourceParentType">
+        <MappingFragment StoreEntitySet="DataSourceParentTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileTypes">
+      <EntityTypeMapping TypeName="WebRADModel.FileType">
+        <MappingFragment StoreEntitySet="FileTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LayoutSubtypes">
+      <EntityTypeMapping TypeName="WebRADModel.LayoutSubtype">
+        <MappingFragment StoreEntitySet="LayoutSubtypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LayoutTypes">
+      <EntityTypeMapping TypeName="WebRADModel.LayoutType">
+        <MappingFragment StoreEntitySet="LayoutTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginColumnTypes">
+      <EntityTypeMapping TypeName="WebRADModel.LoginColumnType">
+        <MappingFragment StoreEntitySet="LoginColumnTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Frontend" ColumnName="Frontend" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProhibitedColumnNames">
+      <EntityTypeMapping TypeName="WebRADModel.ProhibitedColumnName">
+        <MappingFragment StoreEntitySet="ProhibitedColumnNames">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectAdditionalOperations">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectAdditionalOperation">
+        <MappingFragment StoreEntitySet="ProjectAdditionalOperations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AdditionalOperations" ColumnName="AdditionalOperations" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectAncillaryMaintenances">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectAncillaryMaintenance">
+        <MappingFragment StoreEntitySet="ProjectAncillaryMaintenance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="AncillaryProjectID" ColumnName="AncillaryProjectID" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Singleton" ColumnName="Singleton" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectArchiveMigrations">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectArchiveMigration">
+        <MappingFragment StoreEntitySet="ProjectArchiveMigrations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBackendAdditionalLinks">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBackendAdditionalLink">
+        <MappingFragment StoreEntitySet="ProjectBackendAdditionalLinks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBackendExports">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBackendExport">
+        <MappingFragment StoreEntitySet="ProjectBackendExports">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="DataSourceType" ColumnName="DataSourceType" />
+          <ScalarProperty Name="DataSourceID" ColumnName="DataSourceID" />
+          <ScalarProperty Name="SQLQuery" ColumnName="SQLQuery" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Template" ColumnName="Template" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBackendOptionColumns">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBackendOptionColumn">
+        <MappingFragment StoreEntitySet="ProjectBackendOptionColumns">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="OperatorType" ColumnName="OperatorType" />
+          <ScalarProperty Name="ComparisonValue" ColumnName="ComparisonValue" />
+          <ScalarProperty Name="CustomActionCode" ColumnName="CustomActionCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBackendOptions">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBackendOption">
+        <MappingFragment StoreEntitySet="ProjectBackendOptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="SelectionType" ColumnName="SelectionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBuildBackendAncillaryMaintenances">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBuildBackendAncillaryMaintenance">
+        <MappingFragment StoreEntitySet="ProjectBuildBackendAncillaryMaintenance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BuildID" ColumnName="BuildID" />
+          <ScalarProperty Name="AncillaryMaintenanceID" ColumnName="AncillaryMaintenanceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBuildBackendOptions">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBuildBackendOption">
+        <MappingFragment StoreEntitySet="ProjectBuildBackendOptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BuildID" ColumnName="BuildID" />
+          <ScalarProperty Name="BackendOptionTypeID" ColumnName="BackendOptionTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBuildPages">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBuildPage">
+        <MappingFragment StoreEntitySet="ProjectBuildPages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BuildID" ColumnName="BuildID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBuilds">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectBuild">
+        <MappingFragment StoreEntitySet="ProjectBuilds">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Frontend" ColumnName="Frontend" />
+          <ScalarProperty Name="Backend" ColumnName="Backend" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FormsType" ColumnName="FormsType" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectColumns">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectColumn">
+        <MappingFragment StoreEntitySet="ProjectColumns">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TableControlID" ColumnName="TableControlID" />
+          <ScalarProperty Name="ColumnControlID" ColumnName="ColumnControlID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectControlFileTypesAlloweds">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectControlFileTypesAllowed">
+        <MappingFragment StoreEntitySet="ProjectControlFileTypesAllowed">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectControlListItems">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectControlListItem">
+        <MappingFragment StoreEntitySet="ProjectControlListItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectControlPostbackActions">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectControlPostbackAction">
+        <MappingFragment StoreEntitySet="ProjectControlPostbackActions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TriggerControl" ColumnName="TriggerControl" />
+          <ScalarProperty Name="TargetControl" ColumnName="TargetControl" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="UpdateRepeaterItemsSelectionType" ColumnName="UpdateRepeaterItemsSelectionType" />
+          <ScalarProperty Name="UpdateRepeaterItemsValue" ColumnName="UpdateRepeaterItemsValue" />
+          <ScalarProperty Name="SetValueType" ColumnName="SetValueType" />
+          <ScalarProperty Name="ExplicitValue" ColumnName="ExplicitValue" />
+          <ScalarProperty Name="ControlValue" ColumnName="ControlValue" />
+          <ScalarProperty Name="SelectionItems" ColumnName="SelectionItems" />
+          <ScalarProperty Name="DataSourceID" ColumnName="DataSourceID" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="DataSourceType" ColumnName="DataSourceType" />
+          <ScalarProperty Name="DataSourceSelect" ColumnName="DataSourceSelect" />
+          <ScalarProperty Name="DataSourceTable" ColumnName="DataSourceTable" />
+          <ScalarProperty Name="DataSourceWhere" ColumnName="DataSourceWhere" />
+          <ScalarProperty Name="DataSourceGroupBy" ColumnName="DataSourceGroupBy" />
+          <ScalarProperty Name="DataSourceOrderBy" ColumnName="DataSourceOrderBy" />
+          <ScalarProperty Name="DataTextField" ColumnName="DataTextField" />
+          <ScalarProperty Name="DataValueField" ColumnName="DataValueField" />
+          <ScalarProperty Name="DataMethod" ColumnName="DataMethod" />
+          <ScalarProperty Name="OtherDataMethod" ColumnName="OtherDataMethod" />
+          <ScalarProperty Name="MinimumValue" ColumnName="MinimumValue" />
+          <ScalarProperty Name="MaximumValue" ColumnName="MaximumValue" />
+          <ScalarProperty Name="IncludePleaseSelect" ColumnName="IncludePleaseSelect" />
+          <ScalarProperty Name="SelectionMode" ColumnName="SelectionMode" />
+          <ScalarProperty Name="CustomActionCode" ColumnName="CustomActionCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectControlPostbackActionTriggerValues">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectControlPostbackActionTriggerValue">
+        <MappingFragment StoreEntitySet="ProjectControlPostbackActionTriggerValues">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="TriggerValue" ColumnName="TriggerValue" />
+          <ScalarProperty Name="TriggerOperator" ColumnName="TriggerOperator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectControls">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectControl">
+        <MappingFragment StoreEntitySet="ProjectControls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="ParentControlID" ColumnName="ParentControlID" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DisplayHeading" ColumnName="DisplayHeading" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="Subheading" ColumnName="Subheading" />
+          <ScalarProperty Name="ShortHeading" ColumnName="ShortHeading" />
+          <ScalarProperty Name="Autopostback" ColumnName="Autopostback" />
+          <ScalarProperty Name="PerformPostbackAction" ColumnName="PerformPostbackAction" />
+          <ScalarProperty Name="PostbackActionTarget" ColumnName="PostbackActionTarget" />
+          <ScalarProperty Name="PostbackAction" ColumnName="PostbackAction" />
+          <ScalarProperty Name="Onchange" ColumnName="Onchange" />
+          <ScalarProperty Name="OnchangeCall" ColumnName="OnchangeCall" />
+          <ScalarProperty Name="OnchangeBody" ColumnName="OnchangeBody" />
+          <ScalarProperty Name="DisplayColumn" ColumnName="DisplayColumn" />
+          <ScalarProperty Name="DisplayLocation" ColumnName="DisplayLocation" />
+          <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+          <ScalarProperty Name="IncludeDatabase" ColumnName="IncludeDatabase" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="CustomVisibleValue" ColumnName="CustomVisibleValue" />
+          <ScalarProperty Name="Required" ColumnName="Required" />
+          <ScalarProperty Name="MinimumRequired" ColumnName="MinimumRequired" />
+          <ScalarProperty Name="MaximumRequired" ColumnName="MaximumRequired" />
+          <ScalarProperty Name="RequireVerification" ColumnName="RequireVerification" />
+          <ScalarProperty Name="CustomValidation" ColumnName="CustomValidation" />
+          <ScalarProperty Name="CustomValidationCode" ColumnName="CustomValidationCode" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="TextPosition" ColumnName="TextPosition" />
+          <ScalarProperty Name="Calendar" ColumnName="Calendar" />
+          <ScalarProperty Name="RichValue" ColumnName="RichValue" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Placeholder" ColumnName="Placeholder" />
+          <ScalarProperty Name="TextMode" ColumnName="TextMode" />
+          <ScalarProperty Name="RichTextUser" ColumnName="RichTextUser" />
+          <ScalarProperty Name="Rows" ColumnName="Rows" />
+          <ScalarProperty Name="Columns" ColumnName="Columns" />
+          <ScalarProperty Name="MaxLength" ColumnName="MaxLength" />
+          <ScalarProperty Name="MaxLengthType" ColumnName="MaxLengthType" />
+          <ScalarProperty Name="MaxFileSize" ColumnName="MaxFileSize" />
+          <ScalarProperty Name="UploadPath" ColumnName="UploadPath" />
+          <ScalarProperty Name="UploadPathNewFolder" ColumnName="UploadPathNewFolder" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="RepeatDirection" ColumnName="RepeatDirection" />
+          <ScalarProperty Name="RepeatColumns" ColumnName="RepeatColumns" />
+          <ScalarProperty Name="ListSelections" ColumnName="ListSelections" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="SelectionMode" ColumnName="SelectionMode" />
+          <ScalarProperty Name="SelectionItems" ColumnName="SelectionItems" />
+          <ScalarProperty Name="IncludePleaseSelect" ColumnName="IncludePleaseSelect" />
+          <ScalarProperty Name="DataMethod" ColumnName="DataMethod" />
+          <ScalarProperty Name="OtherDataMethod" ColumnName="OtherDataMethod" />
+          <ScalarProperty Name="MinimumValue" ColumnName="MinimumValue" />
+          <ScalarProperty Name="MaximumValue" ColumnName="MaximumValue" />
+          <ScalarProperty Name="SupplyControlData" ColumnName="SupplyControlData" />
+          <ScalarProperty Name="SupplyDataType" ColumnName="SupplyDataType" />
+          <ScalarProperty Name="DataSourceID" ColumnName="DataSourceID" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="DataSourceColumn" ColumnName="DataSourceColumn" />
+          <ScalarProperty Name="DataSourceType" ColumnName="DataSourceType" />
+          <ScalarProperty Name="DataSourceSelect" ColumnName="DataSourceSelect" />
+          <ScalarProperty Name="DataSourceTable" ColumnName="DataSourceTable" />
+          <ScalarProperty Name="DataSourceWhere" ColumnName="DataSourceWhere" />
+          <ScalarProperty Name="DataSourceGroupBy" ColumnName="DataSourceGroupBy" />
+          <ScalarProperty Name="DataSourceOrderBy" ColumnName="DataSourceOrderBy" />
+          <ScalarProperty Name="DataTextField" ColumnName="DataTextField" />
+          <ScalarProperty Name="DataValueField" ColumnName="DataValueField" />
+          <ScalarProperty Name="SQLDataType" ColumnName="SQLDataType" />
+          <ScalarProperty Name="SQLDataSize" ColumnName="SQLDataSize" />
+          <ScalarProperty Name="SQLDefaultValue" ColumnName="SQLDefaultValue" />
+          <ScalarProperty Name="AllowNegativeValue" ColumnName="AllowNegativeValue" />
+          <ScalarProperty Name="SQLInsertItemTable" ColumnName="SQLInsertItemTable" />
+          <ScalarProperty Name="SQLInsertItemStoredProcedure" ColumnName="SQLInsertItemStoredProcedure" />
+          <ScalarProperty Name="ForeignID" ColumnName="ForeignID" />
+          <ScalarProperty Name="LayoutType" ColumnName="LayoutType" />
+          <ScalarProperty Name="LayoutSubtype" ColumnName="LayoutSubtype" />
+          <ScalarProperty Name="RepeaterAddRemove" ColumnName="RepeaterAddRemove" />
+          <ScalarProperty Name="RepeaterItemName" ColumnName="RepeaterItemName" />
+          <ScalarProperty Name="SubmitterEmail" ColumnName="SubmitterEmail" />
+          <ScalarProperty Name="ProspectCode" ColumnName="ProspectCode" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectDataSources">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectDataSource">
+        <MappingFragment StoreEntitySet="ProjectDataSources">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="BackendSource" ColumnName="BackendSource" />
+          <ScalarProperty Name="Column" ColumnName="Column" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Select" ColumnName="Select" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+          <ScalarProperty Name="Where" ColumnName="Where" />
+          <ScalarProperty Name="GroupBy" ColumnName="GroupBy" />
+          <ScalarProperty Name="OrderBy" ColumnName="OrderBy" />
+          <ScalarProperty Name="TextField" ColumnName="TextField" />
+          <ScalarProperty Name="ValueField" ColumnName="ValueField" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectEmailMessages">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectEmailMessage">
+        <MappingFragment StoreEntitySet="ProjectEmailMessages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="ToAddress" ColumnName="ToAddress" />
+          <ScalarProperty Name="BCCAddress" ColumnName="BCCAddress" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Workflow" ColumnName="Workflow" />
+          <ScalarProperty Name="WorkflowDestination" ColumnName="WorkflowDestination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectEmailMessageSubmitterControls">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectEmailMessageSubmitterControl">
+        <MappingFragment StoreEntitySet="ProjectEmailMessageSubmitterControls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectOptions">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectOption">
+        <MappingFragment StoreEntitySet="ProjectOptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectPages">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectPage">
+        <MappingFragment StoreEntitySet="ProjectPages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Dependent" ColumnName="Dependent" />
+          <ScalarProperty Name="SelectionControl" ColumnName="SelectionControl" />
+          <ScalarProperty Name="SelectionValue" ColumnName="SelectionValue" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="WebRADModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="IncludeSectionNumbers" ColumnName="IncludeSectionNumbers" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="CustomDepartmentName" ColumnName="CustomDepartmentName" />
+          <ScalarProperty Name="RequireLogin" ColumnName="RequireLogin" />
+          <ScalarProperty Name="Insert" ColumnName="Insert" />
+          <ScalarProperty Name="Archive" ColumnName="Archive" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="DefaultSort" ColumnName="DefaultSort" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="Actions" ColumnName="Actions" />
+          <ScalarProperty Name="Printable" ColumnName="Printable" />
+          <ScalarProperty Name="Export" ColumnName="Export" />
+          <ScalarProperty Name="ExportType" ColumnName="ExportType" />
+          <ScalarProperty Name="ExportSQLQuery" ColumnName="ExportSQLQuery" />
+          <ScalarProperty Name="NumberExports" ColumnName="NumberExports" />
+          <ScalarProperty Name="EmailSupervisor" ColumnName="EmailSupervisor" />
+          <ScalarProperty Name="IncludeFrontend" ColumnName="IncludeFrontend" />
+          <ScalarProperty Name="FrontendLink" ColumnName="FrontendLink" />
+          <ScalarProperty Name="FrontendPath" ColumnName="FrontendPath" />
+          <ScalarProperty Name="FrontendNewFolder" ColumnName="FrontendNewFolder" />
+          <ScalarProperty Name="MultipleSubmissions" ColumnName="MultipleSubmissions" />
+          <ScalarProperty Name="IncludeBackend" ColumnName="IncludeBackend" />
+          <ScalarProperty Name="BackendLink" ColumnName="BackendLink" />
+          <ScalarProperty Name="BackendPath" ColumnName="BackendPath" />
+          <ScalarProperty Name="BackendNewFolder" ColumnName="BackendNewFolder" />
+          <ScalarProperty Name="CustomSelectStatement" ColumnName="CustomSelectStatement" />
+          <ScalarProperty Name="CustomSelectDataSourceID" ColumnName="CustomSelectDataSourceID" />
+          <ScalarProperty Name="SearchColumns" ColumnName="SearchColumns" />
+          <ScalarProperty Name="Ecommerce" ColumnName="Ecommerce" />
+          <ScalarProperty Name="EcommerceProduct" ColumnName="EcommerceProduct" />
+          <ScalarProperty Name="DefaultCharge" ColumnName="DefaultCharge" />
+          <ScalarProperty Name="Workflow" ColumnName="Workflow" />
+          <ScalarProperty Name="WorkflowStep" ColumnName="WorkflowStep" />
+          <ScalarProperty Name="SQLDatabase" ColumnName="SQLDatabase" />
+          <ScalarProperty Name="SQLMainTableName" ColumnName="SQLMainTableName" />
+          <ScalarProperty Name="SQLInsertStoredProcedureName" ColumnName="SQLInsertStoredProcedureName" />
+          <ScalarProperty Name="SQLUpdateStoredProcedureName" ColumnName="SQLUpdateStoredProcedureName" />
+          <ScalarProperty Name="SQLAdditionalCertificationStatement" ColumnName="SQLAdditionalCertificationStatement" />
+          <ScalarProperty Name="ConfirmationMessageType" ColumnName="ConfirmationMessageType" />
+          <ScalarProperty Name="ConfirmationMessage" ColumnName="ConfirmationMessage" />
+          <ScalarProperty Name="SubmitterEmail" ColumnName="SubmitterEmail" />
+          <ScalarProperty Name="SubmitterEmailMessage" ColumnName="SubmitterEmailMessage" />
+          <ScalarProperty Name="ClosedMessage" ColumnName="ClosedMessage" />
+          <ScalarProperty Name="PageLimit" ColumnName="PageLimit" />
+          <ScalarProperty Name="FrontendDetailsComplete" ColumnName="FrontendDetailsComplete" />
+          <ScalarProperty Name="BackendDetailsComplete" ColumnName="BackendDetailsComplete" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSupervisors">
+      <EntityTypeMapping TypeName="WebRADModel.ProjectSupervisor">
+        <MappingFragment StoreEntitySet="ProjectSupervisors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="SupervisorType" ColumnName="SupervisorType" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+          <ScalarProperty Name="SupervisorName" ColumnName="SupervisorName" />
+          <ScalarProperty Name="SupervisorEmail" ColumnName="SupervisorEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SQLDatabases">
+      <EntityTypeMapping TypeName="WebRADModel.SQLDatabas">
+        <MappingFragment StoreEntitySet="SQLDatabases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SQLServers">
+      <EntityTypeMapping TypeName="WebRADModel.SQLServer">
+        <MappingFragment StoreEntitySet="SQLServers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValidatorTypes">
+      <EntityTypeMapping TypeName="WebRADModel.ValidatorType">
+        <MappingFragment StoreEntitySet="ValidatorTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopLevelProjectControls_v">
+      <EntityTypeMapping TypeName="WebRADModel.TopLevelProjectControls_v">
+        <MappingFragment StoreEntitySet="TopLevelProjectControls_v">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="ParentControlID" ColumnName="ParentControlID" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DisplayHeading" ColumnName="DisplayHeading" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="Subheading" ColumnName="Subheading" />
+          <ScalarProperty Name="ShortHeading" ColumnName="ShortHeading" />
+          <ScalarProperty Name="Autopostback" ColumnName="Autopostback" />
+          <ScalarProperty Name="PerformPostbackAction" ColumnName="PerformPostbackAction" />
+          <ScalarProperty Name="PostbackActionTarget" ColumnName="PostbackActionTarget" />
+          <ScalarProperty Name="PostbackAction" ColumnName="PostbackAction" />
+          <ScalarProperty Name="Onchange" ColumnName="Onchange" />
+          <ScalarProperty Name="OnchangeCall" ColumnName="OnchangeCall" />
+          <ScalarProperty Name="OnchangeBody" ColumnName="OnchangeBody" />
+          <ScalarProperty Name="DisplayColumn" ColumnName="DisplayColumn" />
+          <ScalarProperty Name="DisplayLocation" ColumnName="DisplayLocation" />
+          <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+          <ScalarProperty Name="IncludeDatabase" ColumnName="IncludeDatabase" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="CustomVisibleValue" ColumnName="CustomVisibleValue" />
+          <ScalarProperty Name="Required" ColumnName="Required" />
+          <ScalarProperty Name="MinimumRequired" ColumnName="MinimumRequired" />
+          <ScalarProperty Name="MaximumRequired" ColumnName="MaximumRequired" />
+          <ScalarProperty Name="RequireVerification" ColumnName="RequireVerification" />
+          <ScalarProperty Name="CustomValidation" ColumnName="CustomValidation" />
+          <ScalarProperty Name="CustomValidationCode" ColumnName="CustomValidationCode" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="TextPosition" ColumnName="TextPosition" />
+          <ScalarProperty Name="Calendar" ColumnName="Calendar" />
+          <ScalarProperty Name="RichValue" ColumnName="RichValue" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Placeholder" ColumnName="Placeholder" />
+          <ScalarProperty Name="TextMode" ColumnName="TextMode" />
+          <ScalarProperty Name="RichTextUser" ColumnName="RichTextUser" />
+          <ScalarProperty Name="Rows" ColumnName="Rows" />
+          <ScalarProperty Name="Columns" ColumnName="Columns" />
+          <ScalarProperty Name="MaxLength" ColumnName="MaxLength" />
+          <ScalarProperty Name="MaxLengthType" ColumnName="MaxLengthType" />
+          <ScalarProperty Name="MaxFileSize" ColumnName="MaxFileSize" />
+          <ScalarProperty Name="UploadPath" ColumnName="UploadPath" />
+          <ScalarProperty Name="UploadPathNewFolder" ColumnName="UploadPathNewFolder" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="CssClass" ColumnName="CssClass" />
+          <ScalarProperty Name="RepeatDirection" ColumnName="RepeatDirection" />
+          <ScalarProperty Name="RepeatColumns" ColumnName="RepeatColumns" />
+          <ScalarProperty Name="ListSelections" ColumnName="ListSelections" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="SelectionMode" ColumnName="SelectionMode" />
+          <ScalarProperty Name="SelectionItems" ColumnName="SelectionItems" />
+          <ScalarProperty Name="IncludePleaseSelect" ColumnName="IncludePleaseSelect" />
+          <ScalarProperty Name="DataMethod" ColumnName="DataMethod" />
+          <ScalarProperty Name="OtherDataMethod" ColumnName="OtherDataMethod" />
+          <ScalarProperty Name="MinimumValue" ColumnName="MinimumValue" />
+          <ScalarProperty Name="MaximumValue" ColumnName="MaximumValue" />
+          <ScalarProperty Name="SupplyControlData" ColumnName="SupplyControlData" />
+          <ScalarProperty Name="SupplyDataType" ColumnName="SupplyDataType" />
+          <ScalarProperty Name="DataSourceID" ColumnName="DataSourceID" />
+          <ScalarProperty Name="DataSourceColumn" ColumnName="DataSourceColumn" />
+          <ScalarProperty Name="SQLDataType" ColumnName="SQLDataType" />
+          <ScalarProperty Name="SQLDataSize" ColumnName="SQLDataSize" />
+          <ScalarProperty Name="SQLDefaultValue" ColumnName="SQLDefaultValue" />
+          <ScalarProperty Name="AllowNegativeValue" ColumnName="AllowNegativeValue" />
+          <ScalarProperty Name="SQLInsertItemTable" ColumnName="SQLInsertItemTable" />
+          <ScalarProperty Name="SQLInsertItemStoredProcedure" ColumnName="SQLInsertItemStoredProcedure" />
+          <ScalarProperty Name="ForeignID" ColumnName="ForeignID" />
+          <ScalarProperty Name="LayoutType" ColumnName="LayoutType" />
+          <ScalarProperty Name="LayoutSubtype" ColumnName="LayoutSubtype" />
+          <ScalarProperty Name="RepeaterAddRemove" ColumnName="RepeaterAddRemove" />
+          <ScalarProperty Name="RepeaterItemName" ColumnName="RepeaterItemName" />
+          <ScalarProperty Name="SubmitterEmail" ColumnName="SubmitterEmail" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ModelType" ColumnName="ModelType" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="ToolkitType" ColumnName="ToolkitType" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HTMLType" ColumnName="HTMLType" />
+          <ScalarProperty Name="DesignerDescription" ColumnName="DesignerDescription" />
+          <ScalarProperty Name="DesignerLibrary" ColumnName="DesignerLibrary" />
+          <ScalarProperty Name="IsListControl" ColumnName="IsListControl" />
+          <ScalarProperty Name="IsCheckControl" ColumnName="IsCheckControl" />
+          <ScalarProperty Name="LabelOnPrintable" ColumnName="LabelOnPrintable" />
+          <ScalarProperty Name="ValueAttribute" ColumnName="ValueAttribute" />
+          <ScalarProperty Name="ValidatorMessage" ColumnName="ValidatorMessage" />
+          <ScalarProperty Name="HTMLAttributes" ColumnName="HTMLAttributes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

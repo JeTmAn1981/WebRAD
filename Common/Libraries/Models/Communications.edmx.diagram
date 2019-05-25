@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="485a1721cf7b4036b6d7476227e71772" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Assignments" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_CabinetDepartments" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_CabinetList" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Department_BreadcrumbLinks" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Departments" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Departments_Locations" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepartmentTypes" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepChairList" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepChairList_SubDepartments" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepDirectorsDeansList" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepDirectorsDeansList_SubDepartments" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_DepDirectorsDeansList_Types" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_MajorCategories" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Majors" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Rules" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_RuleTypes" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_Schools" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_StatesProvinces" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_VPDepartments" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsModel.ARA_VPList" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="CommunicationsModel.FK_ARA_Assignments_ARA_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsModel.FK_ARA_Assignments_ARA_Rules" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsModel.FK_ARA_Departments_Locations_ARA_Departments" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

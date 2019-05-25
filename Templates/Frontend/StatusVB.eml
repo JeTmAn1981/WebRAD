@@ -1,0 +1,47 @@
+#Region "Imports"
+%(Imports)%
+#End Region
+
+Public Class %(PageType)%
+    Inherits System.Web.UI.Page
+
+	dim pageName As String = "Application Status"
+#Region " Web Form Designer Generated Code "
+
+    'This call is required by the Web Form Designer.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+
+    End Sub
+
+    Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
+        'CODEGEN: This method call is required by the Web Form Designer
+        'Do not modify it using the code editor.
+        InitializeComponent()
+    End Sub
+
+#End Region
+
+    Private	Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+			%(CheckScheduleCall)%
+			LoadFormText()
+			BindData()
+			%(CheckReviewCall)%
+	End Sub
+	
+	Sub LoadFormText()
+		%(LoadFormText)%
+	End Sub
+
+    Sub BindData()
+       %(BindDataContent)%
+
+       pnlQuit.visible = IIF(GetQueryString("Quit") = "True",True,False)
+    End Sub
+
+
+    Private Sub btnContinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnContinue.Click
+	Redirect("section1.aspx")
+    End Sub
+
+    %(ChangePasswordMethod)%
+End Class

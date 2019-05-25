@@ -1,0 +1,15 @@
+<%@ Page Language="vb" ValidateRequest="false" AutoEventWireup="false" CodeFile="%(PageType)%.aspx.vb"  MaintainScrollPositionOnPostBack="true" Inherits="%(PageType)%" %>%(RunAOPageHeader)%
+<!DOCTYPE HTML>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title><%= Common.APPLICATION_NAME %> | <%= Common.DEPARTMENT_NAME %> | Whitworth University</title>
+        <!-- #include file="\\web1\~whitworth\forms\forms-templates\template-head.htm" -->
+		<link href="//media.whitworth.edu/css/webradapps.css" rel="stylesheet" />
+		%(HeadData)%
+    </head>
+    <body class="body">
+        <!-- #include file="\\web1\~whitworth\forms\forms-templates\template-body-01.htm" -->
+        <%= Common.DEPARTMENT_NAME %>
+        <!-- #include file="\\web1\~whitworth\forms\forms-templates\template-body-02.htm" -->
+	    <!-- Form Start -->

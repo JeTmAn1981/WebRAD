@@ -1,0 +1,1960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebRADModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdditionalOperationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MethodReference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExecuteType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PerPage" Type="Boolean" />
+    <Property Name="Order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BackendActionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BackendOptionOperatorType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BackendOptionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Display" Type="Int32" />
+    <Property Name="IndividualPage" Type="Int32" />
+    <Property Name="DetailsRequired" Type="Boolean" />
+    <NavigationProperty Name="ProjectBackendOptions" Relationship="Self.FK_ProjectBackendOptions_BackendOptionTypes" FromRole="BackendOptionTypes" ToRole="ProjectBackendOptions" />
+    <NavigationProperty Name="ProjectBuildBackendOptions" Relationship="Self.FK_ProjectBuildBackendOptions_BackendOptionTypes" FromRole="BackendOptionTypes" ToRole="ProjectBuildBackendOptions" />
+  </EntityType>
+  <EntityType Name="CompositeControl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompositeControlType" Type="Int32" />
+    <Property Name="IndividualControlType" Type="Int32" />
+    <Property Name="Position" Type="Int32" />
+    <NavigationProperty Name="ControlType" Relationship="Self.FK_CompositeControls_ControlTypes" FromRole="CompositeControls" ToRole="ControlTypes" />
+    <NavigationProperty Name="ControlType1" Relationship="Self.FK_CompositeControls_ControlTypes1" FromRole="CompositeControls" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlActionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UseJavascript" Type="Int32" />
+    <NavigationProperty Name="ControlTypeActions" Relationship="Self.FK_ControlTypeActions_ControlActionTypes" FromRole="ControlActionTypes" ToRole="ControlTypeActions" />
+    <NavigationProperty Name="ProjectControlPostbackActions" Relationship="Self.FK_ProjectControlPostbackActions_ControlActionTypes" FromRole="ControlActionTypes" ToRole="ProjectControlPostbackActions" />
+  </EntityType>
+  <EntityType Name="ControlChangeHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="Property" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OldValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NewValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ControlDataType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignerDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignerLibrary" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ToolkitType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HTMLType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HTMLAttributes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Prefix" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProvidesValue" Type="Boolean" />
+    <Property Name="ValueAttribute" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JSValueAttribute" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ValidatorMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsListControl" Type="Int32" />
+    <Property Name="IsCheckControl" Type="Int32" />
+    <Property Name="LabelOnPrintable" Type="Int32" />
+    <Property Name="ActionAvailable" Type="Int32" />
+    <Property Name="ActionMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JSActionMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlTypeActions" Relationship="Self.FK_ControlTypeActions_ControlDataTypes" FromRole="ControlDataTypes" ToRole="ControlTypeActions" />
+    <NavigationProperty Name="ControlTypeActions1" Relationship="Self.FK_ControlTypeActions_ControlDataTypes1" FromRole="ControlDataTypes" ToRole="ControlTypeActions" />
+    <NavigationProperty Name="ControlTypes" Relationship="Self.FK_ControlTypes_ControlDataTypes" FromRole="ControlDataTypes" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlDisplayType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ControlSQLType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NeedSize" Type="Int32" />
+    <Property Name="NullValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ControlTypeAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActionControlDataType" Type="Int32" />
+    <Property Name="TargetControlDataType" Type="Int32" />
+    <Property Name="ActionType" Type="Int32" />
+    <NavigationProperty Name="ControlActionType" Relationship="Self.FK_ControlTypeActions_ControlActionTypes" FromRole="ControlTypeActions" ToRole="ControlActionTypes" />
+    <NavigationProperty Name="ControlDataType" Relationship="Self.FK_ControlTypeActions_ControlDataTypes" FromRole="ControlTypeActions" ToRole="ControlDataTypes" />
+    <NavigationProperty Name="ControlDataType1" Relationship="Self.FK_ControlTypeActions_ControlDataTypes1" FromRole="ControlTypeActions" ToRole="ControlDataTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailColumnExclusion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColumnName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailRequirement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProfileID" Type="Int32" />
+    <Property Name="DetailTypeID" Type="Int32" />
+    <Property Name="Required" Type="Int32" />
+    <NavigationProperty Name="ControlTypeDetailType" Relationship="Self.FK_ControlTypeDetailRequirements_ControlTypeDetailTypes" FromRole="ControlTypeDetailRequirements" ToRole="ControlTypeDetailTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="ControlType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayHeading" Type="Int32" />
+    <Property Name="Heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Subheading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayLocation" Type="Int32" />
+    <Property Name="DisplayType" Type="Int32" />
+    <Property Name="Enabled" Type="Int32" />
+    <Property Name="Visible" Type="Int32" />
+    <Property Name="Required" Type="Int32" />
+    <Property Name="RequireVerification" Type="Int32" />
+    <Property Name="CustomValidation" Type="Int32" />
+    <Property Name="Autopostback" Type="Int32" />
+    <Property Name="PerformPostbackAction" Type="Int32" />
+    <Property Name="PostbackActionTarget" Type="Int32" />
+    <Property Name="PostbackAction" Type="Int32" />
+    <Property Name="RichValue" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Placeholder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TextPosition" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Calendar" Type="Int32" />
+    <Property Name="MaxLength" Type="Int32" />
+    <Property Name="MaxFileSize" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="CssClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatDirection" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatColumns" Type="Int32" />
+    <Property Name="ListSelections" Type="Int32" />
+    <Property Name="SelectionMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionItems" Type="Int32" />
+    <Property Name="DataMethod" Type="Int32" />
+    <Property Name="OtherDataMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IncludePleaseSelect" Type="Int32" />
+    <Property Name="MinimumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DataSource" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataTextField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataValueField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LayoutType" Type="Int32" />
+    <Property Name="IncludeDatabase" Type="Int32" />
+    <Property Name="SQLDataType" Type="Int32" />
+    <Property Name="SQLDataSize" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RequirementsProfile" Type="Int32" />
+    <Property Name="TextMode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlType1" Relationship="Self.FK_ControlTypeDetails_ControlTypes" FromRole="ControlTypeDetails" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailTypeCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlTypeDetailTypes" Relationship="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories" FromRole="ControlTypeDetailTypeCategories" ToRole="ControlTypeDetailTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailTypeItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlTypeDetailTypeID" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlTypeDetailType" Relationship="Self.FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypeItems" ToRole="ControlTypeDetailTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Heading" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="Int32" />
+    <Property Name="HTMLType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CssClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="ParentTypeID" Type="Int32" />
+    <NavigationProperty Name="ControlTypeDetailRequirements" Relationship="Self.FK_ControlTypeDetailRequirements_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypes" ToRole="ControlTypeDetailRequirements" />
+    <NavigationProperty Name="ControlTypeDetailTypeCategory" Relationship="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories" FromRole="ControlTypeDetailTypes" ToRole="ControlTypeDetailTypeCategories" />
+    <NavigationProperty Name="ControlTypeDetailTypeItems" Relationship="Self.FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypes" ToRole="ControlTypeDetailTypeItems" />
+    <NavigationProperty Name="ControlTypeDetailTypes1" Relationship="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypes" ToRole="ControlTypeDetailTypes1" />
+    <NavigationProperty Name="ControlTypeDetailType1" Relationship="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypes1" ToRole="ControlTypeDetailTypes" />
+    <NavigationProperty Name="ControlTypeDetailValues" Relationship="Self.FK_ControlTypeDetailValues_ControlTypeDetailTypes" FromRole="ControlTypeDetailTypes" ToRole="ControlTypeDetailValues" />
+  </EntityType>
+  <EntityType Name="ControlTypeDetailValue">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlTypeID" Type="Int32" />
+    <Property Name="DetailTypeID" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlTypeDetailType" Relationship="Self.FK_ControlTypeDetailValues_ControlTypeDetailTypes" FromRole="ControlTypeDetailValues" ToRole="ControlTypeDetailTypes" />
+    <NavigationProperty Name="ControlType" Relationship="Self.FK_ControlTypeDetailValues_ControlTypes" FromRole="ControlTypeDetailValues" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeFileTypesAllowed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="FileType" Type="Int32" />
+    <NavigationProperty Name="ControlType" Relationship="Self.FK_ControlTypeFileTypesAllowed_ControlTypes" FromRole="ControlTypeFileTypesAllowed" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlTypeItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlType" Relationship="Self.FK_ControlTypeItems_ControlTypes" FromRole="ControlTypeItems" ToRole="ControlTypes" />
+  </EntityType>
+  <EntityType Name="ControlType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NonASP" Type="Int32" />
+    <Property Name="IsParent" Type="Int32" />
+    <Property Name="Composite" Type="Int32" />
+    <Property Name="ParentControlTypeID" Type="Int32" />
+    <Property Name="CustomValidatorRequired" Type="Int32" />
+    <Property Name="DataType" Type="Int32" />
+    <NavigationProperty Name="CompositeControls" Relationship="Self.FK_CompositeControls_ControlTypes" FromRole="ControlTypes" ToRole="CompositeControls" />
+    <NavigationProperty Name="CompositeControls1" Relationship="Self.FK_CompositeControls_ControlTypes1" FromRole="ControlTypes" ToRole="CompositeControls" />
+    <NavigationProperty Name="ControlDataType" Relationship="Self.FK_ControlTypes_ControlDataTypes" FromRole="ControlTypes" ToRole="ControlDataTypes" />
+    <NavigationProperty Name="ControlTypeDetails" Relationship="Self.FK_ControlTypeDetails_ControlTypes" FromRole="ControlTypes" ToRole="ControlTypeDetails" />
+    <NavigationProperty Name="ControlTypeDetailValues" Relationship="Self.FK_ControlTypeDetailValues_ControlTypes" FromRole="ControlTypes" ToRole="ControlTypeDetailValues" />
+    <NavigationProperty Name="ControlTypeFileTypesAlloweds" Relationship="Self.FK_ControlTypeFileTypesAllowed_ControlTypes" FromRole="ControlTypes" ToRole="ControlTypeFileTypesAllowed" />
+    <NavigationProperty Name="ControlTypeItems" Relationship="Self.FK_ControlTypeItems_ControlTypes" FromRole="ControlTypes" ToRole="ControlTypeItems" />
+    <NavigationProperty Name="ControlTypeValidators" Relationship="Self.FK_ControlTypeValidators_ControlTypes" FromRole="ControlTypes" ToRole="ControlTypeValidators" />
+    <NavigationProperty Name="ProjectControls" Relationship="Self.FK_ProjectControls_ControlTypes" FromRole="ControlTypes" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ControlTypeValidator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Errormessage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ValidationExpression" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlType" Relationship="Self.FK_ControlTypeValidators_ControlTypes" FromRole="ControlTypeValidators" ToRole="ControlTypes" />
+    <NavigationProperty Name="ValidatorType" Relationship="Self.FK_ControlTypeValidators_ValidatorTypes" FromRole="ControlTypeValidators" ToRole="ValidatorTypes" />
+  </EntityType>
+  <EntityType Name="DataMethodType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MethodContent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumValueUsed" Type="Int32" />
+    <Property Name="MaximumValueRequired" Type="Int32" />
+    <Property Name="MinimumValueUsed" Type="Int32" />
+    <Property Name="MinimumValueRequired" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DataSourceParentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Table" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectDataSources" Relationship="Self.FK_ProjectDataSources_DataSourceParentTypes" FromRole="DataSourceParentTypes" ToRole="ProjectDataSources" />
+  </EntityType>
+  <EntityType Name="dtproperty">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Int32" />
+    <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectControlFileTypesAlloweds" Relationship="Self.FK_ProjectControlFileTypesAllowed_FileTypes" FromRole="FileTypes" ToRole="ProjectControlFileTypesAllowed" />
+  </EntityType>
+  <EntityType Name="LayoutSubtype">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LayoutType" Relationship="Self.FK_LayoutSubtypes_LayoutTypes" FromRole="LayoutSubtypes" ToRole="LayoutTypes" />
+  </EntityType>
+  <EntityType Name="LayoutType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LayoutSubtypes" Relationship="Self.FK_LayoutSubtypes_LayoutTypes" FromRole="LayoutTypes" ToRole="LayoutSubtypes" />
+  </EntityType>
+  <EntityType Name="LoginColumnType">
+    <Key>
+      <PropertyRef Name="IDNumber" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDNumber" Type="Int32" Nullable="false" />
+    <Property Name="Heading" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ControlName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ControlType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Prefix" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Frontend" Type="Int32" />
+    <Property Name="Order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ProhibitedColumnName">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProjectAdditionalOperation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageID" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="AdditionalOperations" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectPage" Relationship="Self.FK_ProjectAdditionalOperations_ProjectPages" FromRole="ProjectAdditionalOperations" ToRole="ProjectPages" />
+  </EntityType>
+  <EntityType Name="ProjectAncillaryMaintenance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="AncillaryProjectID" Type="Int32" />
+    <Property Name="ShortName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Singleton" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectAncillaryMaintenance_Projects" FromRole="ProjectAncillaryMaintenance" ToRole="Projects" />
+    <NavigationProperty Name="Project1" Relationship="Self.FK_ProjectAncillaryMaintenance_Projects1" FromRole="ProjectAncillaryMaintenance" ToRole="Projects" />
+    <NavigationProperty Name="ProjectBuildBackendAncillaryMaintenances" Relationship="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance" FromRole="ProjectAncillaryMaintenance" ToRole="ProjectBuildBackendAncillaryMaintenance" />
+  </EntityType>
+  <EntityType Name="ProjectArchiveMigration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProjectBackendAdditionalLink">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectBackendAdditionalLinks_Projects" FromRole="ProjectBackendAdditionalLinks" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectBackendExport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FileType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceType" Type="Int32" />
+    <Property Name="DataSourceID" Type="Int32" />
+    <Property Name="SQLQuery" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MessageType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Template" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectDataSource" Relationship="Self.FK_ProjectBackendExports_ProjectDataSources" FromRole="ProjectBackendExports" ToRole="ProjectDataSources" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectBackendExports_Projects" FromRole="ProjectBackendExports" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectBackendOptionColumn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OptionID" Type="Int32" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="Label" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OperatorType" Type="Int32" />
+    <Property Name="ComparisonValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CustomActionCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProjectBackendOption" Relationship="Self.FK_ProjectBackendOptionColumns_ProjectBackendOptions" FromRole="ProjectBackendOptionColumns" ToRole="ProjectBackendOptions" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectBackendOptionColumns_ProjectControls" FromRole="ProjectBackendOptionColumns" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ProjectBackendOption">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Label" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionType" Type="Int32" />
+    <NavigationProperty Name="BackendOptionType" Relationship="Self.FK_ProjectBackendOptions_BackendOptionTypes" FromRole="ProjectBackendOptions" ToRole="BackendOptionTypes" />
+    <NavigationProperty Name="ProjectBackendOptionColumns" Relationship="Self.FK_ProjectBackendOptionColumns_ProjectBackendOptions" FromRole="ProjectBackendOptions" ToRole="ProjectBackendOptionColumns" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectBackendOptions_Projects" FromRole="ProjectBackendOptions" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectBuildBackendAncillaryMaintenance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildID" Type="Int32" />
+    <Property Name="AncillaryMaintenanceID" Type="Int32" />
+    <NavigationProperty Name="ProjectAncillaryMaintenance" Relationship="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance" FromRole="ProjectBuildBackendAncillaryMaintenance" ToRole="ProjectAncillaryMaintenance" />
+    <NavigationProperty Name="ProjectBuild" Relationship="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds" FromRole="ProjectBuildBackendAncillaryMaintenance" ToRole="ProjectBuilds" />
+  </EntityType>
+  <EntityType Name="ProjectBuildBackendOption">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildID" Type="Int32" />
+    <Property Name="BackendOptionTypeID" Type="Int32" />
+    <NavigationProperty Name="BackendOptionType" Relationship="Self.FK_ProjectBuildBackendOptions_BackendOptionTypes" FromRole="ProjectBuildBackendOptions" ToRole="BackendOptionTypes" />
+    <NavigationProperty Name="ProjectBuild" Relationship="Self.FK_ProjectBuildBackendOptions_ProjectBuilds" FromRole="ProjectBuildBackendOptions" ToRole="ProjectBuilds" />
+  </EntityType>
+  <EntityType Name="ProjectBuildPage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildID" Type="Int32" />
+    <Property Name="PageID" Type="Int32" />
+    <NavigationProperty Name="ProjectBuild" Relationship="Self.FK_ProjectBuildPages_ProjectBuilds" FromRole="ProjectBuildPages" ToRole="ProjectBuilds" />
+    <NavigationProperty Name="ProjectPage" Relationship="Self.FK_ProjectBuildPages_ProjectPages" FromRole="ProjectBuildPages" ToRole="ProjectPages" />
+  </EntityType>
+  <EntityType Name="ProjectBuild">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Frontend" Type="Int32" />
+    <Property Name="Backend" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FormsType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Style" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProjectBuildBackendAncillaryMaintenances" Relationship="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds" FromRole="ProjectBuilds" ToRole="ProjectBuildBackendAncillaryMaintenance" />
+    <NavigationProperty Name="ProjectBuildBackendOptions" Relationship="Self.FK_ProjectBuildBackendOptions_ProjectBuilds" FromRole="ProjectBuilds" ToRole="ProjectBuildBackendOptions" />
+    <NavigationProperty Name="ProjectBuildPages" Relationship="Self.FK_ProjectBuildPages_ProjectBuilds" FromRole="ProjectBuilds" ToRole="ProjectBuildPages" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectBuilds_Projects" FromRole="ProjectBuilds" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectColumn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="TableControlID" Type="Int32" />
+    <Property Name="ColumnControlID" Type="Int32" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TypeID" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectColumns_Projects" FromRole="ProjectColumns" ToRole="Projects" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectControls_TableControl" FromRole="ProjectColumns" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ProjectControlFileTypesAllowed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ControlID" Type="Int32" />
+    <Property Name="FileType" Type="Int32" />
+    <NavigationProperty Name="FileType1" Relationship="Self.FK_ProjectControlFileTypesAllowed_FileTypes" FromRole="ProjectControlFileTypesAllowed" ToRole="FileTypes" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectControlFileTypesAllowed_ProjectControls" FromRole="ProjectControlFileTypesAllowed" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ProjectControlListItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectControlListItems_ProjectControls" FromRole="ProjectControlListItems" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ProjectControlPostbackAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TriggerControl" Type="Int32" />
+    <Property Name="TargetControl" Type="Int32" />
+    <Property Name="Action" Type="Int32" />
+    <Property Name="UpdateRepeaterItemsSelectionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateRepeaterItemsValue" Type="Int32" />
+    <Property Name="SetValueType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExplicitValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ControlValue" Type="Int32" />
+    <Property Name="SelectionItems" Type="Int32" />
+    <Property Name="DataSourceID" Type="Int32" />
+    <Property Name="DataSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceType" Type="Int32" />
+    <Property Name="DataSourceSelect" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceTable" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceWhere" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceGroupBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceOrderBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataTextField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataValueField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataMethod" Type="Int32" />
+    <Property Name="OtherDataMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MinimumValue" Type="Int32" />
+    <Property Name="MaximumValue" Type="Int32" />
+    <Property Name="IncludePleaseSelect" Type="Int32" />
+    <Property Name="SelectionMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomActionCode" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlActionType" Relationship="Self.FK_ProjectControlPostbackActions_ControlActionTypes" FromRole="ProjectControlPostbackActions" ToRole="ControlActionTypes" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectControlPostbackActions_TargetControl" FromRole="ProjectControlPostbackActions" ToRole="ProjectControls" />
+    <NavigationProperty Name="ProjectControlPostbackActionTriggerValues" Relationship="Self.FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions" FromRole="ProjectControlPostbackActions" ToRole="ProjectControlPostbackActionTriggerValues" />
+  </EntityType>
+  <EntityType Name="ProjectControlPostbackActionTriggerValue">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActionID" Type="Int32" />
+    <Property Name="TriggerValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TriggerOperator" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProjectControlPostbackAction" Relationship="Self.FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions" FromRole="ProjectControlPostbackActionTriggerValues" ToRole="ProjectControlPostbackActions" />
+  </EntityType>
+  <EntityType Name="ProjectControl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="PageID" Type="Int32" />
+    <Property Name="ParentControlID" Type="Int32" />
+    <Property Name="ControlType" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayHeading" Type="Int32" />
+    <Property Name="Heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Subheading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ShortHeading" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Autopostback" Type="Int32" />
+    <Property Name="PerformPostbackAction" Type="Int32" />
+    <Property Name="PostbackActionTarget" Type="Int32" />
+    <Property Name="PostbackAction" Type="Int32" />
+    <Property Name="Onchange" Type="Int32" />
+    <Property Name="OnchangeCall" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OnchangeBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayColumn" Type="Int32" />
+    <Property Name="DisplayLocation" Type="Int32" />
+    <Property Name="DisplayType" Type="Int32" />
+    <Property Name="IncludeDatabase" Type="Int32" />
+    <Property Name="Enabled" Type="Int32" />
+    <Property Name="Visible" Type="Int32" />
+    <Property Name="CustomVisibleValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Required" Type="Int32" />
+    <Property Name="MinimumRequired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumRequired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequireVerification" Type="Int32" />
+    <Property Name="CustomValidation" Type="Int32" />
+    <Property Name="CustomValidationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TextPosition" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Calendar" Type="Int32" />
+    <Property Name="RichValue" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Placeholder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TextMode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RichTextUser" Type="Int32" />
+    <Property Name="Rows" Type="Int32" />
+    <Property Name="Columns" Type="Int32" />
+    <Property Name="MaxLength" Type="Int32" />
+    <Property Name="MaxLengthType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MaxFileSize" Type="Int32" />
+    <Property Name="UploadPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadPathNewFolder" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="CssClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatDirection" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatColumns" Type="Int32" />
+    <Property Name="ListSelections" Type="Int32" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionItems" Type="Int32" />
+    <Property Name="IncludePleaseSelect" Type="Int32" />
+    <Property Name="DataMethod" Type="Int32" />
+    <Property Name="OtherDataMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MinimumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SupplyControlData" Type="Int32" />
+    <Property Name="SupplyDataType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceID" Type="Int32" />
+    <Property Name="DataSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceColumn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceType" Type="Int32" />
+    <Property Name="DataSourceSelect" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceTable" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceWhere" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceGroupBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceOrderBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DataTextField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataValueField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SQLDataType" Type="Int32" />
+    <Property Name="SQLDataSize" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SQLDefaultValueType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SQLDefaultValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AllowNegativeValue" Type="Int32" />
+    <Property Name="SQLInsertItemTable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLInsertItemStoredProcedure" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ForeignID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LayoutType" Type="Int32" />
+    <Property Name="LayoutSubtype" Type="Int32" />
+    <Property Name="RepeaterAddRemove" Type="Int32" />
+    <Property Name="RepeaterItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubmitterEmail" Type="Int32" />
+    <Property Name="ProspectCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="Int32" />
+    <NavigationProperty Name="ControlType1" Relationship="Self.FK_ProjectControls_ControlTypes" FromRole="ProjectControls" ToRole="ControlTypes" />
+    <NavigationProperty Name="ProjectBackendOptionColumns" Relationship="Self.FK_ProjectBackendOptionColumns_ProjectControls" FromRole="ProjectControls" ToRole="ProjectBackendOptionColumns" />
+    <NavigationProperty Name="ProjectColumns" Relationship="Self.FK_ProjectControls_TableControl" FromRole="ProjectControls" ToRole="ProjectColumns" />
+    <NavigationProperty Name="ProjectControlFileTypesAlloweds" Relationship="Self.FK_ProjectControlFileTypesAllowed_ProjectControls" FromRole="ProjectControls" ToRole="ProjectControlFileTypesAllowed" />
+    <NavigationProperty Name="ProjectControlListItems" Relationship="Self.FK_ProjectControlListItems_ProjectControls" FromRole="ProjectControls" ToRole="ProjectControlListItems" />
+    <NavigationProperty Name="ProjectControlPostbackActions" Relationship="Self.FK_ProjectControlPostbackActions_TargetControl" FromRole="ProjectControls" ToRole="ProjectControlPostbackActions" />
+    <NavigationProperty Name="ProjectControls1" Relationship="Self.FK_ProjectControls_ParentControl" FromRole="ProjectControls" ToRole="ProjectControls1" />
+    <NavigationProperty Name="ProjectControl1" Relationship="Self.FK_ProjectControls_ParentControl" FromRole="ProjectControls1" ToRole="ProjectControls" />
+    <NavigationProperty Name="ProjectDataSource" Relationship="Self.FK_ProjectControls_ProjectDataSources" FromRole="ProjectControls" ToRole="ProjectDataSources" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectControls_Projects" FromRole="ProjectControls" ToRole="Projects" />
+    <NavigationProperty Name="ProjectEmailMessageSubmitterControls" Relationship="Self.FK_ProjectEmailMessageSubmitterControls_ProjectControls" FromRole="ProjectControls" ToRole="ProjectEmailMessageSubmitterControls" />
+  </EntityType>
+  <EntityType Name="ProjectDataSource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentType" Type="Int32" />
+    <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BackendSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Column" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Select" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Table" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Where" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="GroupBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OrderBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TextField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValueField" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DataSourceParentType" Relationship="Self.FK_ProjectDataSources_DataSourceParentTypes" FromRole="ProjectDataSources" ToRole="DataSourceParentTypes" />
+    <NavigationProperty Name="ProjectBackendExports" Relationship="Self.FK_ProjectBackendExports_ProjectDataSources" FromRole="ProjectDataSources" ToRole="ProjectBackendExports" />
+    <NavigationProperty Name="ProjectControls" Relationship="Self.FK_ProjectControls_ProjectDataSources" FromRole="ProjectDataSources" ToRole="ProjectControls" />
+  </EntityType>
+  <EntityType Name="ProjectEmailMessage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="ToAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BCCAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="MessageType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Workflow" Type="Int32" />
+    <Property Name="WorkflowDestination" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectEmailMessages_Projects" FromRole="ProjectEmailMessages" ToRole="Projects" />
+    <NavigationProperty Name="ProjectEmailMessageSubmitterControls" Relationship="Self.FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages" FromRole="ProjectEmailMessages" ToRole="ProjectEmailMessageSubmitterControls" />
+  </EntityType>
+  <EntityType Name="ProjectEmailMessageSubmitterControl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageID" Type="Int32" />
+    <Property Name="ControlID" Type="Int32" />
+    <NavigationProperty Name="ProjectControl" Relationship="Self.FK_ProjectEmailMessageSubmitterControls_ProjectControls" FromRole="ProjectEmailMessageSubmitterControls" ToRole="ProjectControls" />
+    <NavigationProperty Name="ProjectEmailMessage" Relationship="Self.FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages" FromRole="ProjectEmailMessageSubmitterControls" ToRole="ProjectEmailMessages" />
+  </EntityType>
+  <EntityType Name="ProjectOption">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectOptions_Projects" FromRole="ProjectOptions" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectPage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="Purpose" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Dependent" Type="Boolean" />
+    <Property Name="SelectionControl" Type="Int32" />
+    <Property Name="SelectionValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Certification" Type="Int32" />
+    <NavigationProperty Name="ProjectAdditionalOperations" Relationship="Self.FK_ProjectAdditionalOperations_ProjectPages" FromRole="ProjectPages" ToRole="ProjectAdditionalOperations" />
+    <NavigationProperty Name="ProjectBuildPages" Relationship="Self.FK_ProjectBuildPages_ProjectPages" FromRole="ProjectPages" ToRole="ProjectBuildPages" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectPages_Projects" FromRole="ProjectPages" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="Int32" />
+    <Property Name="CustomDepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequireLogin" Type="Int32" />
+    <Property Name="Insert" Type="Int32" />
+    <Property Name="Archive" Type="Int32" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="DefaultSort" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Filter" Type="Int32" />
+    <Property Name="Actions" Type="Int32" />
+    <Property Name="Printable" Type="Int32" />
+    <Property Name="Export" Type="Int32" />
+    <Property Name="ExportType" Type="Int32" />
+    <Property Name="ExportSQLQuery" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="NumberExports" Type="Int32" />
+    <Property Name="EmailSupervisor" Type="Int32" />
+    <Property Name="IncludeFrontend" Type="Int32" />
+    <Property Name="FrontendLink" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FrontendPath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="FrontendNewFolder" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MultipleSubmissions" Type="Int32" />
+    <Property Name="IncludeSectionNumbers" Type="Int32" />
+    <Property Name="IncludeBackend" Type="Int32" />
+    <Property Name="BackendLink" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BackendPath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="BackendNewFolder" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CustomSelectStatement" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CustomSelectDataSourceID" Type="Int32" />
+    <Property Name="SearchColumns" Type="Int32" />
+    <Property Name="Ecommerce" Type="Int32" />
+    <Property Name="EcommerceProduct" Type="Int32" />
+    <Property Name="DefaultCharge" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Workflow" Type="Int32" />
+    <Property Name="WorkflowStep" Type="Int32" />
+    <Property Name="SQLDatabase" Type="Int32" />
+    <Property Name="SQLMainTableName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLInsertStoredProcedureName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLUpdateStoredProcedureName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLAdditionalCertificationStatement" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CustomConfirmationPageMessage" Type="Boolean" />
+    <Property Name="ConfirmationMessageType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ConfirmationMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CustomStatusPageMessage" Type="Boolean" />
+    <Property Name="StatusMessageType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StatusMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SubmitterEmail" Type="Int32" />
+    <Property Name="SubmitterEmailMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ClosedMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PageLimit" Type="Int32" />
+    <Property Name="FrontendDetailsComplete" Type="Int32" />
+    <Property Name="BackendDetailsComplete" Type="Int32" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateSubmitted" Type="DateTime" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProjectAncillaryMaintenances" Relationship="Self.FK_ProjectAncillaryMaintenance_Projects" FromRole="Projects" ToRole="ProjectAncillaryMaintenance" />
+    <NavigationProperty Name="ProjectAncillaryMaintenances1" Relationship="Self.FK_ProjectAncillaryMaintenance_Projects1" FromRole="Projects" ToRole="ProjectAncillaryMaintenance" />
+    <NavigationProperty Name="ProjectBackendAdditionalLinks" Relationship="Self.FK_ProjectBackendAdditionalLinks_Projects" FromRole="Projects" ToRole="ProjectBackendAdditionalLinks" />
+    <NavigationProperty Name="ProjectBackendExports" Relationship="Self.FK_ProjectBackendExports_Projects" FromRole="Projects" ToRole="ProjectBackendExports" />
+    <NavigationProperty Name="ProjectBackendOptions" Relationship="Self.FK_ProjectBackendOptions_Projects" FromRole="Projects" ToRole="ProjectBackendOptions" />
+    <NavigationProperty Name="ProjectBuilds" Relationship="Self.FK_ProjectBuilds_Projects" FromRole="Projects" ToRole="ProjectBuilds" />
+    <NavigationProperty Name="ProjectColumns" Relationship="Self.FK_ProjectColumns_Projects" FromRole="Projects" ToRole="ProjectColumns" />
+    <NavigationProperty Name="ProjectControls" Relationship="Self.FK_ProjectControls_Projects" FromRole="Projects" ToRole="ProjectControls" />
+    <NavigationProperty Name="ProjectEmailMessages" Relationship="Self.FK_ProjectEmailMessages_Projects" FromRole="Projects" ToRole="ProjectEmailMessages" />
+    <NavigationProperty Name="ProjectOptions" Relationship="Self.FK_ProjectOptions_Projects" FromRole="Projects" ToRole="ProjectOptions" />
+    <NavigationProperty Name="ProjectPages" Relationship="Self.FK_ProjectPages_Projects" FromRole="Projects" ToRole="ProjectPages" />
+    <NavigationProperty Name="ProjectSupervisors" Relationship="Self.FK_ProjectSupervisors_Projects" FromRole="Projects" ToRole="ProjectSupervisors" />
+  </EntityType>
+  <EntityType Name="ProjectSupervisor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="SupervisorType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupervisorID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SupervisorName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SupervisorEmail" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectSupervisors_Projects" FromRole="ProjectSupervisors" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="SQLDatabas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServerID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SQLServer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TableHierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="ForeignID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="txtAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Required" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ValidatorType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prefix" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ControlTypeValidators" Relationship="Self.FK_ControlTypeValidators_ValidatorTypes" FromRole="ValidatorTypes" ToRole="ControlTypeValidators" />
+  </EntityType>
+  <EntityType Name="TopLevelProjectControls_v">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="PageID" Type="Int32" />
+    <Property Name="ParentControlID" Type="Int32" />
+    <Property Name="ControlType" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayHeading" Type="Int32" />
+    <Property Name="Heading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Subheading" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ShortHeading" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Autopostback" Type="Int32" />
+    <Property Name="PerformPostbackAction" Type="Int32" />
+    <Property Name="PostbackActionTarget" Type="Int32" />
+    <Property Name="PostbackAction" Type="Int32" />
+    <Property Name="Onchange" Type="Int32" />
+    <Property Name="OnchangeCall" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OnchangeBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayColumn" Type="Int32" />
+    <Property Name="DisplayLocation" Type="Int32" />
+    <Property Name="DisplayType" Type="Int32" />
+    <Property Name="IncludeDatabase" Type="Int32" />
+    <Property Name="Enabled" Type="Int32" />
+    <Property Name="Visible" Type="Int32" />
+    <Property Name="CustomVisibleValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Required" Type="Int32" />
+    <Property Name="MinimumRequired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumRequired" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequireVerification" Type="Int32" />
+    <Property Name="CustomValidation" Type="Int32" />
+    <Property Name="CustomValidationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TextPosition" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Calendar" Type="Int32" />
+    <Property Name="RichValue" Type="Int32" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Placeholder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TextMode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RichTextUser" Type="Int32" />
+    <Property Name="Rows" Type="Int32" />
+    <Property Name="Columns" Type="Int32" />
+    <Property Name="MaxLength" Type="Int32" />
+    <Property Name="MaxLengthType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MaxFileSize" Type="Int32" />
+    <Property Name="UploadPath" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadPathNewFolder" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="CssClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatDirection" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepeatColumns" Type="Int32" />
+    <Property Name="ListSelections" Type="Int32" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectionItems" Type="Int32" />
+    <Property Name="IncludePleaseSelect" Type="Int32" />
+    <Property Name="DataMethod" Type="Int32" />
+    <Property Name="OtherDataMethod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MinimumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaximumValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SupplyControlData" Type="Int32" />
+    <Property Name="SupplyDataType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DataSourceID" Type="Int32" />
+    <Property Name="DataSourceColumn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLDataType" Type="Int32" />
+    <Property Name="SQLDataSize" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SQLDefaultValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AllowNegativeValue" Type="Int32" />
+    <Property Name="SQLInsertItemTable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SQLInsertItemStoredProcedure" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ForeignID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LayoutType" Type="Int32" />
+    <Property Name="LayoutSubtype" Type="Int32" />
+    <Property Name="RepeaterAddRemove" Type="Int32" />
+    <Property Name="RepeaterItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubmitterEmail" Type="Int32" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="ModelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntityType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ToolkitType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prefix" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DataType" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HTMLType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignerDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DesignerLibrary" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsListControl" Type="Int32" />
+    <Property Name="IsCheckControl" Type="Int32" />
+    <Property Name="LabelOnPrintable" Type="Int32" />
+    <Property Name="ValueAttribute" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ValidatorMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="HTMLAttributes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_ProjectBackendOptions_BackendOptionTypes">
+    <End Role="BackendOptionTypes" Type="Self.BackendOptionType" Multiplicity="0..1" />
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackendOptionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptions">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildBackendOptions_BackendOptionTypes">
+    <End Role="BackendOptionTypes" Type="Self.BackendOptionType" Multiplicity="0..1" />
+    <End Role="ProjectBuildBackendOptions" Type="Self.ProjectBuildBackendOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackendOptionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildBackendOptions">
+        <PropertyRef Name="BackendOptionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompositeControls_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="CompositeControls" Type="Self.CompositeControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CompositeControls">
+        <PropertyRef Name="CompositeControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompositeControls_ControlTypes1">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="CompositeControls" Type="Self.CompositeControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CompositeControls">
+        <PropertyRef Name="IndividualControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlActionTypes">
+    <End Role="ControlActionTypes" Type="Self.ControlActionType" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlActionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="ActionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActions_ControlActionTypes">
+    <End Role="ControlActionTypes" Type="Self.ControlActionType" Multiplicity="0..1" />
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlActionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActions">
+        <PropertyRef Name="Action" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlDataTypes">
+    <End Role="ControlDataTypes" Type="Self.ControlDataType" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="ActionControlDataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeActions_ControlDataTypes1">
+    <End Role="ControlDataTypes" Type="Self.ControlDataType" Multiplicity="0..1" />
+    <End Role="ControlTypeActions" Type="Self.ControlTypeAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeActions">
+        <PropertyRef Name="TargetControlDataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypes_ControlDataTypes">
+    <End Role="ControlDataTypes" Type="Self.ControlDataType" Multiplicity="0..1" />
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlDataTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypes">
+        <PropertyRef Name="DataType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailRequirements_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailRequirements" Type="Self.ControlTypeDetailRequirement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailRequirements">
+        <PropertyRef Name="DetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetails_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetails" Type="Self.ControlTypeDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetails">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories">
+    <End Role="ControlTypeDetailTypeCategories" Type="Self.ControlTypeDetailTypeCategory" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypeCategories">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypes">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypeItems" Type="Self.ControlTypeDetailTypeItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypeItems">
+        <PropertyRef Name="ControlTypeDetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailTypes1" Type="Self.ControlTypeDetailType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailTypes1">
+        <PropertyRef Name="ParentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailValues_ControlTypeDetailTypes">
+    <End Role="ControlTypeDetailTypes" Type="Self.ControlTypeDetailType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailValues" Type="Self.ControlTypeDetailValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypeDetailTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailValues">
+        <PropertyRef Name="DetailTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeDetailValues_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="ControlTypeDetailValues" Type="Self.ControlTypeDetailValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeDetailValues">
+        <PropertyRef Name="ControlTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeFileTypesAllowed_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="ControlTypeFileTypesAllowed" Type="Self.ControlTypeFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeFileTypesAllowed">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeItems_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="ControlTypeItems" Type="Self.ControlTypeItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeItems">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeValidators_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="1" />
+    <End Role="ControlTypeValidators" Type="Self.ControlTypeValidator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeValidators">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ControlTypes">
+    <End Role="ControlTypes" Type="Self.ControlType" Multiplicity="0..1" />
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ControlTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="ControlType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ControlTypeValidators_ValidatorTypes">
+    <End Role="ValidatorTypes" Type="Self.ValidatorType" Multiplicity="1" />
+    <End Role="ControlTypeValidators" Type="Self.ControlTypeValidator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ValidatorTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ControlTypeValidators">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectDataSources_DataSourceParentTypes">
+    <End Role="DataSourceParentTypes" Type="Self.DataSourceParentType" Multiplicity="0..1" />
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataSourceParentTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectDataSources">
+        <PropertyRef Name="ParentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlFileTypesAllowed_FileTypes">
+    <End Role="FileTypes" Type="Self.FileType" Multiplicity="0..1" />
+    <End Role="ProjectControlFileTypesAllowed" Type="Self.ProjectControlFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FileTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlFileTypesAllowed">
+        <PropertyRef Name="FileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LayoutSubtypes_LayoutTypes">
+    <End Role="LayoutTypes" Type="Self.LayoutType" Multiplicity="0..1" />
+    <End Role="LayoutSubtypes" Type="Self.LayoutSubtype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LayoutTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LayoutSubtypes">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAdditionalOperations_ProjectPages">
+    <End Role="ProjectPages" Type="Self.ProjectPage" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectAdditionalOperations" Type="Self.ProjectAdditionalOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectPages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAdditionalOperations">
+        <PropertyRef Name="PageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAncillaryMaintenance_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectAncillaryMaintenance" Type="Self.ProjectAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAncillaryMaintenance">
+        <PropertyRef Name="AncillaryProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectAncillaryMaintenance_Projects1">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectAncillaryMaintenance" Type="Self.ProjectAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectAncillaryMaintenance">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance">
+    <End Role="ProjectAncillaryMaintenance" Type="Self.ProjectAncillaryMaintenance" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBuildBackendAncillaryMaintenance" Type="Self.ProjectBuildBackendAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectAncillaryMaintenance">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildBackendAncillaryMaintenance">
+        <PropertyRef Name="AncillaryMaintenanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendAdditionalLinks_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectBackendAdditionalLinks" Type="Self.ProjectBackendAdditionalLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendAdditionalLinks">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendExports_ProjectDataSources">
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSource" Multiplicity="0..1" />
+    <End Role="ProjectBackendExports" Type="Self.ProjectBackendExport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectDataSources">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendExports">
+        <PropertyRef Name="DataSourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendExports_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectBackendExports" Type="Self.ProjectBackendExport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendExports">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptionColumns_ProjectBackendOptions">
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOption" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptionColumns" Type="Self.ProjectBackendOptionColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBackendOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptionColumns">
+        <PropertyRef Name="OptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptionColumns_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptionColumns" Type="Self.ProjectBackendOptionColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptionColumns">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBackendOptions_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBackendOptions" Type="Self.ProjectBackendOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBackendOptions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds">
+    <End Role="ProjectBuilds" Type="Self.ProjectBuild" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBuildBackendAncillaryMaintenance" Type="Self.ProjectBuildBackendAncillaryMaintenance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBuilds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildBackendAncillaryMaintenance">
+        <PropertyRef Name="BuildID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildBackendOptions_ProjectBuilds">
+    <End Role="ProjectBuilds" Type="Self.ProjectBuild" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBuildBackendOptions" Type="Self.ProjectBuildBackendOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBuilds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildBackendOptions">
+        <PropertyRef Name="BuildID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildPages_ProjectBuilds">
+    <End Role="ProjectBuilds" Type="Self.ProjectBuild" Multiplicity="0..1" />
+    <End Role="ProjectBuildPages" Type="Self.ProjectBuildPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectBuilds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildPages">
+        <PropertyRef Name="BuildID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuildPages_ProjectPages">
+    <End Role="ProjectPages" Type="Self.ProjectPage" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectBuildPages" Type="Self.ProjectBuildPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectPages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuildPages">
+        <PropertyRef Name="PageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectBuilds_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectBuilds" Type="Self.ProjectBuild" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectBuilds">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectColumns_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectColumns" Type="Self.ProjectColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectColumns">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_TableControl">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectColumns" Type="Self.ProjectColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectColumns">
+        <PropertyRef Name="TableControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlFileTypesAllowed_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlFileTypesAllowed" Type="Self.ProjectControlFileTypesAllowed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlFileTypesAllowed">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlListItems_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlListItems" Type="Self.ProjectControlListItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlListItems">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActions_TargetControl">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActions">
+        <PropertyRef Name="TargetControl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions">
+    <End Role="ProjectControlPostbackActions" Type="Self.ProjectControlPostbackAction" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControlPostbackActionTriggerValues" Type="Self.ProjectControlPostbackActionTriggerValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControlPostbackActions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControlPostbackActionTriggerValues">
+        <PropertyRef Name="ActionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ParentControl">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1" />
+    <End Role="ProjectControls1" Type="Self.ProjectControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls1">
+        <PropertyRef Name="ParentControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_ProjectDataSources">
+    <End Role="ProjectDataSources" Type="Self.ProjectDataSource" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectDataSources">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="DataSourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectControls_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectControls">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessageSubmitterControls_ProjectControls">
+    <End Role="ProjectControls" Type="Self.ProjectControl" Multiplicity="0..1" />
+    <End Role="ProjectEmailMessageSubmitterControls" Type="Self.ProjectEmailMessageSubmitterControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectControls">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessageSubmitterControls">
+        <PropertyRef Name="ControlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessages_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectEmailMessages" Type="Self.ProjectEmailMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessages">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages">
+    <End Role="ProjectEmailMessages" Type="Self.ProjectEmailMessage" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectEmailMessageSubmitterControls" Type="Self.ProjectEmailMessageSubmitterControl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectEmailMessages">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectEmailMessageSubmitterControls">
+        <PropertyRef Name="MessageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectOptions_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectOptions" Type="Self.ProjectOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectOptions">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectPages_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProjectPages" Type="Self.ProjectPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectPages">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSupervisors_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectSupervisors" Type="Self.ProjectSupervisor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSupervisors">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebRADEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AdditionalOperationTypes" EntityType="Self.AdditionalOperationType" />
+    <EntitySet Name="BackendActionTypes" EntityType="Self.BackendActionType" />
+    <EntitySet Name="BackendOptionOperatorTypes" EntityType="Self.BackendOptionOperatorType" />
+    <EntitySet Name="BackendOptionTypes" EntityType="Self.BackendOptionType" />
+    <EntitySet Name="CompositeControls" EntityType="Self.CompositeControl" />
+    <EntitySet Name="ControlActionTypes" EntityType="Self.ControlActionType" />
+    <EntitySet Name="ControlChangeHistories" EntityType="Self.ControlChangeHistory" />
+    <EntitySet Name="ControlDataTypes" EntityType="Self.ControlDataType" />
+    <EntitySet Name="ControlDisplayTypes" EntityType="Self.ControlDisplayType" />
+    <EntitySet Name="ControlSQLTypes" EntityType="Self.ControlSQLType" />
+    <EntitySet Name="ControlTypeActions" EntityType="Self.ControlTypeAction" />
+    <EntitySet Name="ControlTypeDetailColumnExclusions" EntityType="Self.ControlTypeDetailColumnExclusion" />
+    <EntitySet Name="ControlTypeDetailRequirements" EntityType="Self.ControlTypeDetailRequirement" />
+    <EntitySet Name="ControlTypeDetails" EntityType="Self.ControlTypeDetail" />
+    <EntitySet Name="ControlTypeDetailTypeCategories" EntityType="Self.ControlTypeDetailTypeCategory" />
+    <EntitySet Name="ControlTypeDetailTypeItems" EntityType="Self.ControlTypeDetailTypeItem" />
+    <EntitySet Name="ControlTypeDetailTypes" EntityType="Self.ControlTypeDetailType" />
+    <EntitySet Name="ControlTypeDetailValues" EntityType="Self.ControlTypeDetailValue" />
+    <EntitySet Name="ControlTypeFileTypesAlloweds" EntityType="Self.ControlTypeFileTypesAllowed" />
+    <EntitySet Name="ControlTypeItems" EntityType="Self.ControlTypeItem" />
+    <EntitySet Name="ControlTypes" EntityType="Self.ControlType" />
+    <EntitySet Name="ControlTypeValidators" EntityType="Self.ControlTypeValidator" />
+    <EntitySet Name="DataMethodTypes" EntityType="Self.DataMethodType" />
+    <EntitySet Name="DataSourceParentTypes" EntityType="Self.DataSourceParentType" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperty" />
+    <EntitySet Name="FileTypes" EntityType="Self.FileType" />
+    <EntitySet Name="LayoutSubtypes" EntityType="Self.LayoutSubtype" />
+    <EntitySet Name="LayoutTypes" EntityType="Self.LayoutType" />
+    <EntitySet Name="LoginColumnTypes" EntityType="Self.LoginColumnType" />
+    <EntitySet Name="ProhibitedColumnNames" EntityType="Self.ProhibitedColumnName" />
+    <EntitySet Name="ProjectAdditionalOperations" EntityType="Self.ProjectAdditionalOperation" />
+    <EntitySet Name="ProjectAncillaryMaintenances" EntityType="Self.ProjectAncillaryMaintenance" />
+    <EntitySet Name="ProjectArchiveMigrations" EntityType="Self.ProjectArchiveMigration" />
+    <EntitySet Name="ProjectBackendAdditionalLinks" EntityType="Self.ProjectBackendAdditionalLink" />
+    <EntitySet Name="ProjectBackendExports" EntityType="Self.ProjectBackendExport" />
+    <EntitySet Name="ProjectBackendOptionColumns" EntityType="Self.ProjectBackendOptionColumn" />
+    <EntitySet Name="ProjectBackendOptions" EntityType="Self.ProjectBackendOption" />
+    <EntitySet Name="ProjectBuildBackendAncillaryMaintenances" EntityType="Self.ProjectBuildBackendAncillaryMaintenance" />
+    <EntitySet Name="ProjectBuildBackendOptions" EntityType="Self.ProjectBuildBackendOption" />
+    <EntitySet Name="ProjectBuildPages" EntityType="Self.ProjectBuildPage" />
+    <EntitySet Name="ProjectBuilds" EntityType="Self.ProjectBuild" />
+    <EntitySet Name="ProjectColumns" EntityType="Self.ProjectColumn" />
+    <EntitySet Name="ProjectControlFileTypesAlloweds" EntityType="Self.ProjectControlFileTypesAllowed" />
+    <EntitySet Name="ProjectControlListItems" EntityType="Self.ProjectControlListItem" />
+    <EntitySet Name="ProjectControlPostbackActions" EntityType="Self.ProjectControlPostbackAction" />
+    <EntitySet Name="ProjectControlPostbackActionTriggerValues" EntityType="Self.ProjectControlPostbackActionTriggerValue" />
+    <EntitySet Name="ProjectControls" EntityType="Self.ProjectControl" />
+    <EntitySet Name="ProjectDataSources" EntityType="Self.ProjectDataSource" />
+    <EntitySet Name="ProjectEmailMessages" EntityType="Self.ProjectEmailMessage" />
+    <EntitySet Name="ProjectEmailMessageSubmitterControls" EntityType="Self.ProjectEmailMessageSubmitterControl" />
+    <EntitySet Name="ProjectOptions" EntityType="Self.ProjectOption" />
+    <EntitySet Name="ProjectPages" EntityType="Self.ProjectPage" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="ProjectSupervisors" EntityType="Self.ProjectSupervisor" />
+    <EntitySet Name="SQLDatabases" EntityType="Self.SQLDatabas" />
+    <EntitySet Name="SQLServers" EntityType="Self.SQLServer" />
+    <EntitySet Name="TableHierarchies" EntityType="Self.TableHierarchy" />
+    <EntitySet Name="Tests" EntityType="Self.Test" />
+    <EntitySet Name="ValidatorTypes" EntityType="Self.ValidatorType" />
+    <EntitySet Name="TopLevelProjectControls_v" EntityType="Self.TopLevelProjectControls_v" />
+    <AssociationSet Name="FK_ProjectBackendOptions_BackendOptionTypes" Association="Self.FK_ProjectBackendOptions_BackendOptionTypes">
+      <End Role="BackendOptionTypes" EntitySet="BackendOptionTypes" />
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildBackendOptions_BackendOptionTypes" Association="Self.FK_ProjectBuildBackendOptions_BackendOptionTypes">
+      <End Role="BackendOptionTypes" EntitySet="BackendOptionTypes" />
+      <End Role="ProjectBuildBackendOptions" EntitySet="ProjectBuildBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompositeControls_ControlTypes" Association="Self.FK_CompositeControls_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="CompositeControls" EntitySet="CompositeControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompositeControls_ControlTypes1" Association="Self.FK_CompositeControls_ControlTypes1">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="CompositeControls" EntitySet="CompositeControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlActionTypes" Association="Self.FK_ControlTypeActions_ControlActionTypes">
+      <End Role="ControlActionTypes" EntitySet="ControlActionTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActions_ControlActionTypes" Association="Self.FK_ProjectControlPostbackActions_ControlActionTypes">
+      <End Role="ControlActionTypes" EntitySet="ControlActionTypes" />
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlDataTypes" Association="Self.FK_ControlTypeActions_ControlDataTypes">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeActions_ControlDataTypes1" Association="Self.FK_ControlTypeActions_ControlDataTypes1">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypeActions" EntitySet="ControlTypeActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypes_ControlDataTypes" Association="Self.FK_ControlTypes_ControlDataTypes">
+      <End Role="ControlDataTypes" EntitySet="ControlDataTypes" />
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailRequirements_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailRequirements_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailRequirements" EntitySet="ControlTypeDetailRequirements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetails_ControlTypes" Association="Self.FK_ControlTypeDetails_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeDetails" EntitySet="ControlTypeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories" Association="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypeCategories">
+      <End Role="ControlTypeDetailTypeCategories" EntitySet="ControlTypeDetailTypeCategories" />
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailTypeItems_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailTypeItems" EntitySet="ControlTypeDetailTypeItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailTypes_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailTypes_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailTypes1" EntitySet="ControlTypeDetailTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailValues_ControlTypeDetailTypes" Association="Self.FK_ControlTypeDetailValues_ControlTypeDetailTypes">
+      <End Role="ControlTypeDetailTypes" EntitySet="ControlTypeDetailTypes" />
+      <End Role="ControlTypeDetailValues" EntitySet="ControlTypeDetailValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeDetailValues_ControlTypes" Association="Self.FK_ControlTypeDetailValues_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeDetailValues" EntitySet="ControlTypeDetailValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeFileTypesAllowed_ControlTypes" Association="Self.FK_ControlTypeFileTypesAllowed_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeFileTypesAllowed" EntitySet="ControlTypeFileTypesAlloweds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeItems_ControlTypes" Association="Self.FK_ControlTypeItems_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeItems" EntitySet="ControlTypeItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeValidators_ControlTypes" Association="Self.FK_ControlTypeValidators_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ControlTypeValidators" EntitySet="ControlTypeValidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ControlTypes" Association="Self.FK_ProjectControls_ControlTypes">
+      <End Role="ControlTypes" EntitySet="ControlTypes" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ControlTypeValidators_ValidatorTypes" Association="Self.FK_ControlTypeValidators_ValidatorTypes">
+      <End Role="ValidatorTypes" EntitySet="ValidatorTypes" />
+      <End Role="ControlTypeValidators" EntitySet="ControlTypeValidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectDataSources_DataSourceParentTypes" Association="Self.FK_ProjectDataSources_DataSourceParentTypes">
+      <End Role="DataSourceParentTypes" EntitySet="DataSourceParentTypes" />
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlFileTypesAllowed_FileTypes" Association="Self.FK_ProjectControlFileTypesAllowed_FileTypes">
+      <End Role="FileTypes" EntitySet="FileTypes" />
+      <End Role="ProjectControlFileTypesAllowed" EntitySet="ProjectControlFileTypesAlloweds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LayoutSubtypes_LayoutTypes" Association="Self.FK_LayoutSubtypes_LayoutTypes">
+      <End Role="LayoutTypes" EntitySet="LayoutTypes" />
+      <End Role="LayoutSubtypes" EntitySet="LayoutSubtypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAdditionalOperations_ProjectPages" Association="Self.FK_ProjectAdditionalOperations_ProjectPages">
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+      <End Role="ProjectAdditionalOperations" EntitySet="ProjectAdditionalOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAncillaryMaintenance_Projects" Association="Self.FK_ProjectAncillaryMaintenance_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectAncillaryMaintenance" EntitySet="ProjectAncillaryMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectAncillaryMaintenance_Projects1" Association="Self.FK_ProjectAncillaryMaintenance_Projects1">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectAncillaryMaintenance" EntitySet="ProjectAncillaryMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance" Association="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectAncillaryMaintenance">
+      <End Role="ProjectAncillaryMaintenance" EntitySet="ProjectAncillaryMaintenances" />
+      <End Role="ProjectBuildBackendAncillaryMaintenance" EntitySet="ProjectBuildBackendAncillaryMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendAdditionalLinks_Projects" Association="Self.FK_ProjectBackendAdditionalLinks_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendAdditionalLinks" EntitySet="ProjectBackendAdditionalLinks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendExports_ProjectDataSources" Association="Self.FK_ProjectBackendExports_ProjectDataSources">
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+      <End Role="ProjectBackendExports" EntitySet="ProjectBackendExports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendExports_Projects" Association="Self.FK_ProjectBackendExports_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendExports" EntitySet="ProjectBackendExports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptionColumns_ProjectBackendOptions" Association="Self.FK_ProjectBackendOptionColumns_ProjectBackendOptions">
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+      <End Role="ProjectBackendOptionColumns" EntitySet="ProjectBackendOptionColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptionColumns_ProjectControls" Association="Self.FK_ProjectBackendOptionColumns_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectBackendOptionColumns" EntitySet="ProjectBackendOptionColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBackendOptions_Projects" Association="Self.FK_ProjectBackendOptions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBackendOptions" EntitySet="ProjectBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds" Association="Self.FK_ProjectBuildBackendAncillaryMaintenance_ProjectBuilds">
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+      <End Role="ProjectBuildBackendAncillaryMaintenance" EntitySet="ProjectBuildBackendAncillaryMaintenances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildBackendOptions_ProjectBuilds" Association="Self.FK_ProjectBuildBackendOptions_ProjectBuilds">
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+      <End Role="ProjectBuildBackendOptions" EntitySet="ProjectBuildBackendOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildPages_ProjectBuilds" Association="Self.FK_ProjectBuildPages_ProjectBuilds">
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+      <End Role="ProjectBuildPages" EntitySet="ProjectBuildPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuildPages_ProjectPages" Association="Self.FK_ProjectBuildPages_ProjectPages">
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+      <End Role="ProjectBuildPages" EntitySet="ProjectBuildPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectBuilds_Projects" Association="Self.FK_ProjectBuilds_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectBuilds" EntitySet="ProjectBuilds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectColumns_Projects" Association="Self.FK_ProjectColumns_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectColumns" EntitySet="ProjectColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_TableControl" Association="Self.FK_ProjectControls_TableControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectColumns" EntitySet="ProjectColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlFileTypesAllowed_ProjectControls" Association="Self.FK_ProjectControlFileTypesAllowed_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlFileTypesAllowed" EntitySet="ProjectControlFileTypesAlloweds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlListItems_ProjectControls" Association="Self.FK_ProjectControlListItems_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlListItems" EntitySet="ProjectControlListItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActions_TargetControl" Association="Self.FK_ProjectControlPostbackActions_TargetControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions" Association="Self.FK_ProjectControlPostbackActionTriggerValues_ProjectControlPostbackActions">
+      <End Role="ProjectControlPostbackActions" EntitySet="ProjectControlPostbackActions" />
+      <End Role="ProjectControlPostbackActionTriggerValues" EntitySet="ProjectControlPostbackActionTriggerValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ParentControl" Association="Self.FK_ProjectControls_ParentControl">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectControls1" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_ProjectDataSources" Association="Self.FK_ProjectControls_ProjectDataSources">
+      <End Role="ProjectDataSources" EntitySet="ProjectDataSources" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectControls_Projects" Association="Self.FK_ProjectControls_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessageSubmitterControls_ProjectControls" Association="Self.FK_ProjectEmailMessageSubmitterControls_ProjectControls">
+      <End Role="ProjectControls" EntitySet="ProjectControls" />
+      <End Role="ProjectEmailMessageSubmitterControls" EntitySet="ProjectEmailMessageSubmitterControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessages_Projects" Association="Self.FK_ProjectEmailMessages_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectEmailMessages" EntitySet="ProjectEmailMessages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages" Association="Self.FK_ProjectEmailMessageSubmitterControls_ProjectEmailMessages">
+      <End Role="ProjectEmailMessages" EntitySet="ProjectEmailMessages" />
+      <End Role="ProjectEmailMessageSubmitterControls" EntitySet="ProjectEmailMessageSubmitterControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectOptions_Projects" Association="Self.FK_ProjectOptions_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectOptions" EntitySet="ProjectOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectPages_Projects" Association="Self.FK_ProjectPages_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectPages" EntitySet="ProjectPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSupervisors_Projects" Association="Self.FK_ProjectSupervisors_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectSupervisors" EntitySet="ProjectSupervisors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
