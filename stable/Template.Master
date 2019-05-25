@@ -1,0 +1,210 @@
+﻿<%@ Master Language="VB"  AutoEventWireup="false" CodeBehind="Template.master.vb" Inherits="stable.Template" %>
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit"%>
+
+<!DOCTYPE HTML>
+  <html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head id="Head1" runat="server">
+			<title>Whitworth University Communications - Web-RAD</title>
+    
+      <meta charset="utf-8">
+<!-- Reusable code : Whitworth head References -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#c12033">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="//media.whitworth.edu/css/mq-base.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="//media.whitworth.edu/css/jquery.comiseo.daterangepicker.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//media.whitworth.edu/css/jquery.timeentry.css"> 
+<!--<![endif]-->
+<noscript>
+  <link href="//media.whitworth.edu/pattern-lab/grunticon/icons.fallback.css" rel="stylesheet">
+</noscript>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="//media.whitworth.edu/js/jquery.plugin.min.js"></script> 
+<script src="//media.whitworth.edu/js/moment.js"></script>
+
+<script src="//media.whitworth.edu/js/jquery.comiseo.daterangepicker.min.js"></script>
+<script src="//media.whitworth.edu/js/jquery.timeentry.min.js"></script>		
+
+<script src="//media.whitworth.edu/js/webservice.js"></script>
+<script src="//media.whitworth.edu/js/webradapps.js"></script>
+
+<script>
+    if (typeof jQuery === 'undefined') {
+        document.write(unescape('%3Cscript%20src%3D%22/js/jquery-2.1.4.min.js%22%3E%3C/script%3E'))
+    };
+</script>
+<!-- <script src="//media.whitworth.edu/js/whitworth.min.js"></script> -->
+<!-- <script type="text/javascript" src="//media.whitworth.edu/js/ckeditor/ckeditor.js"></script> -->
+<!-- div-loading functions -->
+<script language="javascript" type="text/javascript">
+    function ChangeToProject(projectID)
+    {
+        var currenthref = window.location.href;
+        if (currenthref.includes('ID='))
+        {
+            currenthref = window.location.href.replace(/ID=(\d+)/i, 'ID=' + projectID);
+        }
+        else
+        {
+            currenthref += '?ID=' + projectID;
+        }
+        window.location = currenthref;
+    }
+
+    function showLoadingDiv() {
+        document.getElementById('div-loading').style.display = 'block';
+    }
+    function showLoadingDivSetTime(seconds) {
+        document.getElementById('div-loading').style.display = 'block';
+        window.setInterval(hideLoadingDiv, seconds * 1000);
+    }
+    function hideLoadingDiv() {
+        document.getElementById('div-loading').style.display = 'none';
+    }
+</script>
+<!-- Reusable code : Alert Message Display --> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetAlertMessage();
+    });
+</script>  
+<link href="//media.whitworth.edu/css/glyphicon.css" rel="stylesheet">
+      <link href="./content/site.css" rel="stylesheet">
+
+	<link href="//media.whitworth.edu/css/webradapps.css" rel="stylesheet" />
+    <style>
+        .WebRADMultiline {
+            height: auto !important;
+        }
+    </style>
+<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>  	
+  </head>
+
+  <body class="body">
+    <!-- Reusable code : Alert Message Display --> 
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetAlertMessage();
+    });
+</script>  
+<div class="alert" align="center" style="background-color: rgb(244, 244, 244);display:none;" id="AlertMessageSection">
+    <div style="max-width:80em; padding: 2em 1em; text-align:left;">
+        <img src="/images/alert.png" style="float:left; margin: .5em;">
+        <p id="AlertMessage" style="margin-left: 4em;"></p>
+    </div>
+</div>
+<!-- End Alert Message Display -->
+<!-- Reusable code : Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T5B6BN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T5B6BN');
+</script>
+<!-- End Google Tag Manager -->
+<div class="overflow-hidden-wrapper" id="open-menu">
+    <div class="pushed-by-menu">
+        <a href="#" class="pushed-by-menu--overlay">
+            <h3 class="visually-hidden">Close Menu</h3>
+        </a>
+        <!--#include file="\\web1\~whitworth\header-responsive.htm" -->
+        <div class="hide-primary-nav">
+            <article>
+                <div id="GeneralSubpageHeader">
+                    <header class="page-header page_title-border_top page_title-bg">
+                        <div class="pl-page-wrapper">
+                            <h1 class="page_title-text page_title-text_size">
+                                <asp:Label id="lblFormTitle" runat="server" Text="" />
+              University Communications
+                </h1>
+            <select class="header-links icon-arrow-down"></select>
+            <div class="header_links-fallback icon-arrow-down"></div>
+        </div>
+    </header>
+</div>
+<div class="pl-page-wrapper pad_vertical-x2-at_lg">
+    <div class="pl-wide">
+        <!-- form controls -->
+        <form id="Form1" runat="server">
+            <!-- breadcrumbs -->
+            <asp:Label ID="lblBreadcrumbs" runat="server"><ol class="breadcrumbs hide_at_sm"><li><a href="http://www.whitworth.edu/cms/">Whitworth University</a></li></ol></asp:Label>
+            <!-- heading -->
+            <h2>WebRAD - <asp:ContentPlaceHolder id="SectionName" runat="server"></asp:ContentPlaceHolder> - <asp:Label ID="lblProjectSelection" runat="server" /></h2>
+            <!-- content -->
+            <div class="v1">
+        
+    <!-- Form Start -->
+    <!-- Page Main START -->
+	    <asp:ScriptManager ID="smMain" runat="server" EnablePageMethods="true" >
+            <Services>
+                    <asp:ServiceReference path="WebService.asmx" />
+                </Services>
+	    </asp:ScriptManager>
+    
+
+                <style>
+    .TopMenuItem {
+        float: left;
+        /*background-image: url(~images/bluebar_bk.jpg), url(~images/arrow.png), url(~images/arrow.png);*/
+        margin: 20px;
+        height: 50px;
+    }
+</style>
+
+                <% Dim projectID As String = Common.General.ProjectOperations.GetProjectID() %>
+
+<div class="TopMenuItem ">
+    <a href="index.aspx?ID=<%= projectID %>" class="button">Main Details</a>
+
+</div>
+<div class="TopMenuItem">
+    <a href="controls.aspx?ID=<%= projectID %>&PageID=<%= Common.General.Pages.GetFirstPage(projectID)%>" class="button">Control Details</a>
+
+</div>
+<div class="TopMenuItem">
+    <a href="frontend.aspx?ID=<%= projectID %>" class="button">Frontend Details</a>
+   </div>
+<div class="TopMenuItem">
+    <a href="backend.aspx?ID=<%= projectID %>" class="button">Backend Details</a>
+</div>
+<div class="TopMenuItem">
+    <a href="finalize.aspx?ID=<%= projectID %>" class="button">Finalize</a>
+</div>
+<br style="clear:both;" />
+
+
+              <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+    <!-- Page Main END -->
+    <!-- Form End -->
+    <!-- #include file="\\web1\~whitworth\forms\forms-templates\template-footer.htm" -->
+    
+  </body>
+
+  </html>
+
+
+

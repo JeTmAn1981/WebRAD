@@ -1,0 +1,26 @@
+﻿.controls-list ul {
+    padding-left: 0px;
+}
+
+.controls-list li
+{
+    list-style:none;
+    
+}
+
+.project-pages {
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.project-pages div
+{
+    padding-right:25px;
+}
+
+.project-pages input
+{
+    border:none;
+}

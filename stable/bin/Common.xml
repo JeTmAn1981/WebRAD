@@ -1,0 +1,1687 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Common
+</name>
+</assembly>
+<members>
+<member name="M:Common.Getter.GetAcademicYear(System.Int32)">
+ <summary>
+ Used for displaying years on forms which correspond to the academic year. These displays may need to change, depending on what time of the year it is.
+ </summary>
+ <param name="nMonth">The month to check.</param>
+ <returns>The academic year in relation to the given month.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetAcademicYear(System.DateTime)">
+ <summary>
+ Used for displaying years on forms which correspond to the academic year. These displays may need to change, depending on what time of the year it is.
+ </summary>
+ <param name="dateTime">The date to check.</param>
+ <returns>The first academic year in relation to the given month. (Example: Jan 7, 2011 returns 2010 for the 2010/11 academic year)</returns>
+ <remarks>
+ Examples: 
+ Jan 7th, 2011 returns 2010 for the 2010/11 academic year
+ August 12th, 2011 returns 2011 for the 2011/12 academic year
+ </remarks>
+</member>
+<member name="M:Common.Getter.GetCharCodes(System.Int32,System.Int32,System.String)">
+ <summary>
+ Returns a string of all of the char codes within the provided code values.
+ </summary>
+ <remarks>If sDelimeter="table" then the results will be placed in a table.</remarks>
+</member>
+<member name="M:Common.Getter.GetCharCodes(System.String,System.String)">
+ <summary>
+ Returns a string of the char codes of the provided string.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDataTableValues(System.Data.DataTable,System.String,System.Int32,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Returns a string of the values in a DataTable.
+ </summary>
+ <param name="dtValues">The DataTable to see the values of.</param>
+ <param name="sDelimeter">How to separate values.</param>
+ <param name="nRowCutoff">The row to stop finding values at.</param>
+ <param name="nDisplayType">The way the data is displayed.</param>
+ <param name="nColumnCutOff">The number of characters to display in the column fields.</param>
+ <returns>A string to display the table values.</returns>
+ <remarks>Display types: 1=vertical, 2=horizontal</remarks>
+</member>
+<member name="M:Common.Getter.GetDataRowValues(System.Data.DataRow,System.String,System.Int32,System.Int32)">
+ <summary>
+ Returns a string of the values in a DataRow.
+ </summary>
+ <param name="dr">The DataRow to see the values of.</param>
+ <param name="sDelimeter">How to separate values.</param>
+ <param name="nDisplayType">The way the data is displayed. 1=vertical, 2=horizontal</param>
+ <param name="nColumnCutOff">The number of characters to display in the column fields.</param>
+ <returns>A string to display the table values.</returns>
+ <remarks>Display types: 1=vertical, 2=horizontal</remarks>
+</member>
+<member name="M:Common.Getter.GetDataTableColumnsHTML(System.Data.DataTable,System.String)">
+ <summary>
+ Returns the list of columns and their datatypes found in a DataTable.
+ </summary>
+ <param name="dtValues">The target DataTable.</param>
+ <param name="sDelimeter">The string which will be used to separate the columns displayed.</param>
+ <returns>A string to display the table column values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetListofValues(System.String,System.String,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+ <summary>
+ Returns a string of the values retrieved by a SQL select string in a comma-delimited list format.
+ </summary>
+ <param name="cnx">The SQL connection to be used for retrieving the data.</param>
+ <param name="sSelect">The SQL string to be used to specify which data is retrieved.</param>
+ <param name="sTarget">The single SQL column which is to be used as the basis for creating the list.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetListOfSelectedValues(System.Object@,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ Returns a delimited list of the values selected in a list control.
+ </summary>
+ <param name="oTarget"></param>
+ <param name="sSelectionType"></param>
+ <param name="sDelimiter"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfo(System.String)">
+ <summary>
+ Returns a DataTable filled with a student's information.
+ </summary>
+ <param name="sPLID">The PLID # to search on.</param>
+ <returns>A DataTable with the student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetUserInfo(System.String,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="sValue"></param>
+ <param name="sColumn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentName(System.String)">
+ <summary>
+ Returns the name of the student.
+ </summary>
+ <param name="sStudentID">The student id # to search on.</param>
+ <returns>The full name of the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentFirstName(System.String)">
+ <summary>
+ Returns the first name of the student.
+ </summary>
+ <param name="sStudentID">The student id # to search on.</param>
+ <returns>The first name of the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentLastName(System.String)">
+ <summary>
+ Returns the last name of the student.
+ </summary>
+ <param name="sStudentID">The student id # to search on.</param>
+ <returns>The last name of the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentEmail(System.String)">
+ <summary>
+ Returns the email address of the student.
+ </summary>
+ <param name="sStudentID">The student id # to search on.</param>
+ <returns>The email address of the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfo(System.String,System.String)">
+ <summary>
+ Gets a student's information based on their student id # and the column to pull from the DataTable.
+ </summary>
+ <param name="sStudentID">The student's ID #.</param>
+ <param name="sColumn">The DataTable column to pull from.</param>
+ <returns>The selected information for the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentIDByUsername(System.String)">
+ <summary>
+ Returns the student id # for the provided username.
+ </summary>
+ <param name="sUsername">The username to search on. Formatting is handled within the function.</param>
+ <returns>The user's student id #.</returns>
+ <remarks>GetCurrentUsername() can be used to get the current user's username.</remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByUsername(System.String,System.String)">
+ <summary>
+ Gets a student's information based on their username and the column to pull from the DataTable.
+ </summary>
+ <param name="sUsername">The username to use. Formatting is taken care of within the function.</param>
+ <param name="sInfoToGet">The DataTable column to pull from.</param>
+ <returns>The selected information for the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByUsername(System.String)">
+ <summary>
+ Gets all of a student's information based on their username.
+ </summary>
+ <param name="sUsername">The username to use.</param>
+ <returns>A DataTable with the student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentIDByEmail(System.String)">
+ <summary>
+ Returns the student id # for the provided email address.
+ </summary>
+ <param name="sEmail">The email address to search on.</param>
+ <returns>The user's student id #.</returns>
+ <remarks>Request.ServerVariables("LOGON_USER").ToString() can be used to get the current user's username.</remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByEmail(System.String,System.String)">
+ <summary>
+ Gets a student's information based on their email address and the column to pull from the DataTable.
+ </summary>
+ <param name="sEmail">The email address to use. Formatting is taken care of within the function.</param>
+ <param name="sInfoToGet">The DataTable column to pull from.</param>
+ <returns>The selected information for the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByEmail(System.String)">
+ <summary>
+ Gets a student's information based on their email address.
+ </summary>
+ <param name="sEmail">The email address to use. Formatting is taken care of within the function.</param>
+ <returns>The selected information for the student.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByName(System.String,System.String)">
+ <summary>
+ Gets a student's information by matching their name.
+ </summary>
+ <param name="sFirstName">The student's first name as it appears in DT_PEOPLE_LISTING.</param>
+ <param name="sLastName">The student's last name as it appears in DT_PEOPLE_LISTING.</param>
+ <returns>The student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByName(System.String,System.String,System.String)">
+ <summary>
+ Gets a student's information by matching their name.
+ </summary>
+ <param name="sFirstName">The student's first name as it appears in DT_PEOPLE_LISTING.</param>
+ <param name="sLastName">The student's last name as it appears in DT_PEOPLE_LISTING.</param>
+ <param name="sColumn">The specific column to retrieve.</param>
+ <returns>The student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByFullName(System.String)">
+ <summary>
+ Gets a student's information by matching their name.
+ </summary>
+ <param name="sName">The student's name as it appears in DT_PEOPLE_LISTING.</param>
+ <returns>The student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStudentInfoByFullName(System.String,System.String)">
+ <summary>
+ Gets a student's information by matching their name.
+ </summary>
+ <param name="sName">The student's name as it appears in DT_PEOPLE_LISTING.</param>
+ <param name="sColumn">The specific column of information to retrieve.</param>
+ <returns>The student's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetUserUndergraduate(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="sUsername"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetUserEmail(System.String)">
+ <summary>
+ Returns the email address associated with the provided username.
+ </summary>
+ <param name="sUsername">The username of the person to retrieve the email address for.</param>
+ <returns>The email address associated with the provided username.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDateTime(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList)">
+ <summary>
+ Gets a DateTime object from the controls provided in the parameters.
+ </summary>
+ <param name="ddlMonth">The month ddl.</param>
+ <param name="ddlDay">The day ddl.</param>
+ <param name="ddlYear">The year ddl.</param>
+ <param name="ddlTime">The time ddl.</param>
+ <returns>A datetime object with the combined datetime values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDateTime(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList)">
+ <summary>
+ Gets a DateTime object from the controls provided in the parameters.
+ </summary>
+ <param name="ddlMonth">The month ddl.</param>
+ <param name="ddlDay">The day ddl.</param>
+ <param name="ddlYear">The year ddl.</param>
+ <param name="ddlHour">The hour portion of the time stamp.</param>
+ <param name="ddlMinute">The minute portion of the time stamp.</param>
+ <param name="ddlAmPm">The am/pm portion of the time stamp.</param>
+ <returns>A datetime object with the combined datetime values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetWordCount(System.String)">
+ <summary>
+ Uses a regular expression to count the number of individual words present in the target string.
+ </summary>
+ <param name="sTarget">The word string.</param>
+ <returns>The number of words found in the string.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetTwitterFeed(System.Int32,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="nTweetNumber"></param>
+ <param name="sTwitterName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetTwitterJSON(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="sTwitterName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetTwitterAuthentication(System.String,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 
+ </summary>
+ <param name="sTwitterName"></param>
+ <param name="oauth_token"></param>
+ <param name="oauth_token_secret"></param>
+ <param name="oauth_consumer_key"></param>
+ <param name="oauth_consumer_secret"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSpotlights(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="sDepartment"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingInfo(System.String)">
+ <summary>
+ Returns a building's information in a DataTable.
+ </summary>
+ <param name="sBuildingID">Accepts two values, 1)The building ID number or 2)The building name.</param>
+ <returns>The building's information in a DataTable.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingName(System.String)">
+ <summary>
+ Gets a building name by the building info provided. Returns S_UNAVAILABLE if no match is found.
+ </summary>
+ <param name="sBuilding">The building to get the name for.</param>
+ <returns>The name of the building. Returns S_UNAVAILABLE if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingShortName(System.Int32)">
+ <summary>
+ Gets a building name by the building id. Returns S_UNAVAILABLE if no match is found.
+ </summary>
+ <param name="nBuildingID">The building id to get the name for.</param>
+ <returns>The name of the building. Returns S_UNAVAILABLE if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingID(System.String)">
+ <summary>
+ Gets a building id by the building ID or name. Ensures the building ID is the most up-to-date version.
+ </summary>
+ <param name="sBuilding">The building to get the id for. Accepts the building ID, name, short name or code.</param>
+ <returns>The building id.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetUpToDateBuildingID(System.Int32)">
+ <summary>
+ Gets the most up-to-date building id by the building ID. GetBuildingID() should be called outside of 
+ WhitTools instead of this function.
+ </summary>
+ <param name="nBuildingID">The building to get the most up-to-date ID for.</param>
+ <returns>The most up-to-date building ID.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingIDByRoomID(System.Int32)">
+ <summary>
+ Returns the building/location id the room/sub-location is associated with. Returns N_ERROR (-255) if no match is found.
+ </summary>
+ <param name="nRoomID">The room/sub-location to get the building/location id for.</param>
+ <returns>The building/location id the room/sub-location is associated with. Returns N_ERROR (-255) if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingIDByDwBuilding(System.String)">
+ <summary>
+ Gets the building/location id by comparing the DataWarehouse building name. Returns N_ERROR (-255) if no match is found.
+ </summary>
+ <param name="sDwBuilding">The building/location name as it is found in the DataWarehouse.</param>
+ <returns>The building/location id the DataWarehouse version is associated with. Returns N_ERROR (-255) if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingByDwBuilding(System.String)">
+ <summary>
+ Gets the building/location name by comparing the DataWarehouse building name. Returns S_UNAVAILABLE if no match is found.
+ </summary>
+ <param name="sDwBuilding">The building/location name as it is found in the DataWarehouse.</param>
+ <returns>The building/location name the DataWarehouse version is associated with. Returns S_UNAVAILABLE if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingByID(System.Int32)">
+ <summary>
+ Returns the name of the building/location for the provided building/location id. Returns S_UNAVAILABLE if no match is found.
+ </summary>
+ <param name="nBuildingID">The building/location to get the name of.</param>
+ <returns>The name of the building/location. Returns S_UNAVAILABLE if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildingIDsFromDepartment(System.String)">
+ <summary>
+ Returns the building/location information for all buildings associated with the provided department.
+ </summary>
+ <param name="sDepIDCode">Accepts three values, 1)The department id number or 2)The department code or 3)The department name as it appears in the DataTable or DataWarehouse.</param>
+ <returns>A DataTable containing the building/location information for all buildings associated with the provided department.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBuildings(System.Int32)">
+ <summary>
+ Gets all buildings in a DataTable. Active and most up-to-date buildings only. Building names are under the column "Name".
+ </summary>
+ <param name="nFilter">The way to filter the building list. 0 = Active Buildings, 1 = Full Search (everything that is not redirected, regardless of active status)</param>
+ <returns>A DataTable with all buildings' information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetRoomByID(System.String)">
+ <summary>
+ Returns the name of the room/sub-location for the provided room id. Returns N_ERROR (-255) if no match is found.
+ </summary>
+ <param name="sRoomID">The room/sub-location to get the name of.</param>
+ <returns>The name of the room/sub-location. Returns N_ERROR (-255) if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetRoomID(System.String,System.String)">
+ <summary>
+ Returns the name of the room/sub-location for the provided room id. Returns N_ERROR (-255) if no match is found.
+ </summary>
+ <param name="sRoomID">The room/sub-location to get the name of.</param>
+ <returns>The name of the room/sub-location. Returns N_ERROR (-255) if no match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCmdValues(System.Data.SqlClient.SqlCommand,System.Boolean)">
+ <summary>
+ Returns a string of the values in an SQLCommand.
+ </summary>
+ <param name="cmd">The SQLCommand object to see the parameters of.</param>
+ <param name="bReportErrors">Report any errors that occur?</param>
+ <returns>A string to display the SQLCommand values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSqlCmdValues(System.Data.SqlClient.SqlCommand,System.Boolean)">
+ <summary>
+ Returns a string of the values in an SQLCommand.
+ </summary>
+ <param name="cmd">The SQLCommand object to see the parameters of.</param>
+ <param name="bReportErrors">Report any errors that occur?</param>
+ <returns>A string to display the SQLCommand values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSqlDataAdapterValues(System.Data.SqlClient.SqlDataAdapter,System.String,System.Boolean)">
+ <summary>
+ Returns a string of the values in an sql data adapter.
+ </summary>
+ <param name="sqlDataAdapter">The SqlDataAdapter object to get values for.</param>
+ <param name="sDelimeter">The delimiter for the list of values.</param>
+ <param name="bReportErrors">Report any errors that occur?</param>
+ <returns>A list of SqlDataAdapter values.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentPage">
+ <summary>
+ Retrieves the current html page the function is called in.
+ </summary>
+ <returns>The current html page.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentUsername(System.String)">
+ <summary>
+ Retrieves the formatted username of the currently logged in user. Only works when ssl is required. Returns S_UNAVAILABLE if the username is "Unavailable".
+ </summary>
+ <param name="sUsername">A username to substitute. Only works if a web team member is logged in.</param>
+ <returns>The formatted username of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentUsernameFormatted(System.String@)">
+ <summary>
+ Retrieves the formatted username of the currently logged in user. Only works when ssl is required. Returns S_UNAVAILABLE if the username is "Unavailable".
+ </summary>
+ <param name="sUsername">A username to substitute. Only works if a Whitworth user is logged in.</param>
+ <returns>The formatted username of the currently logged in user. Returns S_UNAVAILABLE if ssl is not available.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentPLID">
+ <summary>
+ Retrieves the PLID of the currently logged in user. Only works when ssl is required. Returns S_STUDENT_ID_BLANK if the PLID cannot be found.
+ </summary>
+ <returns>The PLID of the currently logged in user. Returns S_STUDENT_ID_BLANK (0000000) if not found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentIsFacultyStaff">
+ <summary>
+ Retrieves the Faculty/Staff status of the currently logged in user. Only works when ssl is required. Returns False if the user cannot be found.
+ </summary>
+ <returns>Is the current user a faculty/staff member?</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentIsStudent">
+ <summary>
+ Retrieves the student status of the currently logged in user. Only works when ssl is required. Returns False if the user cannot be found.
+ </summary>
+ <returns>Is the current user a student?</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentUserEmail">
+ <summary>
+ Retrieves the email address of the currently logged in user. Only works when ssl is required. Returns S_UNAVAILABLE if the email address cannot be found.
+ </summary>
+ <returns>The email address of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentUserPhone">
+ <summary>
+ Retrieves the 10 digit phone number of the currently logged in user. Only works when ssl is required. Returns S_NONE if the phone number cannot be found.
+ </summary>
+ <returns>The 10 digit phone number of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentUserPhoneExt(System.Boolean)">
+ <summary>
+ Retrieves the 4 digit phone number extension of the currently logged in user. Only works when ssl is required. Returns S_NONE if the phone number cannot be found.
+ </summary>
+ <param name="bIncludeX">Include the x in front of the extension? (Ex: x4647)</param>
+ <returns>The 4 digit phone number extension of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentStudentInfo">
+ <summary>
+ Retrieves the PeopleListing information of the currently logged in user. Only works when ssl is required. Returns a blank DataTable if the user cannot be found.
+ </summary>
+ <returns>The PeopleListing information of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentStudentInfo(System.String)">
+ <summary>
+ Retrieves the PeopleListing column information of the currently logged in user. Only works when ssl is required. Returns a blank DataTable if the user cannot be found.
+ </summary>
+ <returns>The PeopleListing column information of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentStudentName">
+ <summary>
+ Retrieves the name of the currently logged in user. Only works when ssl is required. Returns an empty value if the user cannot be found.
+ </summary>
+ <returns>The name of the currently logged in user.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetViewInvoiceLink(System.Int32)">
+ <summary>
+ Returns a link to the e-commerce invoice viewing page with the invoice number appended to the link.
+ </summary>
+ <param name="nInvoice"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSessionVariable(System.String)">
+ <summary>
+ Returns the value of the provided session variable. Returns S_EMPTY_VALUE if no value is found.
+ </summary>
+ <param name="sSession">The name of the session variable to get a value for.</param>
+ <returns>The value of the provided session variable. Returns S_EMPTY_VALUE if no value is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSessionVariableInt(System.String)">
+ <summary>
+ Returns the integer value of the provided session variable. Returns 0 if no value is found.
+ </summary>
+ <param name="sSession">The name of the session variable to get an integer value for.</param>
+ <returns>The integer value of the provided session variable. Returns 0 if no value is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSessionVariableDate(System.String)">
+ <summary>
+ Returns the date value of the provided session variable. Returns CDate(S_NULL_DATE) if no value is found.
+ </summary>
+ <param name="sSession">The name of the session variable to get a date value for.</param>
+ <returns>The date value of the provided session variable. Returns CDate(S_NULL_DATE) if no value is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetQueryString(System.String,System.Boolean,System.Boolean)">
+ <summary>
+ Returns the value of the provided QueryString variable. Returns S_EMPTY_VALUE if no value is found.
+ </summary>
+ <param name="sQueryString">The name of the QueryString variable to get a value for.</param>
+ <param name="bCleanSQL">Use the CleanSQL() function on the query string value?</param>
+ <param name="bIncludeSpecialCharacters">Convert special characters to their special form? If false, the strict form will be used.</param>
+ <returns>The value of the provided QueryString variable.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetQuickPLIDSearchLink(System.String,System.Boolean,System.String)">
+ <summary>
+ Creates an anchor tag for linking the user to the quick PLID search page.
+ </summary>
+ <param name="sText">The html text displayed in the hyperlink.</param>
+ <param name="bLinkOnlyForWebTeam">Only web team members get to access the link?</param>
+ <param name="sNonWebTeamText">If bLinkOnlyForWebTeam is true, then this is the text non-web team users will see.</param>
+ <returns>The anchor tag linking to the quick PLID search page.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetListControlSelectedItems(System.Web.UI.Control@)">
+ <summary>
+ Gets the number of selected items in a control.
+ </summary>
+ <param name="cTarget">The control to check the number of selected items of.</param>
+ <returns>The number of selected items in the control.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetMaintenanceSetValue(System.Boolean)">
+ <summary>
+ Gets the value that bypasses the redirect to the maintenance page when a page is set as "Under Maintenance".
+ </summary>
+ <param name="bWebTeamOnly">Should only web team members be able to see this? Also displays if the maintenance QueryString is set.</param>
+ <returns>The Request.QueryString("Maintenance") value that should be set to bypass the maintenance page redirect.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetPageURL(System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Gets the current page url.
+ </summary>
+ <param name="bShortVersion">The page name of the url only. Still includes QueryString variables.</param>
+ <param name="bIncludeQueryStrings">Include query strings in the url?</param>
+ <returns>A string with the current page url.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetPagePhysicalPath(System.Boolean,System.Boolean)">
+ <summary>
+ Gets the physical path to the current page. Defaults to not include the name of the page itself, just 
+ the path to the current folder. Includes the "\" at the end of the path.
+ </summary>
+ <param name="bIncludeCurrentPageInPath">Include the name of the current page in the path?</param>
+ <returns>The physical path to the current page.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetControlName(System.Web.UI.Control)">
+ <summary>
+ Used by the UpdateRepeaterItems method, this method parses a control object that is passed to it
+ and, after determining what its data type is, returns the name of the control, sans any prefixes
+ attached to it (e.g. "ddl" for dropdownlist).
+ </summary>
+ <param name="ctlCurrent">The control which you would like to get an ID from.</param>
+ <returns></returns>
+</member>
+<member name="M:Common.Getter.GetControlValue(System.Web.UI.Control)">
+ <summary>
+ This method will retrieve the selected value from a control that is passed to it.
+ The value which is selected is based on the type of control that is passed.
+ </summary>
+ <param name="ctlCurrent">The control for which you would like to retrieve the selected value.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDistinctYearsFromDataTable(System.String,System.String,System.Data.SqlClient.SqlConnection,System.String)">
+ <summary>
+ Gets a unique set of years found in a datetime column from the provided DataTable. Returns the columns as "Year".
+ </summary>
+ <param name="sDataTable">The DataTable to get distinct years from.</param>
+ <param name="sColumn">The column containing the datetime object to query.</param>
+ <param name="cnx">The SQLConnection object to use if the full path to the DataTable is not provided.</param>
+ <param name="sOrderByDirection">The direction to order the years in. DESC or ASC are the options. Defaults to DESC.</param>
+ <returns>A DataTable containing the distinct years found in the column.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetShowIndex(System.String,System.String)">
+ <summary>
+ Gets the .SelectedIndex value to assign to the ddlShow control on maintenance pages.
+ </summary>
+ <param name="sCookie">The cookie to check for a value to assign. Overrides sQueryString if provided.</param>
+ <param name="sQueryString">The QueryString value to check. Defaults to "Show".</param>
+ <returns>The index to assign to the ddlShow control on the page.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSortIndex(System.String,System.String)">
+ <summary>
+ Gets the .SelectedIndex value to assign to the ddlSortBy control on maintenance pages.
+ </summary>
+ <param name="sCookie">The cookie to check for a value to assign. Overrides sQueryString if provided.</param>
+ <param name="sQueryString">The QueryString value to check. Defaults to "Sort".</param>
+ <returns>The index to assign to the ddlSortBy control on the page.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetQueryStringInt(System.String)">
+ <summary>
+ Gets the integer value of a QueryString. Returns N_ERROR (-255) if the QueryString is not an integer value.
+ </summary>
+ <param name="sQueryString">The QueryString value to check. Defaults to "ID".</param>
+ <returns>The integer value of the QueryString. Returns N_ERROR (-255) if the QueryString is not an integer value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetQueryStringDate(System.String)">
+ <summary>
+ Gets the DateTime value of a QueryString. Returns S_NULL_DATE (1/1/1900) if the QueryString is not a DateTime value.
+ </summary>
+ <param name="sQueryString">The QueryString value to check.</param>
+ <returns>Tthe DateTime value of a QueryString. Returns S_NULL_DATE (1/1/1900) if the QueryString is not a DateTime value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStack(System.Exception)">
+ <summary>
+ Gets the current process stack in a DataTable. Table columns are FileName, LineNumber, ColumnNumber, Frame.
+ </summary>
+ <param name="ex">The optional exception to pull the stack from.</param>
+ <returns>A DataTable filled with the current call stack.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetGuaranteedDate(System.String)">
+ <summary>
+ Returns a DateTime value no matter what kind of value is passed in. If a DateTime object can be
+ created from the provided value then that DateTime is returned, otherwise a null DateTime value is
+ returned (1/1/1900 12:00:00 AM).
+ </summary>
+ <param name="sDate">The string to try to convert to a DateTime object.</param>
+ <returns>A DateTime value from the provided date parameter. Returns 1/1/1900 12:00:00 AM upon a failure.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetUniqueNumber(System.Boolean)">
+ <summary>
+ Returns a unique number based off of the current time.
+ </summary>
+ <param name="bIncludeMilliseconds">Include milliseconds as a unique identifier.</param>
+ <returns>A unique number value based off of the current DateTime.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetAlphabet">
+ <summary>
+ Returns a DataTable filled with the English alphabet, one letter per row. Column name is "Letter".
+ </summary>
+ <returns>A DataTable filled with the English alphabet, one letter per row. Column name is "Letter".</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetMajorDescription(System.String)">
+ <summary>
+ Returns a description of a major value, checking up to three different tables to find a description that matches the passed value.
+ </summary>
+ <param name="sMajor"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetFacultyStaffOfficeBuilding(System.String)">
+ <summary>
+ Gets the building/location ID for the Faculty/Staff member provided.
+ </summary>
+ <param name="sPLID">The Whitworth ID number to get the employee's office building/location id for.</param>
+ <returns>The building/location ID of the employee's office. Returns N_ERROR (-255) if no building match is found.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetFacultyStaffInfo(System.String)">
+ <summary>
+ Returns a DataTable filled with an employee's information.
+ </summary>
+ <param name="sPLID">The PLID # to search on.</param>
+ <returns>A DataTable with the employee's information.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetFacultyStaffInfo(System.String,System.String)">
+ <summary>
+ Returns the employee's information for the given column.
+ </summary>
+ <param name="sPLID">The PLID # to search on.</param>
+ <param name="sColumn">The DataTable column to return the value of.</param>
+ <returns>The employee's information for the given column.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetMasterFormsLink(System.Int32)">
+ <summary>
+ Get the link for the master forms list.
+ </summary>
+ <param name="nFormID">The form ID.</param>
+ <returns>A link to the form url.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetNearestDayOfWeek(System.DateTime,System.String,System.Boolean)">
+ <summary>
+ Gets the nearest day of the week (DateTime) to the provided date.
+ </summary>
+ <param name="dateReference">The date to reference to get the nearest day of the week to.</param>
+ <param name="sDayOfWeek">The day of the week to find that is nearest to the reference date. Defaults to Sunday. Accepts DayOfWeek.Monday, S_TUESDAY, N_WEDNESDAY, "Thur", etc.</param>
+ <param name="bRoundDayDown">If true, look to the nearest date before the reference date. Otherwise, look for the nearest date after the reference date.</param>
+ <returns>The nearest day of the week DateTime value to the reference date.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetCurrentYear(System.Int32)">
+ <summary>
+ Returns the current year based on a month value passed to it.  If the current month is later in the year than the month passed to it, the current year will be considered to be the following year.
+ </summary>
+ <param name="nMonth"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetEndOfMonth(System.DateTime)">
+ <summary>
+ Returns the end of the month DateTime value of the provided DateTime parameter. Retains the same 
+ timestamp as the parameter DateTime value. Adjusts for leap years.
+ </summary>
+ <param name="dateReference">The date to get the end of the month for. Defaults to the current date.</param>
+ <returns>The date of the last day of the month with the timestamp the same as the passed in value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetStartOfMonth(System.DateTime)">
+ <summary>
+ Returns the start of the month DateTime value of the provided DateTime parameter. Retains the same 
+ timestamp as the parameter DateTime value.
+ </summary>
+ <param name="dateReference">The date to get the start of the month for.</param>
+ <returns>The date of the first day of the month with the timestamp the same as the passed in value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetRandomInt(System.Int32,System.Int32)">
+ <summary>
+ Returns a random number between -2147483648 (Integer.MinValue) and 2147483647 (Integer.MaxValue).
+ </summary>
+ <param name="nMin">The minimum random integer to return.</param>
+ <param name="nMax">The maximum random integer to return.</param>
+ <returns>A random number between -2147483648 and 2147483647 (or other provided parameters).</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetRandomIntPositive(System.Int32,System.Int32)">
+ <summary>
+ Returns a random number between 0 and 2147483647 (Integer.MaxValue).
+ </summary>
+ <param name="nMax">The maximum random integer to return.</param>
+ <param name="nMin">The minimum random integer to return.</param>
+ <returns>A random number between 0 and 2147483647 (or other provided parameters).</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetGuaranteedPLID(System.String,System.Boolean)">
+ <summary>
+ Returns the provide sPLID parameter, unless that PLID does not exist. Otherwise Whitworth University's 
+ emergency contact PLID is returned. This function is intended to always provide at least one contact 
+ person's PLID for a given purpose.
+ </summary>
+ <param name="sPLID">If this PLID exists, then it is returned. Otherwise the emergency contact's PLID is returned.</param>
+ <param name="bOnlyStaffPLIDs">Only return a Faculty/Staff person's PLID? Even if an existing PLID is provided in the sPLID parameter?</param>
+ <returns>If a PLID is provided in the parameters, then that PLID is returned. Otherwise the emergency contact's PLID is returned.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetEmergencyContactPLID(System.String,System.Boolean)">
+ <summary>
+ Returns the provide sPLID parameter, unless that PLID does not exist. Otherwise Whitworth University's 
+ emergency contact PLID is returned. This function is intended to always provide at least one contact 
+ person's PLID for a given purpose.
+ </summary>
+ <param name="sPLID">If this PLID exists, then it is returned. Otherwise the emergency contact's PLID is returned.</param>
+ <param name="bOnlyStaffPLIDs">Only return a Faculty/Staff person's PLID? Even if an existing PLID is provided in the sPLID parameter?</param>
+ <returns>If a PLID is provided in the parameters, then that PLID is returned. Otherwise the emergency contact's PLID is returned.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetConnectionDatabase(System.Data.SqlClient.SqlConnection)">
+ <summary>
+ Returns the database the SqlConnection object is connected to.
+ </summary>
+ <param name="cnx">The SqlConnection object to check.</param>
+ <returns>The database the SqlConnection object is associated with.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSQLTableColumnNames(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Gets the column names for a table.
+ </summary>
+ <param name="sTableName">The DataTable to pull from.</param>
+ <param name="sDatabaseName">The Database to pull from.</param>
+ <param name="sDelimiter">The way to delimit columns.</param>
+ <param name="bIncludeID">Include ID in the list?</param>
+ <returns>A list of a DataTable's column names.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetPictureLinkByUsername(System.String)">
+ <summary>
+ Get a link to the image for a username.
+ </summary>
+ <param name="sUsername">The username to get the image for.</param>
+ <returns>A link to the image for a username.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetPictureLinkByPLID(System.String)">
+ <summary>
+ Get a link to the image for a PLID.
+ </summary>
+ <param name="sPLID">The PLID to get the image for.</param>
+ <returns>A link to the image for a PLID.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBlacklistedEmails">
+ <summary>
+ Gets a list of blacklisted email addresses where Blacklisted=Yes.
+ </summary>
+ <returns>A list of blacklisted email addresses.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetEmailBlacklist">
+ <summary>
+ Gets a list of blacklisted email addresses where Blacklisted=Yes.
+ </summary>
+ <returns>A list of blacklisted email addresses.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetBlacklistedEmailsFullList(System.Boolean)">
+ <summary>
+ Gets a ful list of email addresses that are in the blacklist database.
+ </summary>
+ <param name="bMustBeBlacklisted">Only return email addresses that are listed as Blacklisted=Yes? If false, then all email addresses are returned.</param>
+ <returns>A list of blacklisted email addresses.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDataTableColumnValue(System.String,System.String,System.String,System.String)">
+ <summary>
+ Gets the column value for a column in a DataTable.
+ </summary>
+ <param name="sDataTable">The DataTable to check the column in.</param>
+ <param name="sColumn">The column to get a value for.</param>
+ <param name="sColumnValue">The column value to get. Defaults to "MaxLength"</param>
+ <param name="sDatabase">The Database the DataTable is in.</param>
+ <returns>The column value for the column in the DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDataTableColumnMaxLength(System.String,System.String,System.String)">
+ <summary>
+ Gets the max length value for a column in a DataTable.
+ </summary>
+ <param name="sDataTable">The DataTable to check the column in.</param>
+ <param name="sColumn">The column to get the max length value for.</param>
+ <param name="sDatabase">The Database the DataTable is in.</param>
+ <returns>The max length value for the column in the DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetSubDepartments(System.String@)">
+ <summary>
+ 
+ </summary>
+ <param name="sDepartmentCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetEmailIssuesOccurring">
+ <summary>
+ Checks if their are any email issues currently happening.
+ </summary>
+ <returns>Are there email issues occurring?</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetDepartmentMembership(System.String,System.String)">
+ <summary>
+ Checks to see if username belongs to a specified department.
+ </summary>
+ <param name="sDepartment"></param>
+ <param name="sUsername"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Getter.GetWebConfigVariable(System.String)">
+ <summary>
+ Checks the web.config file for the given variable
+ </summary>
+ <param name="sVariable"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Actions.Main.GetRepeaterAction(System.Int32)">
+ <summary>
+ Currently the only allowed repeater action is custom code.  This method will need to be updated
+ if other Main are allowed.
+ </summary>
+ <param name="nID"></param>
+ <returns></returns>
+</member>
+<member name="M:Common.General.Actions.GetRepeaterAction(System.Int32)">
+ <summary>
+ Currently the only allowed repeater action is custom code.  This method will need to be updated
+ if other actions are allowed.
+ </summary>
+ <param name="nID"></param>
+ <returns></returns>
+</member>
+<member name="M:Common.General.Pages.GetFirstPage(System.String)">
+ <summary>
+ Checks to see if a page has already been created for this project.  If no pages exist, creates a page.  Then returns the first page's ID.
+ </summary>
+ <param name="nProjectID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Common.Webpages.Frontend.Main.GetExportMethods(System.Int32,System.String@)">
+ <summary>
+ 
+ </summary>
+ <returns></returns>
+</member>
+<member name="F:Common.WebRADDataSource._pnlDataSourceType">
+<summary>
+pnlDataSourceType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._RequiredFieldValidator1">
+<summary>
+RequiredFieldValidator1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rblDataSourceType">
+<summary>
+rblDataSourceType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._pnlDataSource">
+<summary>
+pnlDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rfvDataSource">
+<summary>
+rfvDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSource">
+<summary>
+lblDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSource">
+<summary>
+txtDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._chkUseBackendDatasource">
+<summary>
+chkUseBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._pnlBackendDAtasource">
+<summary>
+pnlBackendDAtasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rfvBackendDatasource">
+<summary>
+rfvBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblBackendDatasource">
+<summary>
+lblBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtBackendDatasource">
+<summary>
+txtBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._pnlDataSourceSpecific">
+<summary>
+pnlDataSourceSpecific control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rfvDataSourceSelect">
+<summary>
+rfvDataSourceSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSourceSelectHeader">
+<summary>
+lblDataSourceSelectHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSourceSelect">
+<summary>
+txtDataSourceSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSourceTableHeader">
+<summary>
+lblDataSourceTableHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSourceTable">
+<summary>
+txtDataSourceTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSourceWhereHeader">
+<summary>
+lblDataSourceWhereHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSourceWhere">
+<summary>
+txtDataSourceWhere control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSourceGroupByHeader">
+<summary>
+lblDataSourceGroupByHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSourceGroupBy">
+<summary>
+txtDataSourceGroupBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataSourceOrderByHeader">
+<summary>
+lblDataSourceOrderByHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataSourceOrderBy">
+<summary>
+txtDataSourceOrderBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._pnlDataTextField">
+<summary>
+pnlDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rfvDataTextField">
+<summary>
+rfvDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataTextFieldHeader">
+<summary>
+lblDataTextFieldHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataTextField">
+<summary>
+txtDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._pnlDataValueField">
+<summary>
+pnlDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._rfvDataValueField">
+<summary>
+rfvDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._lblDataValueFieldHeader">
+<summary>
+lblDataValueFieldHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADDataSource._txtDataValueField">
+<summary>
+txtDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlSelectionItems">
+<summary>
+pnlSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvSelectionItems">
+<summary>
+rfvSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlSelectionItemsRequired">
+<summary>
+pnlSelectionItemsRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._ddlSelectionItems">
+<summary>
+ddlSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlListItems">
+<summary>
+pnlListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvListItems">
+<summary>
+rfvListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlListItemsRequired">
+<summary>
+pnlListItemsRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._ddlListItems">
+<summary>
+ddlListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rptListItems">
+<summary>
+rptListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._lblListItemCount">
+<summary>
+lblListItemCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlDataMethod">
+<summary>
+pnlDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvDataMethod">
+<summary>
+rfvDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._ddlDataMethod">
+<summary>
+ddlDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlOtherDataMethod">
+<summary>
+pnlOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvOtherDataMethod">
+<summary>
+rfvOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._txtOtherDataMethod">
+<summary>
+txtOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlIncludePleaseSelect">
+<summary>
+pnlIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvIncludePleaseSelect">
+<summary>
+rfvIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rblIncludePleaseSelect">
+<summary>
+rblIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlMinimumValue">
+<summary>
+pnlMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvMinimumValue">
+<summary>
+rfvMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlMinimumValueRequired">
+<summary>
+pnlMinimumValueRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._txtMinimumValue">
+<summary>
+txtMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlMaximumValue">
+<summary>
+pnlMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._rfvMaximumValue">
+<summary>
+rfvMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._pnlMaximumValueRequired">
+<summary>
+pnlMaximumValueRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._txtMaximumValue">
+<summary>
+txtMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.WebRADListItems._ucDataSource">
+<summary>
+ucDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="T:Common.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Common.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:Common.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="F:Common.TopMenu._ddlProjects">
+<summary>
+ddlProjects control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenu._libMainDetails">
+<summary>
+libMainDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenu._libControlDetails">
+<summary>
+libControlDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenu._libFrontendDetails">
+<summary>
+libFrontendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenu._libBackendDetails">
+<summary>
+libBackendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenu._libFinalize">
+<summary>
+libFinalize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._ddlProjects">
+<summary>
+ddlProjects control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._libMainDetails">
+<summary>
+libMainDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._libControlDetails">
+<summary>
+libControlDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._libFrontendDetails">
+<summary>
+libFrontendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._libBackendDetails">
+<summary>
+libBackendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TopMenuNew._libFinalize">
+<summary>
+libFinalize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TriggerValues._rfvNumberTriggerValues">
+<summary>
+rfvNumberTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TriggerValues._ddlNumberTriggerValues">
+<summary>
+ddlNumberTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Common.TriggerValues._rptTriggerValues">
+<summary>
+rptTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

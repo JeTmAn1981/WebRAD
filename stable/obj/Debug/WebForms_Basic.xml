@@ -1,0 +1,6194 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+stable
+</name>
+</assembly>
+<members>
+<member name="T:stable.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:stable.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:stable.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:stable.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:stable.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:stable.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="F:stable.ajaxtest._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.ajaxtest._smMain">
+<summary>
+smMain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.ajaxtest._SupervisorsContainer">
+<summary>
+SupervisorsContainer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.ajaxtest._cvSupervisors">
+<summary>
+cvSupervisors control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.ajaxtest._rptSupervisors">
+<summary>
+rptSupervisors control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.ajaxtest._btnrptSupervisorsAddItem">
+<summary>
+btnrptSupervisorsAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._Form1">
+<summary>
+Form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._scriptManager">
+<summary>
+scriptManager control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvIncludebackend">
+<summary>
+rfvIncludebackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rblIncludebackend">
+<summary>
+rblIncludebackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlBackend">
+<summary>
+pnlBackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlTest">
+<summary>
+ddlTest control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptTest">
+<summary>
+rptTest control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._cvBackendPath">
+<summary>
+cvBackendPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlBackendFolder">
+<summary>
+pnlBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lblSelectedBackendFolder">
+<summary>
+lblSelectedBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lsbBackendFolders">
+<summary>
+lsbBackendFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvCreateBackendFolder">
+<summary>
+rfvCreateBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rblCreateBackendFolder">
+<summary>
+rblCreateBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlNewBackendFolder">
+<summary>
+pnlNewBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvNewBackendFolderName">
+<summary>
+rfvNewBackendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._txtNewBackendFolderName">
+<summary>
+txtNewBackendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvBackendLink">
+<summary>
+rfvBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._cvBackendLink">
+<summary>
+cvBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._txtBackendLink">
+<summary>
+txtBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lblSelectedDisplayColumns">
+<summary>
+lblSelectedDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lsbDisplayColumns">
+<summary>
+lsbDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._cblBackendOptions">
+<summary>
+cblBackendOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlSearch">
+<summary>
+pnlSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvSearchColumns">
+<summary>
+rfvSearchColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlSearchColumns">
+<summary>
+ddlSearchColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lblSelectedSearchTermControls">
+<summary>
+lblSelectedSearchTermControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lsbSearchTermControls">
+<summary>
+lsbSearchTermControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lblSelectedSearchDisplayColumns">
+<summary>
+lblSelectedSearchDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lsbSearchDisplayColumns">
+<summary>
+lsbSearchDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlActionsOtherThanDelete">
+<summary>
+pnlActionsOtherThanDelete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvActions">
+<summary>
+rfvActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlActions">
+<summary>
+ddlActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptActions">
+<summary>
+rptActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlSort">
+<summary>
+pnlSort control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rblDefaultSort">
+<summary>
+rblDefaultSort control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvSortColumns">
+<summary>
+rfvSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlSortColumns">
+<summary>
+ddlSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptSortColumns">
+<summary>
+rptSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlFilter">
+<summary>
+pnlFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvFilterOptions">
+<summary>
+rfvFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlFilterOptions">
+<summary>
+ddlFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptFilterOptions">
+<summary>
+rptFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlExport">
+<summary>
+pnlExport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvNumberExports">
+<summary>
+rfvNumberExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlNumberExports">
+<summary>
+ddlNumberExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptExports">
+<summary>
+rptExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlReport">
+<summary>
+pnlReport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvNumberReports">
+<summary>
+rfvNumberReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlNumberReports">
+<summary>
+ddlNumberReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptReports">
+<summary>
+rptReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlSchedulePage">
+<summary>
+pnlSchedulePage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._lblFormName">
+<summary>
+lblFormName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._txtClosedMessage">
+<summary>
+txtClosedMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlCustomselectstatement">
+<summary>
+pnlCustomselectstatement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvCustomSelectStatement">
+<summary>
+rfvCustomSelectStatement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._txtCustomSelectStatement">
+<summary>
+txtCustomSelectStatement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlPaging">
+<summary>
+pnlPaging control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._cmpPageLimit">
+<summary>
+cmpPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvPageLimit">
+<summary>
+rfvPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rvPageLimit">
+<summary>
+rvPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._txtPageLimit">
+<summary>
+txtPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlAncillarymaintenance">
+<summary>
+pnlAncillarymaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rfvNumberAncillaryMaintenance">
+<summary>
+rfvNumberAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._ddlNumberAncillaryMaintenance">
+<summary>
+ddlNumberAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptAncillaryMaintenance">
+<summary>
+rptAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._pnlAdditionalLinks">
+<summary>
+pnlAdditionalLinks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._cvAdditionalLinks">
+<summary>
+cvAdditionalLinks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._rptAdditionalLinks">
+<summary>
+rptAdditionalLinks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._btnrptAdditionalLinksAddItem">
+<summary>
+btnrptAdditionalLinksAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._btnContinue">
+<summary>
+btnContinue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backend._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvIncludebackend">
+<summary>
+rfvIncludebackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rblIncludebackend">
+<summary>
+rblIncludebackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlBackend">
+<summary>
+pnlBackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptTest">
+<summary>
+rptTest control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cvBackendPath">
+<summary>
+cvBackendPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlBackendFolder">
+<summary>
+pnlBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSelectedBackendFolder">
+<summary>
+lblSelectedBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lsbBackendFolders">
+<summary>
+lsbBackendFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvCreateBackendFolder">
+<summary>
+rfvCreateBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rblCreateBackendFolder">
+<summary>
+rblCreateBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlNewBackendFolder">
+<summary>
+pnlNewBackendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvNewBackendFolderName">
+<summary>
+rfvNewBackendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtNewBackendFolderName">
+<summary>
+txtNewBackendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvBackendLink">
+<summary>
+rfvBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cvBackendLink">
+<summary>
+cvBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtBackendLink">
+<summary>
+txtBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSelectedDisplayColumns">
+<summary>
+lblSelectedDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lsbDisplayColumns">
+<summary>
+lsbDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cblBackendOptions">
+<summary>
+cblBackendOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlShowOptionDetails">
+<summary>
+pnlShowOptionDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._OptionTabs">
+<summary>
+OptionTabs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._Search">
+<summary>
+Search control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvSearchColumns">
+<summary>
+rfvSearchColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSearchColumns">
+<summary>
+lblSearchColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlSearchColumns">
+<summary>
+ddlSearchColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSelectedSearchTermControls">
+<summary>
+lblSelectedSearchTermControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lsbSearchTermControls">
+<summary>
+lsbSearchTermControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSelectedSearchDisplayColumns">
+<summary>
+lblSelectedSearchDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lsbSearchDisplayColumns">
+<summary>
+lsbSearchDisplayColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvActions">
+<summary>
+rfvActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblActions">
+<summary>
+lblActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlActions">
+<summary>
+ddlActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptActions">
+<summary>
+rptActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rblDefaultSort">
+<summary>
+rblDefaultSort control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvSortColumns">
+<summary>
+rfvSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlSortColumns">
+<summary>
+ddlSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptSortColumns">
+<summary>
+rptSortColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvFilterOptions">
+<summary>
+rfvFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblFilterOptions">
+<summary>
+lblFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlFilterOptions">
+<summary>
+ddlFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptFilterOptions">
+<summary>
+rptFilterOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvNumberExports">
+<summary>
+rfvNumberExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblNumberExports">
+<summary>
+lblNumberExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlNumberExports">
+<summary>
+ddlNumberExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptExports">
+<summary>
+rptExports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvNumberReports">
+<summary>
+rfvNumberReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblNumberReports">
+<summary>
+lblNumberReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlNumberReports">
+<summary>
+ddlNumberReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptReports">
+<summary>
+rptReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvName">
+<summary>
+rfvName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblName">
+<summary>
+lblName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtName">
+<summary>
+txtName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvType">
+<summary>
+rfvType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rblDataSourceType">
+<summary>
+rblDataSourceType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ucDataSource">
+<summary>
+ucDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlStatement">
+<summary>
+pnlStatement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvSQLQuery">
+<summary>
+rfvSQLQuery control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblSQLQuery">
+<summary>
+lblSQLQuery control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtSQLQuery">
+<summary>
+txtSQLQuery control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._pnlColumns">
+<summary>
+pnlColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cvMainColumns">
+<summary>
+cvMainColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblMainTableName">
+<summary>
+lblMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lsbMainColumns">
+<summary>
+lsbMainColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptTables">
+<summary>
+rptTables control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rblTemplateMessageType">
+<summary>
+rblTemplateMessageType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtTemplate">
+<summary>
+txtTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtTemplatePlain">
+<summary>
+txtTemplatePlain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblFormName">
+<summary>
+lblFormName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtClosedMessage">
+<summary>
+txtClosedMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ucCustomSelectDataSource">
+<summary>
+ucCustomSelectDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cmpPageLimit">
+<summary>
+cmpPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvPageLimit">
+<summary>
+rfvPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rvPageLimit">
+<summary>
+rvPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblPageLimit">
+<summary>
+lblPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._txtPageLimit">
+<summary>
+txtPageLimit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rfvNumberAncillaryMaintenance">
+<summary>
+rfvNumberAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._lblNumberAncillaryMaintenance">
+<summary>
+lblNumberAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._ddlNumberAncillaryMaintenance">
+<summary>
+ddlNumberAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptAncillaryMaintenance">
+<summary>
+rptAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._cvAdditionalLinks">
+<summary>
+cvAdditionalLinks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._rptAdditionalLinks">
+<summary>
+rptAdditionalLinks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._btnrptAdditionalLinksAddItem">
+<summary>
+btnrptAdditionalLinksAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._btnContinue">
+<summary>
+btnContinue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.backendnew._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:stable.backendnew.MakeExportNamesUnique(System.Web.UI.WebControls.Repeater)">
+ <summary>
+ Potential bug:  What happens if the export name is already at the character limit?  Uniqueness-inducing dashes will be truncated?
+ </summary>
+ <param name="rptCurrent"></param>
+</member>
+<member name="F:stable.buildproject._Form1">
+<summary>
+Form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._libMainDetails">
+<summary>
+libMainDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._libControlDetails">
+<summary>
+libControlDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._libFrontendDetails">
+<summary>
+libFrontendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._libBackendDetails">
+<summary>
+libBackendDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._libFinalize">
+<summary>
+libFinalize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._ScriptManager">
+<summary>
+ScriptManager control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblPageTitle">
+<summary>
+lblPageTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblDepartmentName">
+<summary>
+lblDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblEcommerce">
+<summary>
+lblEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._pnlEcommerce">
+<summary>
+pnlEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblEcommerceProduct">
+<summary>
+lblEcommerceProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblSQLServer">
+<summary>
+lblSQLServer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblSQLDatabase">
+<summary>
+lblSQLDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblSQLMainTableName">
+<summary>
+lblSQLMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblSQLInsertStoredProcedureName">
+<summary>
+lblSQLInsertStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblSQLUpdateStoredProcedureName">
+<summary>
+lblSQLUpdateStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._lblControlList">
+<summary>
+lblControlList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._txtNotes">
+<summary>
+txtNotes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._chkCreateFrontend">
+<summary>
+chkCreateFrontend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._cblPages">
+<summary>
+cblPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._chkCreateBackend">
+<summary>
+chkCreateBackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._rblProjectType">
+<summary>
+rblProjectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._rblProjectStyle">
+<summary>
+rblProjectStyle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._btnSubmit">
+<summary>
+btnSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.buildproject._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._Form1">
+<summary>
+Form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblFrontendLink">
+<summary>
+lblFrontendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblBackendLink">
+<summary>
+lblBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblPageTitle">
+<summary>
+lblPageTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblDepartmentName">
+<summary>
+lblDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblEcommerce">
+<summary>
+lblEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._pnlEcommerce">
+<summary>
+pnlEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblEcommerceProduct">
+<summary>
+lblEcommerceProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblSQLDatabase">
+<summary>
+lblSQLDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblSQLMainTableName">
+<summary>
+lblSQLMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblSQLInsertStoredProcedureName">
+<summary>
+lblSQLInsertStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblSQLUpdateStoredProcedureName">
+<summary>
+lblSQLUpdateStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.confirmation._lblControlList">
+<summary>
+lblControlList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlParentControls">
+<summary>
+ddlParentControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnSetParent">
+<summary>
+btnSetParent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSetGroupName">
+<summary>
+txtSetGroupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnSetGroup">
+<summary>
+btnSetGroup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnDeleteControls">
+<summary>
+btnDeleteControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._MainContent_btnAlignControls">
+<summary>
+MainContent_btnAlignControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rptPages">
+<summary>
+rptPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._imbAddPage">
+<summary>
+imbAddPage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._sds">
+<summary>
+sds control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._chkSelectAllControls">
+<summary>
+chkSelectAllControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSelectAllControls">
+<summary>
+lblSelectAllControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rl1">
+<summary>
+rl1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._vs2">
+<summary>
+vs2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnContinue2">
+<summary>
+btnContinue2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvControlType">
+<summary>
+rfvControlType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblControlType">
+<summary>
+lblControlType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlControlType">
+<summary>
+ddlControlType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlParentControl">
+<summary>
+pnlParentControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblParentControl">
+<summary>
+lblParentControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlParentControl">
+<summary>
+ddlParentControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlControlTypeDetails">
+<summary>
+pnlControlTypeDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvName">
+<summary>
+rfvName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvName">
+<summary>
+cvName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblName">
+<summary>
+lblName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtName">
+<summary>
+txtName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlDisplayHeading">
+<summary>
+pnlDisplayHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvDisplayHeading">
+<summary>
+rfvDisplayHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblDisplayHeading">
+<summary>
+lblDisplayHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblDisplayHeading">
+<summary>
+rblDisplayHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlHeading">
+<summary>
+pnlHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvHeading">
+<summary>
+rfvHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblHeading">
+<summary>
+lblHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtHeading">
+<summary>
+txtHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSubheading">
+<summary>
+pnlSubheading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSubHeading">
+<summary>
+lblSubHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSubHeading">
+<summary>
+txtSubHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlShortHeading">
+<summary>
+pnlShortHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvShortHeading">
+<summary>
+rfvShortHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblShortHeading">
+<summary>
+lblShortHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtShortHeading">
+<summary>
+txtShortHeading control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRepeaterAddRemove">
+<summary>
+pnlRepeaterAddRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRepeaterAddRemove">
+<summary>
+lblRepeaterAddRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRepeaterAddRemove">
+<summary>
+rblRepeaterAddRemove control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRepeaterItemName">
+<summary>
+pnlRepeaterItemName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRepeaterItemName">
+<summary>
+rfvRepeaterItemName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRepeaterItemName">
+<summary>
+lblRepeaterItemName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtRepeaterItemName">
+<summary>
+txtRepeaterItemName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRequired">
+<summary>
+pnlRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRequired">
+<summary>
+rfvRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRequired">
+<summary>
+lblRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRequired">
+<summary>
+rblRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlMinimumRequired">
+<summary>
+pnlMinimumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvMinimumRequired">
+<summary>
+rfvMinimumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblMinimumRequired">
+<summary>
+lblMinimumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlMinimumRequired">
+<summary>
+ddlMinimumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblMaximumRequired">
+<summary>
+lblMaximumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlMaximumRequired">
+<summary>
+ddlMaximumRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlCustomValidation">
+<summary>
+pnlCustomValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvCustomValidation">
+<summary>
+rfvCustomValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCustomValidation">
+<summary>
+lblCustomValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblCustomValidation">
+<summary>
+rblCustomValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlCustomValidationCode">
+<summary>
+pnlCustomValidationCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvCustomValidationCode">
+<summary>
+cvCustomValidationCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCustomValidationCode">
+<summary>
+lblCustomValidationCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtCustomValidationCode">
+<summary>
+txtCustomValidationCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRequireVerification">
+<summary>
+pnlRequireVerification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRequireVerification">
+<summary>
+rfvRequireVerification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRequireVerification">
+<summary>
+lblRequireVerification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRequireVerification">
+<summary>
+rblRequireVerification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlTextPosition">
+<summary>
+pnlTextPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvTextPosition">
+<summary>
+rfvTextPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblTextPosition">
+<summary>
+lblTextPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblTextPosition">
+<summary>
+rblTextPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlLayoutType">
+<summary>
+pnlLayoutType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvLayoutType">
+<summary>
+rfvLayoutType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblLayoutType">
+<summary>
+lblLayoutType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblLayoutType">
+<summary>
+rblLayoutType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvLayoutSubtype">
+<summary>
+rfvLayoutSubtype control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblLayoutSubtype">
+<summary>
+lblLayoutSubtype control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblLayoutSubtype">
+<summary>
+rblLayoutSubtype control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSupplyControlData">
+<summary>
+pnlSupplyControlData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSupplyControlData">
+<summary>
+rfvSupplyControlData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSupplyControlData">
+<summary>
+lblSupplyControlData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblSupplyControlData">
+<summary>
+rblSupplyControlData control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSupplyDataType">
+<summary>
+pnlSupplyDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSupplyDataType">
+<summary>
+lblSupplyDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblSupplyDataType">
+<summary>
+rblSupplyDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlControlDataSource">
+<summary>
+pnlControlDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblontrolSupplyDataSource">
+<summary>
+lblontrolSupplyDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlControlDataSourceColumn">
+<summary>
+pnlControlDataSourceColumn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvControlDataSourceColumn">
+<summary>
+rfvControlDataSourceColumn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblControlDataSourceColumn">
+<summary>
+lblControlDataSourceColumn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtControlDataSourceColumn">
+<summary>
+txtControlDataSourceColumn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvDisplayLocation">
+<summary>
+rfvDisplayLocation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblDisplayLocation">
+<summary>
+lblDisplayLocation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblDisplayLocation">
+<summary>
+rblDisplayLocation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvDisplayType">
+<summary>
+rfvDisplayType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblDisplayType">
+<summary>
+lblDisplayType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlDisplayType">
+<summary>
+ddlDisplayType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlIncludeDatabase">
+<summary>
+pnlIncludeDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvIncludeDatabase">
+<summary>
+rfvIncludeDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblIncludeDatabase">
+<summary>
+lblIncludeDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblIncludeDatabase">
+<summary>
+rblIncludeDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlAutopostback">
+<summary>
+pnlAutopostback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvAutopostback">
+<summary>
+rfvAutopostback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblAutopostback">
+<summary>
+lblAutopostback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblAutopostback">
+<summary>
+rblAutopostback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlPostbackActionOptions">
+<summary>
+pnlPostbackActionOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlPerformPostbackAction">
+<summary>
+pnlPerformPostbackAction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvPerformPostbackAction">
+<summary>
+rfvPerformPostbackAction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblPerformPostbackAction">
+<summary>
+lblPerformPostbackAction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblPerformPostbackAction">
+<summary>
+rblPerformPostbackAction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlPostbackActions">
+<summary>
+pnlPostbackActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvPostbackActions">
+<summary>
+rfvPostbackActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblActions">
+<summary>
+lblActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlActions">
+<summary>
+ddlActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rptPostbackActions">
+<summary>
+rptPostbackActions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlOnchange">
+<summary>
+pnlOnchange control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblOnchange">
+<summary>
+lblOnchange control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblOnchange">
+<summary>
+rblOnchange control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlOnchangeDetail">
+<summary>
+pnlOnchangeDetail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvOnchangeCall">
+<summary>
+rfvOnchangeCall control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblOnchangeCall">
+<summary>
+lblOnchangeCall control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtOnchangeCall">
+<summary>
+txtOnchangeCall control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblOnchangeBody">
+<summary>
+lblOnchangeBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtOnchangeBody">
+<summary>
+txtOnchangeBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlEnabled">
+<summary>
+pnlEnabled control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblEnabled">
+<summary>
+lblEnabled control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblEnabled">
+<summary>
+rblEnabled control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlVisible">
+<summary>
+pnlVisible control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvVisible">
+<summary>
+rfvVisible control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblVisible">
+<summary>
+lblVisible control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblVisible">
+<summary>
+rblVisible control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlDependentValue">
+<summary>
+pnlDependentValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvVisibleDependingControls">
+<summary>
+cvVisibleDependingControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rptVisibleDependingControls">
+<summary>
+rptVisibleDependingControls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnrptVisibleDependingControlsAddItem">
+<summary>
+btnrptVisibleDependingControlsAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlCustomVisibleValue">
+<summary>
+pnlCustomVisibleValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvCustomVisibleValue">
+<summary>
+rfvCustomVisibleValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCustomVisibleValue">
+<summary>
+lblCustomVisibleValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtCustomVisibleValue">
+<summary>
+txtCustomVisibleValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlCalendar">
+<summary>
+pnlCalendar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvCalendar">
+<summary>
+rfvCalendar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCalendar">
+<summary>
+lblCalendar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblCalendar">
+<summary>
+rblCalendar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlValue">
+<summary>
+pnlValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRichtextbox">
+<summary>
+rfvRichtextbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRichTextbox">
+<summary>
+lblRichTextbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRichTextbox">
+<summary>
+rblRichTextbox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRegularValue">
+<summary>
+pnlRegularValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvValue">
+<summary>
+rfvValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtValue">
+<summary>
+txtValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRichValue">
+<summary>
+pnlRichValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRichValue">
+<summary>
+rfvRichValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtRichValue">
+<summary>
+txtRichValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlText">
+<summary>
+pnlText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvText">
+<summary>
+rfvText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblText">
+<summary>
+lblText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtText">
+<summary>
+txtText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlPlaceholder">
+<summary>
+pnlPlaceholder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblPlaceholder">
+<summary>
+lblPlaceholder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtPlaceholder">
+<summary>
+txtPlaceholder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlTextMode">
+<summary>
+pnlTextMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblTextMode">
+<summary>
+lblTextMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlTextMode">
+<summary>
+ddlTextMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRichTextboxUser">
+<summary>
+pnlRichTextboxUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRichTextboxUser">
+<summary>
+rfvRichTextboxUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRichTextboxUser">
+<summary>
+lblRichTextboxUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRichTextboxUser">
+<summary>
+rblRichTextboxUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRows">
+<summary>
+pnlRows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRows">
+<summary>
+rfvRows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cmpRows">
+<summary>
+cmpRows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRows">
+<summary>
+lblRows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtRows">
+<summary>
+txtRows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlColumns">
+<summary>
+pnlColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvColumns">
+<summary>
+rfvColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cmpColumns">
+<summary>
+cmpColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblColumns">
+<summary>
+lblColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtColumns">
+<summary>
+txtColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlMaxLength">
+<summary>
+pnlMaxLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvMaxLength">
+<summary>
+rfvMaxLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cmpMaxLength">
+<summary>
+cmpMaxLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblMaxLength">
+<summary>
+lblMaxLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtMaxLength">
+<summary>
+txtMaxLength control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblMaxLengthType">
+<summary>
+lblMaxLengthType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblMaxLengthType">
+<summary>
+rblMaxLengthType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlMaxFileSize">
+<summary>
+pnlMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvMaxFileSize">
+<summary>
+rfvMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cmpMaxFileSize">
+<summary>
+cmpMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblMaxFileSize">
+<summary>
+lblMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtMaxFileSize">
+<summary>
+txtMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlFileTypesAllowed">
+<summary>
+pnlFileTypesAllowed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvFileTypesAllowed">
+<summary>
+cvFileTypesAllowed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblFileTypesAllowed">
+<summary>
+lblFileTypesAllowed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lsbFileTypesAllowed">
+<summary>
+lsbFileTypesAllowed control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlUploadPath">
+<summary>
+pnlUploadPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvUploadPath">
+<summary>
+cvUploadPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblUploadPathFolder">
+<summary>
+lblUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlUploadPathFolder">
+<summary>
+pnlUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSelectedUploadPathFolder">
+<summary>
+lblSelectedUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lsbUploadPathFolders">
+<summary>
+lsbUploadPathFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvCreateUploadPathFolder">
+<summary>
+rfvCreateUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCreateUploadPathFolder">
+<summary>
+lblCreateUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblCreateUploadPathFolder">
+<summary>
+rblCreateUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlNewUploadPathFolder">
+<summary>
+pnlNewUploadPathFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvNewUploadPathFolderName">
+<summary>
+rfvNewUploadPathFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblNewUploadPathFolderName">
+<summary>
+lblNewUploadPathFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtNewUploadPathFolderName">
+<summary>
+txtNewUploadPathFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlWidth">
+<summary>
+pnlWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvWidth">
+<summary>
+rfvWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblWidth">
+<summary>
+lblWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtWidth">
+<summary>
+txtWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlCssClass">
+<summary>
+pnlCssClass control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvCssClass">
+<summary>
+rfvCssClass control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCssClass">
+<summary>
+lblCssClass control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtCssClass">
+<summary>
+txtCssClass control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRepeatDirection">
+<summary>
+pnlRepeatDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRepeatDirection">
+<summary>
+rfvRepeatDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRepeatDirection">
+<summary>
+lblRepeatDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblRepeatDirection">
+<summary>
+rblRepeatDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlRepeatColumns">
+<summary>
+pnlRepeatColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvRepeatColumns">
+<summary>
+rfvRepeatColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblRepeatColumns">
+<summary>
+lblRepeatColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlRepeatColumns">
+<summary>
+ddlRepeatColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlListSelections">
+<summary>
+pnlListSelections control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvListSelections">
+<summary>
+rfvListSelections control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblListSelections">
+<summary>
+lblListSelections control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblListSelections">
+<summary>
+rblListSelections control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlGroupName">
+<summary>
+pnlGroupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvGroupName">
+<summary>
+rfvGroupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblGroupName">
+<summary>
+lblGroupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtGroupName">
+<summary>
+txtGroupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSelectionMode">
+<summary>
+pnlSelectionMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSelectionMode">
+<summary>
+rfvSelectionMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSelectionMode">
+<summary>
+lblSelectionMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblSelectionMode">
+<summary>
+rblSelectionMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSQLDataType">
+<summary>
+pnlSQLDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLDataType">
+<summary>
+rfvSQLDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSQLDataType">
+<summary>
+lblSQLDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._ddlSQLDataType">
+<summary>
+ddlSQLDataType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSQLDataSize">
+<summary>
+pnlSQLDataSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLDataSize">
+<summary>
+rfvSQLDataSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._cvSQLDataSize">
+<summary>
+cvSQLDataSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSQLDataSize">
+<summary>
+lblSQLDataSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSQLDataSize">
+<summary>
+txtSQLDataSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSQLDefaultValue">
+<summary>
+pnlSQLDefaultValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLDefaultValueType">
+<summary>
+rfvSQLDefaultValueType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblSQLDefaultValueType">
+<summary>
+rblSQLDefaultValueType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLDefaultValue">
+<summary>
+rfvSQLDefaultValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSQLDefaultValue">
+<summary>
+lblSQLDefaultValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSQLDefaultValue">
+<summary>
+txtSQLDefaultValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlAllowNegativeValue">
+<summary>
+pnlAllowNegativeValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblAllowNegativeValue">
+<summary>
+lblAllowNegativeValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblAllowNegativeValue">
+<summary>
+rblAllowNegativeValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlAllowZeroValue">
+<summary>
+pnlAllowZeroValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblAllowZeroValue">
+<summary>
+lblAllowZeroValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rblAllowZeroValue">
+<summary>
+rblAllowZeroValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSQLInsertItemTable">
+<summary>
+pnlSQLInsertItemTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLInsertItemTable">
+<summary>
+rfvSQLInsertItemTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSQLInsertItemTable">
+<summary>
+lblSQLInsertItemTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSQLInsertItemTable">
+<summary>
+txtSQLInsertItemTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlSQLInsertItemStoredProcedure">
+<summary>
+pnlSQLInsertItemStoredProcedure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvSQLInsertItemStoredProcedure">
+<summary>
+rfvSQLInsertItemStoredProcedure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblSQLInsertItemStoredProcedure">
+<summary>
+lblSQLInsertItemStoredProcedure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtSQLInsertItemStoredProcedure">
+<summary>
+txtSQLInsertItemStoredProcedure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlForeignID">
+<summary>
+pnlForeignID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvForeignID">
+<summary>
+rfvForeignID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblForeignID">
+<summary>
+lblForeignID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtForeignID">
+<summary>
+txtForeignID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._pnlProspectCode">
+<summary>
+pnlProspectCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._rfvProspectCode">
+<summary>
+rfvProspectCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblProspectCode">
+<summary>
+lblProspectCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._txtProspectCode">
+<summary>
+txtProspectCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCurrentControlID">
+<summary>
+lblCurrentControlID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._lblCurrentControlPosition">
+<summary>
+lblCurrentControlPosition control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._btnContinue">
+<summary>
+btnContinue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.controlsnew._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlDataSourceType">
+<summary>
+pnlDataSourceType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._RequiredFieldValidator1">
+<summary>
+RequiredFieldValidator1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rblDataSourceType">
+<summary>
+rblDataSourceType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlDataSource">
+<summary>
+pnlDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rfvDataSource">
+<summary>
+rfvDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSource">
+<summary>
+lblDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSource">
+<summary>
+txtDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._chkUseBackendDatasource">
+<summary>
+chkUseBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlBackendDAtasource">
+<summary>
+pnlBackendDAtasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rfvBackendDatasource">
+<summary>
+rfvBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblBackendDatasource">
+<summary>
+lblBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtBackendDatasource">
+<summary>
+txtBackendDatasource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlDataSourceSpecific">
+<summary>
+pnlDataSourceSpecific control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rfvDataSourceSelect">
+<summary>
+rfvDataSourceSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSourceSelectHeader">
+<summary>
+lblDataSourceSelectHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSourceSelect">
+<summary>
+txtDataSourceSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSourceTableHeader">
+<summary>
+lblDataSourceTableHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSourceTable">
+<summary>
+txtDataSourceTable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSourceWhereHeader">
+<summary>
+lblDataSourceWhereHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSourceWhere">
+<summary>
+txtDataSourceWhere control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSourceGroupByHeader">
+<summary>
+lblDataSourceGroupByHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSourceGroupBy">
+<summary>
+txtDataSourceGroupBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataSourceOrderByHeader">
+<summary>
+lblDataSourceOrderByHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataSourceOrderBy">
+<summary>
+txtDataSourceOrderBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlDataTextField">
+<summary>
+pnlDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rfvDataTextField">
+<summary>
+rfvDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataTextFieldHeader">
+<summary>
+lblDataTextFieldHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataTextField">
+<summary>
+txtDataTextField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._pnlDataValueField">
+<summary>
+pnlDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._rfvDataValueField">
+<summary>
+rfvDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._lblDataValueFieldHeader">
+<summary>
+lblDataValueFieldHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADDataSource._txtDataValueField">
+<summary>
+txtDataValueField control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._MainUpdatePanel">
+<summary>
+MainUpdatePanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblPageTitle">
+<summary>
+lblPageTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblDepartmentName">
+<summary>
+lblDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblEcommerce">
+<summary>
+lblEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._pnlEcommerce">
+<summary>
+pnlEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblEcommerceProduct">
+<summary>
+lblEcommerceProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblSQLServer">
+<summary>
+lblSQLServer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblSQLDatabase">
+<summary>
+lblSQLDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblSQLMainTableName">
+<summary>
+lblSQLMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblSQLInsertStoredProcedureName">
+<summary>
+lblSQLInsertStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblSQLUpdateStoredProcedureName">
+<summary>
+lblSQLUpdateStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblControlList">
+<summary>
+lblControlList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblFrontendLink">
+<summary>
+lblFrontendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._lblBackendLink">
+<summary>
+lblBackendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._chkCreateFrontend">
+<summary>
+chkCreateFrontend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._chkIncludeStatusPage">
+<summary>
+chkIncludeStatusPage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._cblPages">
+<summary>
+cblPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._chkCreateBackend">
+<summary>
+chkCreateBackend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._chkBackendOptionsAll">
+<summary>
+chkBackendOptionsAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._cblBackendOptions">
+<summary>
+cblBackendOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._pnlAncillaryMaintenance">
+<summary>
+pnlAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._chkAncillaryMaintenanceAll">
+<summary>
+chkAncillaryMaintenanceAll control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._rptAncillaryMaintenance">
+<summary>
+rptAncillaryMaintenance control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._rblProjectType">
+<summary>
+rblProjectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._rblFormsType">
+<summary>
+rblFormsType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.finalizenewer._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvIncludeFrontend">
+<summary>
+rfvIncludeFrontend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblIncludeFrontend">
+<summary>
+rblIncludeFrontend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlFrontend">
+<summary>
+pnlFrontend control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._updMain">
+<summary>
+updMain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._cvFrontendPath">
+<summary>
+cvFrontendPath control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlFrontendFolder">
+<summary>
+pnlFrontendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._lblSelectedFrontendFolder">
+<summary>
+lblSelectedFrontendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._lsbFrontendFolders">
+<summary>
+lsbFrontendFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvCreateFrontendFolder">
+<summary>
+rfvCreateFrontendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblCreateFrontendFolder">
+<summary>
+rblCreateFrontendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlNewFrontendFolder">
+<summary>
+pnlNewFrontendFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvNewFrontendFolderName">
+<summary>
+rfvNewFrontendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtNewFrontendFolderName">
+<summary>
+txtNewFrontendFolderName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvFrontendLink">
+<summary>
+rfvFrontendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._cvFrontendLink">
+<summary>
+cvFrontendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtFrontendLink">
+<summary>
+txtFrontendLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvRequireLogin">
+<summary>
+rfvRequireLogin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblRequireLogin">
+<summary>
+rblRequireLogin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlLoginColumns">
+<summary>
+pnlLoginColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._lsbLoginColumns">
+<summary>
+lsbLoginColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvEmailSubmitter">
+<summary>
+rfvEmailSubmitter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblEmailSubmitter">
+<summary>
+rblEmailSubmitter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlEmailSubmitter">
+<summary>
+pnlEmailSubmitter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptEmailRecipients">
+<summary>
+rptEmailRecipients control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._btnAddEmail">
+<summary>
+btnAddEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._cblAdditionalOperationTypes">
+<summary>
+cblAdditionalOperationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._AdditionalOperationTabs">
+<summary>
+AdditionalOperationTabs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._AfterPageLoad">
+<summary>
+AfterPageLoad control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptAfterPageLoad">
+<summary>
+rptAfterPageLoad control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._AfterPageSubmit">
+<summary>
+AfterPageSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptAfterPageSubmit">
+<summary>
+rptAfterPageSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._PageHeader">
+<summary>
+PageHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptPageHeader">
+<summary>
+rptPageHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._BeforePageLoad">
+<summary>
+BeforePageLoad control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptBeforePageLoad">
+<summary>
+rptBeforePageLoad control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._CommonMethods">
+<summary>
+CommonMethods control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtCommonMethods">
+<summary>
+txtCommonMethods control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._PageMethods">
+<summary>
+PageMethods control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptPageMethods">
+<summary>
+rptPageMethods control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._Imports">
+<summary>
+Imports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtImports">
+<summary>
+txtImports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._BeforePageSubmit">
+<summary>
+BeforePageSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptBeforePageSubmit">
+<summary>
+rptBeforePageSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._SupervisorsContainer">
+<summary>
+SupervisorsContainer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._cvSupervisors">
+<summary>
+cvSupervisors control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptSupervisors">
+<summary>
+rptSupervisors control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._btnrptSupervisorsAddItem">
+<summary>
+btnrptSupervisorsAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvEmailSupervisor">
+<summary>
+rfvEmailSupervisor control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblEmailSupervisor">
+<summary>
+rblEmailSupervisor control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlPages">
+<summary>
+pnlPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rfvMultipleSubmissions">
+<summary>
+rfvMultipleSubmissions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblMultipleSubmissions">
+<summary>
+rblMultipleSubmissions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlRetainedColumns">
+<summary>
+pnlRetainedColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._lblMainTableName">
+<summary>
+lblMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._lsbMainColumns">
+<summary>
+lsbMainColumns control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptTables">
+<summary>
+rptTables control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._PagesContainer">
+<summary>
+PagesContainer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._cvPages">
+<summary>
+cvPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rptPages">
+<summary>
+rptPages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._btnrptPagesAddItem">
+<summary>
+btnrptPagesAddItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._chkCustomConfirmationPageMessage">
+<summary>
+chkCustomConfirmationPageMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlConfirmationPageMessage">
+<summary>
+pnlConfirmationPageMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblConfirmationPageMessageType">
+<summary>
+rblConfirmationPageMessageType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtConfirmationPageMessageRich">
+<summary>
+txtConfirmationPageMessageRich control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtConfirmationPageMessagePlain">
+<summary>
+txtConfirmationPageMessagePlain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlShowCustomStatusPageMessage">
+<summary>
+pnlShowCustomStatusPageMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._chkCustomStatusPagemessage">
+<summary>
+chkCustomStatusPagemessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._pnlStatusPageMessage">
+<summary>
+pnlStatusPageMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._rblStatusPageMessageType">
+<summary>
+rblStatusPageMessageType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtStatusPageMessageRich">
+<summary>
+txtStatusPageMessageRich control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._txtStatusPageMessagePlain">
+<summary>
+txtStatusPageMessagePlain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._btnContinue">
+<summary>
+btnContinue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.frontendnewpagetest._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlCurrentProject">
+<summary>
+ddlCurrentProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvPageTitle">
+<summary>
+rfvPageTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtPageTitle">
+<summary>
+txtPageTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvDepartmentName">
+<summary>
+rfvDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlDepartmentName">
+<summary>
+ddlDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._lblOptions">
+<summary>
+lblOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._cblOptions">
+<summary>
+cblOptions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._pnlCustomDepartmentName">
+<summary>
+pnlCustomDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvCustomDepartmentName">
+<summary>
+rfvCustomDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtCustomDepartmentName">
+<summary>
+txtCustomDepartmentName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._pnlEcommerce">
+<summary>
+pnlEcommerce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvEcommerceProduct">
+<summary>
+rfvEcommerceProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlEcommerceProduct">
+<summary>
+ddlEcommerceProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvDefaultCharge">
+<summary>
+rfvDefaultCharge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rblDefaultCharge">
+<summary>
+rblDefaultCharge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._pnlDefaultCharge">
+<summary>
+pnlDefaultCharge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvDefaultChargeText">
+<summary>
+rfvDefaultChargeText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._cmpDefaultChargeText">
+<summary>
+cmpDefaultChargeText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtDefaultCharge">
+<summary>
+txtDefaultCharge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._pnlWorkflow">
+<summary>
+pnlWorkflow control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvWorkflowStep">
+<summary>
+rfvWorkflowStep control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlWorkflowStep">
+<summary>
+ddlWorkflowStep control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvSQLServer">
+<summary>
+rfvSQLServer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlSQLServer">
+<summary>
+ddlSQLServer control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvSQLDatabase">
+<summary>
+rfvSQLDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._ddlSQLDatabase">
+<summary>
+ddlSQLDatabase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvSQLMainTableName">
+<summary>
+rfvSQLMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtSQLMainTableName">
+<summary>
+txtSQLMainTableName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvSQLInsertStoredProcedureName">
+<summary>
+rfvSQLInsertStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtSQLInsertStoredProcedureName">
+<summary>
+txtSQLInsertStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._rfvSQLUpdateStoredProcedureName">
+<summary>
+rfvSQLUpdateStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtSQLUpdateStoredProcedureName">
+<summary>
+txtSQLUpdateStoredProcedureName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._txtSQLAdditionalCertificationStatement">
+<summary>
+txtSQLAdditionalCertificationStatement control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._btnContinue">
+<summary>
+btnContinue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.indexnew._vsWebRAD">
+<summary>
+vsWebRAD control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlSelectionItems">
+<summary>
+pnlSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvSelectionItems">
+<summary>
+rfvSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlSelectionItemsRequired">
+<summary>
+pnlSelectionItemsRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._ddlSelectionItems">
+<summary>
+ddlSelectionItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlListItems">
+<summary>
+pnlListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvListItems">
+<summary>
+rfvListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlListItemsRequired">
+<summary>
+pnlListItemsRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._ddlListItems">
+<summary>
+ddlListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rptListItems">
+<summary>
+rptListItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._lblListItemCount">
+<summary>
+lblListItemCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlDataMethod">
+<summary>
+pnlDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvDataMethod">
+<summary>
+rfvDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._ddlDataMethod">
+<summary>
+ddlDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlOtherDataMethod">
+<summary>
+pnlOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvOtherDataMethod">
+<summary>
+rfvOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._txtOtherDataMethod">
+<summary>
+txtOtherDataMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlIncludePleaseSelect">
+<summary>
+pnlIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvIncludePleaseSelect">
+<summary>
+rfvIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rblIncludePleaseSelect">
+<summary>
+rblIncludePleaseSelect control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlMinimumValue">
+<summary>
+pnlMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvMinimumValue">
+<summary>
+rfvMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlMinimumValueRequired">
+<summary>
+pnlMinimumValueRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._txtMinimumValue">
+<summary>
+txtMinimumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlMaximumValue">
+<summary>
+pnlMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._rfvMaximumValue">
+<summary>
+rfvMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._pnlMaximumValueRequired">
+<summary>
+pnlMaximumValueRequired control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._txtMaximumValue">
+<summary>
+txtMaximumValue control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.WebRADListItems._ucDataSource">
+<summary>
+ucDataSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._Head1">
+<summary>
+Head1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._head">
+<summary>
+head control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._lblFormTitle">
+<summary>
+lblFormTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._Form1">
+<summary>
+Form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._lblBreadcrumbs">
+<summary>
+lblBreadcrumbs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._SectionName">
+<summary>
+SectionName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._lblProjectSelection">
+<summary>
+lblProjectSelection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._smMain">
+<summary>
+smMain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.Template._MainContent">
+<summary>
+MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.TriggerValues._rfvNumberTriggerValues">
+<summary>
+rfvNumberTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.TriggerValues._ddlNumberTriggerValues">
+<summary>
+ddlNumberTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:stable.TriggerValues._rptTriggerValues">
+<summary>
+rptTriggerValues control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

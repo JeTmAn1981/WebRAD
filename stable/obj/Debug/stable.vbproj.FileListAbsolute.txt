@@ -1,0 +1,247 @@
+Y:\~Test\Tom\stable\bin\stable.dll.config
+Y:\~Test\Tom\stable\bin\stable.dll
+Y:\~Test\Tom\stable\bin\stable.pdb
+Y:\~Test\Tom\stable\bin\WebForms_Basic.xml
+Y:\~Test\Tom\stable\bin\Antlr3.Runtime.dll
+Y:\~Test\Tom\stable\bin\AspNet.ScriptManager.bootstrap.dll
+Y:\~Test\Tom\stable\bin\AspNet.ScriptManager.jQuery.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.DependencyCollector.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.Web.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AI.WindowsServer.dll
+Y:\~Test\Tom\stable\bin\Microsoft.ApplicationInsights.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AspNet.FriendlyUrls.dll
+Y:\~Test\Tom\stable\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+Y:\~Test\Tom\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\~Test\Tom\stable\bin\Microsoft.ScriptManager.MSAjax.dll
+Y:\~Test\Tom\stable\bin\Microsoft.ScriptManager.WebForms.dll
+Y:\~Test\Tom\stable\bin\Microsoft.Web.Infrastructure.dll
+Y:\~Test\Tom\stable\bin\Newtonsoft.Json.dll
+Y:\~Test\Tom\stable\bin\System.Web.Optimization.dll
+Y:\~Test\Tom\stable\bin\WebGrease.dll
+Y:\~Test\Tom\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\~Test\Tom\stable\bin\System.Web.Optimization.xml
+Y:\~Test\Tom\stable\bin\Antlr3.Runtime.pdb
+Y:\~Test\Tom\stable\bin\Microsoft.AspNet.FriendlyUrls.xml
+Y:\~Test\Tom\stable\bin\Newtonsoft.Json.xml
+Y:\~Test\Tom\stable\bin\Microsoft.ApplicationInsights.xml
+Y:\~Test\Tom\stable\bin\Microsoft.AI.DependencyCollector.xml
+Y:\~Test\Tom\stable\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Y:\~Test\Tom\stable\bin\Microsoft.AI.WindowsServer.xml
+Y:\~Test\Tom\stable\bin\Microsoft.AI.Web.xml
+Y:\~Test\Tom\stable\obj\Debug\stable.vbprojResolveAssemblyReference.cache
+Y:\~Test\Tom\stable\obj\Debug\stable.Resources.resources
+Y:\~Test\Tom\stable\obj\Debug\stable.vbproj.GenerateResource.Cache
+Y:\~Test\Tom\stable\obj\Debug\stable.vbproj.CoreCompileInputs.cache
+Y:\~Test\Tom\stable\obj\Debug\stable.dll
+Y:\~Test\Tom\stable\obj\Debug\WebForms_Basic.xml
+Y:\~Test\Tom\stable\obj\Debug\stable.pdb
+Y:\~Test\Tom\WebRAD\stable\bin\stable.dll.config
+Y:\~Test\Tom\WebRAD\stable\bin\stable.dll
+Y:\~Test\Tom\WebRAD\stable\bin\stable.pdb
+Y:\~Test\Tom\WebRAD\stable\bin\WebForms_Basic.xml
+Y:\~Test\Tom\WebRAD\stable\bin\AjaxControlToolkit.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Antlr3.Runtime.dll
+Y:\~Test\Tom\WebRAD\stable\bin\AspNet.ScriptManager.bootstrap.dll
+Y:\~Test\Tom\WebRAD\stable\bin\AspNet.ScriptManager.jQuery.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Common.dll
+Y:\~Test\Tom\WebRAD\stable\bin\DocumentFormat.OpenXml.dll
+Y:\~Test\Tom\WebRAD\stable\bin\EntityFramework.dll
+Y:\~Test\Tom\WebRAD\stable\bin\EntityFramework.SqlServer.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.Web.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.WindowsServer.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.ApplicationInsights.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.Web.Infrastructure.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Newtonsoft.Json.dll
+Y:\~Test\Tom\WebRAD\stable\bin\NLog.dll
+Y:\~Test\Tom\WebRAD\stable\bin\System.Web.Optimization.dll
+Y:\~Test\Tom\WebRAD\stable\bin\WebGrease.dll
+Y:\~Test\Tom\WebRAD\stable\bin\WhitTools.dll
+Y:\~Test\Tom\WebRAD\stable\bin\Common.pdb
+Y:\~Test\Tom\WebRAD\stable\bin\Common.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Common.dll.config
+Y:\~Test\Tom\WebRAD\stable\bin\Antlr3.Runtime.pdb
+Y:\~Test\Tom\WebRAD\stable\bin\EntityFramework.xml
+Y:\~Test\Tom\WebRAD\stable\bin\EntityFramework.SqlServer.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.Web.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.AI.WindowsServer.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.ApplicationInsights.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Newtonsoft.Json.xml
+Y:\~Test\Tom\WebRAD\stable\bin\NLog.xml
+Y:\~Test\Tom\WebRAD\stable\bin\Microsoft.Web.Infrastructure.xml
+Y:\~Test\Tom\WebRAD\stable\bin\WhitTools.pdb
+Y:\~Test\Tom\WebRAD\stable\bin\WhitTools.xml
+Y:\~Test\Tom\WebRAD\stable\bin\WhitTools.dll.config
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\Stable.vbprojResolveAssemblyReference.cache
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\stable.Resources.resources
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\Stable.vbproj.GenerateResource.Cache
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\Stable.vbproj.CoreCompileInputs.cache
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\stable.dll
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\WebForms_Basic.xml
+Y:\~Test\Tom\WebRAD\stable\obj\Debug\stable.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.dll.config
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WebForms_Basic.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\AjaxControlToolkit.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Antlr3.Runtime.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\AspNet.ScriptManager.bootstrap.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\AspNet.ScriptManager.jQuery.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\DocumentFormat.OpenXml.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.SqlServer.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Agent.Intercept.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.PerfCounterCollector.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Web.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.WindowsServer.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.ApplicationInsights.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.Web.Infrastructure.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Newtonsoft.Json.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\NLog.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\System.Web.Optimization.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WebGrease.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.dll.config
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Antlr3.Runtime.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\DocumentFormat.OpenXml.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.SqlServer.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Web.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.WindowsServer.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.ApplicationInsights.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Newtonsoft.Json.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\NLog.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.Web.Infrastructure.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.pdb
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.dll.config
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbprojResolveAssemblyReference.cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.Resources.resources
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbproj.GenerateResource.Cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbproj.CoreCompileInputs.cache
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.dll
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\WebForms_Basic.xml
+\\web2\~Whitworth\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\stable.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WebForms_Basic.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\AjaxControlToolkit.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Antlr3.Runtime.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\AspNet.ScriptManager.bootstrap.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\AspNet.ScriptManager.jQuery.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.SqlServer.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Web.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.WindowsServer.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.ApplicationInsights.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.Web.Infrastructure.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Newtonsoft.Json.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\NLog.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\System.CodeDom.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\System.Web.Optimization.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WebGrease.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Common.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Antlr3.Runtime.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\EntityFramework.SqlServer.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.Web.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.AI.WindowsServer.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.ApplicationInsights.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Newtonsoft.Json.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\NLog.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\Microsoft.Web.Infrastructure.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.pdb
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\bin\WhitTools.dll.config
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbprojResolveAssemblyReference.cache
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.Resources.resources
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbproj.GenerateResource.Cache
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\Stable.vbproj.CoreCompileInputs.cache
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.dll
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\WebForms_Basic.xml
+Y:\Administration\InformationSystems\Forms\WebRAD\stable\obj\Debug\stable.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\stable.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\stable.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\stable.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\AjaxControlToolkit.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Antlr3.Runtime.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Common.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\EntityFramework.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\EntityFramework.SqlServer.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.Web.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Newtonsoft.Json.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\NLog.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\System.CodeDom.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\System.Web.Optimization.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WebGrease.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\ClosedXML.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\DocumentFormat.OpenXml.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\ExcelNumberFormat.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\FastMember.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Common.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Common.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Antlr3.Runtime.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\EntityFramework.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\EntityFramework.SqlServer.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.Web.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Newtonsoft.Json.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\NLog.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WhitTools.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WhitTools.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WhitTools.dll.config
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\ClosedXML.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\ClosedXML.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\DocumentFormat.OpenXml.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\ExcelNumberFormat.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\Stable.vbprojAssemblyReference.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\stable.Resources.resources
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\Stable.vbproj.GenerateResource.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\Stable.vbproj.CoreCompileInputs.cache
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\Stable.vbproj.CopyComplete
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\stable.dll
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\WebForms_Basic.xml
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\obj\Debug\stable.pdb
+C:\Users\tryan\Documents\Visual Studio 2017\Projects\WebRAD\stable\bin\WhitTools.dll
